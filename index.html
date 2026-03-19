@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI-Domain.ai – Premium KI-Domains für die Wirtschaft von morgen</title>
+<meta name="description" content="Strategisch ausgewählte .ai-Domains für Gründer, Startups, KMUs und Konzerne.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ══════════════════════════════════════════════════════
+   DESIGN SYSTEM
+   Display : Cormorant Garamond — editorial, timeless, authority
+   UI      : Syne — geometric, precise, modern
+   Accent  : #2D6BE4 (electric blue — one color only)
+   Gold    : #A8834A (prices only — restrained)
+   Palette : near-black → cool grey scale → off-white
+   ══════════════════════════════════════════════════════ */
+
+:root {
+  --ink:    #04080F;
+  --ink2:   #07101E;
+  --ink3:   #0C1929;
+  --rule:   rgba(255,255,255,0.07);
+  --rule2:  rgba(255,255,255,0.12);
+  --snow:   #EDF1FA;
+  --grey:   #8899B4;
+  --grey2:  #3E5070;
+  --blue:   #2D6BE4;
+  --blue-h: #4D87FF;
+  --gold:   #A8834A;
+  --gold-l: #C9A96E;
+  --fd:     'Cormorant Garamond', Georgia, serif;
+  --fu:     'Syne', sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--ink);
+  color: var(--snow);
+  font-family: var(--fu);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle grain */
+body::after {
+  content: '';
+  position: fixed; inset: 0; z-index: 1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.032'/%3E%3C/svg%3E");
+}
+
+/* ─── NAVIGATION ──────────────────────────────── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 56px;
+  background: rgba(4,8,15,0.75);
+  backdrop-filter: blur(24px) saturate(160%);
+  border-bottom: 1px solid var(--rule);
+}
+
+.nav-logo {
+  display: flex; align-items: center; height: 100%;
+}
+.nav-logo img {
+  height: 34px; width: auto;
+  mix-blend-mode: screen;
+  filter: brightness(1.5);
+  display: block;
+}
+
+.nav-links {
+  display: flex; gap: 40px; list-style: none;
+  position: absolute; left: 50%; transform: translateX(-50%);
+}
+.nav-links a {
+  font-family: var(--fu); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--grey); text-decoration: none;
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--snow); }
+
+.nav-right {
+  display: flex; align-items: center; gap: 20px;
+}
+.nav-sedo {
+  font-family: var(--fu); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--blue); text-decoration: none;
+  border: 1px solid rgba(45,107,228,.4);
+  padding: 9px 20px; border-radius: 3px;
+  transition: all .22s;
+}
+.nav-sedo:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+/* ─── HERO ────────────────────────────────────── */
+#hero {
+  position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 80px 56px;
+  text-align: center;
+  background: var(--ink);
+}
+
+.hero-inner {
+  position: relative; z-index: 10;
+  display: flex; flex-direction: column;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.hero-logo {
+  width: 180px; height: auto;
+  mix-blend-mode: screen;
+  filter: brightness(1.5);
+  display: block;
+  margin: 0 auto 48px;
+  animation: riseIn .9s cubic-bezier(.22,1,.36,1) both;
+}
+
+.hero-label {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--fu); font-size: 14px; font-weight: 700;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--snow);
+  margin-bottom: 36px;
+  animation: riseIn .9s .1s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-label-pip {
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 8px var(--blue);
+  animation: pip 2.5s ease-in-out infinite;
+}
+@keyframes pip {
+  0%,100% { opacity:1; transform:scale(1); }
+  50% { opacity:.3; transform:scale(1.8); }
+}
+
+.hero-h1 {
+  font-family: var(--fd);
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  font-weight: 300;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  color: var(--snow);
+  margin-bottom: 32px;
+  animation: riseIn .9s .2s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-h1 em {
+  font-style: italic;
+  color: var(--snow);
+}
+
+.hero-sub {
+  font-family: var(--fu); font-size: 20px; font-weight: 700;
+  color: var(--snow); line-height: 1.6;
+  max-width: 660px;
+  margin: 0 auto 48px;
+  animation: riseIn .9s .3s cubic-bezier(.22,1,.36,1) both;
+}
+
+.hero-ctas {
+  display: flex; gap: 14px; flex-wrap: wrap; justify-content: center;
+  animation: riseIn .9s .4s cubic-bezier(.22,1,.36,1) both;
+}
+
+.cta-primary {
+  padding: 15px 36px;
+  background: var(--blue); color: #fff;
+  border-radius: 3px;
+  font-family: var(--fu); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none;
+  transition: all .24s;
+}
+.cta-primary:hover { background: var(--blue-h); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(45,107,228,.35); }
+
+.cta-secondary {
+  padding: 15px 36px;
+  background: transparent; color: var(--snow);
+  border: 1px solid var(--rule2);
+  border-radius: 3px;
+  font-family: var(--fu); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  text-decoration: none;
+  transition: all .24s;
+}
+.cta-secondary:hover { border-color: rgba(45,107,228,.5); background: rgba(45,107,228,.06); }
+
+/* scroll indicator */
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  z-index: 10;
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  animation: riseIn .9s .8s cubic-bezier(.22,1,.36,1) both;
+}
+.hero-scroll span {
+  font-family: var(--fu); font-size: 9px; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--grey2);
+}
+.scroll-line {
+  width: 1px; height: 44px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  animation: drip 2s ease-in-out infinite;
+}
+@keyframes drip {
+  0% { transform:scaleY(0); transform-origin:top; opacity:0; }
+  50% { transform:scaleY(1); opacity:1; }
+  100% { transform:scaleY(1); transform-origin:bottom; opacity:0; }
+}
+
+/* ─── TICKER ──────────────────────────────────── */
+.ticker {
+  position: relative; z-index: 10;
+  overflow: hidden;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--ink2);
+  height: 44px;
+  display: flex; align-items: center;
+}
+.ticker-track {
+  display: flex; white-space: nowrap;
+  animation: scroll 50s linear infinite;
+}
+.ticker-track:hover { animation-play-state: paused; }
+.ticker-item {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 0 28px;
+  font-family: var(--fu); font-size: 12px;
+  border-right: 1px solid var(--rule);
+}
+.t-name { color: var(--grey); font-weight: 400; }
+.t-sep { color: var(--grey2); font-size: 8px; }
+.t-price { color: var(--gold-l); font-weight: 600; }
+@keyframes scroll { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+/* ─── MANIFESTO SECTION ───────────────────────── */
+.manifesto {
+  position: relative; z-index: 10;
+  padding: 140px 56px;
+  max-width: 1360px; margin: 0 auto;
+}
+.manifesto-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 120px; align-items: end;
+}
+.manifesto-left .tag {
+  font-family: var(--fu); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 28px; display: block;
+}
+.manifesto-left h2 {
+  font-family: var(--fd);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300; line-height: 1.1;
+  color: var(--snow);
+}
+.manifesto-left h2 em { font-style: italic; }
+
+.manifesto-right {
+  padding-top: 16px;
+}
+.manifesto-right p {
+  font-family: var(--fu); font-size: 15px; font-weight: 400;
+  color: var(--grey); line-height: 1.8;
+  margin-bottom: 24px;
+}
+.manifesto-right p strong { color: var(--snow); font-weight: 600; }
+.manifesto-divider {
+  width: 40px; height: 1px;
+  background: var(--blue);
+  margin-bottom: 28px;
+}
+
+/* ─── AUDIENCE ────────────────────────────────── */
+.audience {
+  position: relative; z-index: 10;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  background: var(--ink2);
+}
+.audience-inner {
+  max-width: 1360px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 0;
+}
+.audience-card {
+  padding: 56px 40px;
+  border-right: 1px solid var(--rule);
+  transition: background .3s;
+}
+.audience-card:last-child { border-right: none; }
+.audience-card:hover { background: var(--ink3); }
+
+.aud-number {
+  font-family: var(--fd); font-size: 3rem; font-weight: 300;
+  color: var(--rule2); line-height: 1;
+  margin-bottom: 32px; display: block;
+  transition: color .3s;
+}
+.audience-card:hover .aud-number { color: var(--blue); }
+
+.aud-type {
+  font-family: var(--fu); font-size: 10px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 14px; display: block;
+}
+.aud-title {
+  font-family: var(--fd); font-size: 1.4rem; font-weight: 400;
+  color: var(--snow); margin-bottom: 14px; line-height: 1.25;
+}
+.aud-body {
+  font-family: var(--fu); font-size: 13px; font-weight: 400;
+  color: var(--grey); line-height: 1.75;
+}
+
+/* ─── STATS BAND ──────────────────────────────── */
+.stats-band {
+  position: relative; z-index: 10;
+  max-width: 1360px; margin: 0 auto;
+  padding: 80px 56px;
+  display: grid; grid-template-columns: repeat(5,1fr);
+  gap: 0;
+  border-bottom: 1px solid var(--rule);
+}
+.stat-cell {
+  padding: 0 32px;
+  border-right: 1px solid var(--rule);
+}
+.stat-cell:first-child { padding-left: 0; }
+.stat-cell:last-child { border-right: none; }
+.s-num {
+  font-family: var(--fd); font-size: 2.8rem; font-weight: 300;
+  color: var(--snow); line-height: 1; margin-bottom: 10px;
+  display: block;
+}
+.s-num.blue { color: var(--blue); }
+.s-num.gold { color: var(--gold-l); }
+.s-label {
+  font-family: var(--fu); font-size: 11px; font-weight: 400;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--grey); line-height: 1.55;
+}
+
+/* ─── PORTFOLIO ───────────────────────────────── */
+.portfolio {
+  position: relative; z-index: 10;
+  padding: 120px 56px;
+  max-width: 1360px; margin: 0 auto;
+}
+.sec-head {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 48px; flex-wrap: wrap; gap: 16px;
+}
+.sec-tag {
+  font-family: var(--fu); font-size: 11px; font-weight: 500;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 10px; display: block;
+}
+.sec-h2 {
+  font-family: var(--fd);
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 300; color: var(--snow);
+}
+.sec-h2 em { font-style: italic; }
+.dom-count-badge {
+  font-family: var(--fu); font-size: 11px; color: var(--grey);
+  border: 1px solid var(--rule); padding: 6px 14px;
+  border-radius: 2px; letter-spacing: .05em;
+}
+
+/* controls */
+.controls {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 32px; flex-wrap: wrap;
+}
+.search-wrap { position: relative; }
+.search-input {
+  padding: 9px 16px 9px 36px;
+  background: var(--ink2);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  color: var(--snow);
+  font-family: var(--fu); font-size: 13px;
+  width: 220px; outline: none;
+  transition: border-color .2s;
+}
+.search-input:focus { border-color: rgba(45,107,228,.5); }
+.search-ico {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  font-size: 13px; color: var(--grey); pointer-events: none;
+}
+.filter-pill {
+  padding: 7px 16px;
+  border: 1px solid var(--rule); border-radius: 2px;
+  background: transparent; color: var(--grey);
+  font-family: var(--fu); font-size: 11px; font-weight: 500;
+  letter-spacing: .08em; text-transform: uppercase;
+  cursor: pointer; transition: all .2s;
+}
+.filter-pill:hover { border-color: rgba(45,107,228,.4); color: var(--snow); }
+.filter-pill.on { background: var(--blue); border-color: var(--blue); color: #fff; }
+
+/* grid */
+.dom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.dcard {
+  background: var(--ink);
+  padding: 28px 28px 24px;
+  display: flex; flex-direction: column; gap: 10px;
+  cursor: pointer; position: relative; overflow: hidden;
+  transition: background .25s;
+}
+.dcard-topline {
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: var(--blue); transform: scaleX(0); transform-origin: left;
+  transition: transform .4s cubic-bezier(.22,1,.36,1);
+}
+.dcard.gold-line .dcard-topline { background: var(--gold); }
+.dcard:hover { background: var(--ink2); }
+.dcard:hover .dcard-topline { transform: scaleX(1); }
+
+.dcard-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+
+.dtags { display: flex; gap: 5px; flex-wrap: wrap; flex-shrink: 0; }
+.dtag {
+  padding: 2px 7px; border-radius: 2px;
+  font-family: var(--fu); font-size: 9px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+}
+.dtag-s { background: rgba(168,131,74,.12); color: var(--gold-l); border: 1px solid rgba(168,131,74,.22); }
+.dtag-hot { background: rgba(239,68,68,.08); color: #FDA4AF; border: 1px solid rgba(239,68,68,.18); }
+.dtag-p { background: rgba(45,107,228,.1); color: var(--blue-h); border: 1px solid rgba(45,107,228,.2); }
+
+.dname {
+  font-family: var(--fu); font-size: 1.05rem; font-weight: 500;
+  color: var(--snow); word-break: break-all; line-height: 1.3;
+}
+.dname .tld { color: var(--blue); }
+
+.dtraffic {
+  font-family: var(--fu); font-size: 10px; font-weight: 500;
+  letter-spacing: .06em; color: #4ADE80;
+  display: inline-flex; align-items: center; gap: 5px;
+}
+.dtraffic::before { content:'▲'; font-size:8px; }
+
+.ddesc {
+  font-family: var(--fu); font-size: 13px; font-weight: 400;
+  color: var(--grey); line-height: 1.65; flex: 1;
+}
+
+.dfoot {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 16px; border-top: 1px solid var(--rule); gap: 10px;
+}
+.dprice {
+  font-family: var(--fd); font-size: 1.4rem; font-weight: 400;
+  color: var(--snow);
+}
+.dprice.s-price { color: var(--gold-l); font-style: italic; }
+.dprice.on-req {
+  font-family: var(--fu); font-size: 11px; font-weight: 500;
+  letter-spacing: .06em; color: #4ADE80; text-transform: uppercase;
+}
+.dbuy {
+  padding: 8px 16px;
+  border: 1px solid rgba(45,107,228,.4);
+  border-radius: 2px;
+  font-family: var(--fu); font-size: 11px; font-weight: 600;
+  letter-spacing: .08em; text-transform: uppercase;
+  color: var(--blue); text-decoration: none;
+  transition: all .2s; flex-shrink: 0; white-space: nowrap;
+}
+.dbuy:hover { background: var(--blue); color: #fff; border-color: var(--blue); }
+
+/* ─── AGENTS BLOCK ────────────────────────────── */
+.agents-block {
+  position: relative; z-index: 10;
+  background: var(--ink2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 100px 56px;
+}
+.agents-inner { max-width: 1360px; margin: 0 auto; }
+.agents-top {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 100px; align-items: end;
+  margin-bottom: 64px;
+}
+.agents-h2 {
+  font-family: var(--fd); font-size: clamp(2.2rem,4.5vw,4rem);
+  font-weight: 300; line-height: 1.08; color: var(--snow);
+}
+.agents-h2 em { font-style: italic; }
+.agents-text p {
+  font-family: var(--fu); font-size: 14px; color: var(--grey);
+  line-height: 1.8; margin-bottom: 14px;
+}
+.agents-nums {
+  display: flex; gap: 0;
+  border: 1px solid var(--rule);
+  margin-bottom: 48px;
+}
+.agents-num {
+  flex: 1; padding: 28px 24px;
+  border-right: 1px solid var(--rule);
+}
+.agents-num:last-child { border-right: none; }
+.an-n {
+  font-family: var(--fd); font-size: 2rem; font-weight: 300;
+  color: var(--blue); line-height: 1; margin-bottom: 6px; display: block;
+}
+.an-l {
+  font-family: var(--fu); font-size: 10px; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--grey);
+}
+
+/* ─── MARKET SECTION ──────────────────────────── */
+.market {
+  position: relative; z-index: 10;
+  padding: 120px 56px;
+  max-width: 1360px; margin: 0 auto;
+}
+.market-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 100px; align-items: center;
+}
+.market-copy h2 {
+  font-family: var(--fd); font-size: clamp(2rem,4vw,3.5rem);
+  font-weight: 300; line-height: 1.1;
+  color: var(--snow); margin-bottom: 28px;
+}
+.market-copy h2 em { font-style: italic; }
+.market-copy p {
+  font-family: var(--fu); font-size: 14px; color: var(--grey);
+  line-height: 1.8; margin-bottom: 16px;
+}
+.market-note {
+  margin-top: 28px; padding: 18px 22px;
+  border-left: 2px solid var(--gold);
+  background: rgba(168,131,74,.04);
+  font-family: var(--fu); font-size: 13px; color: var(--gold-l);
+  line-height: 1.65;
+}
+.market-facts {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule);
+}
+.mf { background: var(--ink2); padding: 32px 28px; }
+.mf-n {
+  font-family: var(--fd); font-size: 2.2rem; font-weight: 300;
+  color: var(--snow); line-height: 1; margin-bottom: 8px;
+}
+.mf-n.blue { color: var(--blue); }
+.mf-n.gold { color: var(--gold-l); }
+.mf-n.green { color: #4ADE80; }
+.mf-l {
+  font-family: var(--fu); font-size: 10px; font-weight: 500;
+  letter-spacing: .1em; text-transform: uppercase; color: var(--grey);
+  line-height: 1.5;
+}
+
+/* ─── TRAFFIC ─────────────────────────────────── */
+.traffic {
+  position: relative; z-index: 10;
+  background: var(--ink2);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 80px 56px;
+}
+.traffic-inner { max-width: 1360px; margin: 0 auto; }
+.tlist { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-top: 40px; }
+.trow {
+  display: flex; align-items: center; gap: 28px;
+  background: var(--ink2); padding: 18px 28px;
+  text-decoration: none; transition: background .2s;
+}
+.trow:hover { background: var(--ink3); }
+.t-rank { font-family: var(--fu); font-size: 10px; color: var(--grey2); width: 18px; flex-shrink: 0; font-weight: 500; }
+.t-domain { font-family: var(--fu); font-size: 14px; font-weight: 500; color: var(--snow); flex: 1; min-width: 0; }
+.t-domain .tld { color: var(--blue); }
+.t-bar-bg { flex: 2; height: 1px; background: var(--rule); position: relative; overflow: visible; }
+.t-bar-fill { position: absolute; top: -1px; left: 0; height: 3px; background: var(--blue); border-radius: 2px; transition: width 1.5s cubic-bezier(.22,1,.36,1); width: 0; }
+.t-uniq { font-family: var(--fu); font-size: 12px; color: var(--grey); width: 110px; text-align: right; flex-shrink: 0; }
+.t-ctr { font-family: var(--fu); font-size: 12px; font-weight: 600; color: #4ADE80; width: 65px; text-align: right; flex-shrink: 0; }
+
+/* ─── HOW TO ──────────────────────────────────── */
+.howto {
+  position: relative; z-index: 10;
+  padding: 80px 56px 120px;
+  max-width: 1360px; margin: 0 auto;
+}
+.steps-grid {
+  display: grid; grid-template-columns: repeat(4,1fr);
+  gap: 1px; background: var(--rule);
+  border: 1px solid var(--rule); margin-top: 40px;
+}
+.step {
+  background: var(--ink); padding: 36px 32px;
+  transition: background .25s;
+}
+.step:hover { background: var(--ink2); }
+.step-n {
+  font-family: var(--fu); font-size: 10px; font-weight: 600;
+  letter-spacing: .2em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 20px; display: block;
+}
+.step-t {
+  font-family: var(--fd); font-size: 1.25rem; font-weight: 400;
+  color: var(--snow); margin-bottom: 12px; line-height: 1.25;
+}
+.step-d {
+  font-family: var(--fu); font-size: 13px; color: var(--grey);
+  line-height: 1.72;
+}
+
+/* ─── FOOTER ──────────────────────────────────── */
+footer {
+  position: relative; z-index: 10;
+  background: var(--ink);
+  border-top: 1px solid var(--rule);
+  padding: 72px 56px 36px;
+}
+.footer-inner { max-width: 1360px; margin: 0 auto; }
+.footer-top {
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 80px; margin-bottom: 56px;
+}
+.footer-brand img {
+  height: 32px; mix-blend-mode: screen; filter: brightness(1.4);
+  display: block; margin-bottom: 20px;
+}
+.footer-claim {
+  font-family: var(--fd); font-size: 1.1rem; font-weight: 300;
+  font-style: italic; color: var(--grey); line-height: 1.65;
+}
+.footer-col h4 {
+  font-family: var(--fu); font-size: 10px; font-weight: 600;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--grey2); margin-bottom: 18px;
+}
+.footer-col p, .footer-col address {
+  font-family: var(--fu); font-size: 12px; color: var(--grey);
+  line-height: 2.1; font-style: normal;
+}
+.footer-col a { color: var(--blue); text-decoration: none; }
+.footer-col a:hover { text-decoration: underline; }
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 24px; border-top: 1px solid var(--rule);
+  flex-wrap: wrap; gap: 10px;
+}
+.footer-copy {
+  font-family: var(--fu); font-size: 11px; color: var(--grey2);
+}
+
+/* ─── LANG ────────────────────────────────────── */
+.lang-toggle {
+  position: fixed; bottom: 28px; right: 28px; z-index: 600;
+  display: flex; flex-direction: column;
+  border: 1px solid var(--rule); border-radius: 3px; overflow: hidden;
+  background: var(--ink3);
+}
+.lang-btn {
+  padding: 8px 14px; border: none; background: transparent;
+  color: var(--grey); font-family: var(--fu); font-size: 10px;
+  font-weight: 600; letter-spacing: .1em; cursor: pointer; transition: all .2s;
+  border-bottom: 1px solid var(--rule);
+}
+.lang-btn:last-child { border-bottom: none; }
+.lang-btn.on { background: var(--blue); color: #fff; }
+
+/* ─── REVEAL ANIMATION ────────────────────────── */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity .8s cubic-bezier(.22,1,.36,1), transform .8s cubic-bezier(.22,1,.36,1);
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-d1 { transition-delay: .05s; }
+.reveal-d2 { transition-delay: .12s; }
+.reveal-d3 { transition-delay: .2s; }
+
+/* ─── ANIMATIONS ──────────────────────────────── */
+@keyframes riseIn {
+  from { opacity:0; transform:translateY(24px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* ─── RESPONSIVE ──────────────────────────────── */
+@media (max-width: 1100px) {
+  nav { padding: 0 28px; }
+  .nav-links { display: none; }
+  .manifesto-grid { grid-template-columns: 1fr; gap: 48px; }
+  .audience-inner { grid-template-columns: 1fr 1fr; }
+  .agents-top { grid-template-columns: 1fr; gap: 48px; }
+  .market-grid { grid-template-columns: 1fr; gap: 56px; }
+  .footer-top { grid-template-columns: 1fr; gap: 40px; }
+  .steps-grid { grid-template-columns: 1fr 1fr; }
+  .stats-band { grid-template-columns: repeat(3,1fr); }
+}
+@media (max-width: 680px) {
+  #hero, .manifesto, .portfolio, .agents-block, .market,
+  .traffic, .howto, footer { padding-left: 24px; padding-right: 24px; }
+  .audience-inner { grid-template-columns: 1fr; }
+  .audience-card { border-right: none; border-bottom: 1px solid var(--rule); }
+  .steps-grid { grid-template-columns: 1fr; }
+  .stats-band { grid-template-columns: 1fr 1fr; padding: 48px 24px; }
+  .dom-grid { grid-template-columns: 1fr; }
+  .market-facts { grid-template-columns: 1fr; }
+  .agents-nums { flex-wrap: wrap; }
+  .footer-top { grid-template-columns: 1fr; }
+  footer { padding: 48px 24px 28px; }
+  .hero-h1 { font-size: clamp(2.8rem,11vw,4rem); }
+}
+
+/* ── HERO STAGE (schwarzer Fullscreen-Streifen mit Logo) ── */
+#hero-stage {
+  position: relative;
+  width: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#hero-canvas {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; z-index: 2;
+  pointer-events: none; opacity: 0.55;
+}
+
+#hero-vignette {
+  position: absolute; inset: 0; z-index: 3;
+  background: radial-gradient(ellipse 90% 120% at 50% 50%, transparent 30%, rgba(0,0,0,0.5) 100%);
+  pointer-events: none;
+}
+
+#hero-logo-wrap {
+  position: relative; z-index: 10;
+  display: flex; align-items: center; justify-content: center;
+  padding: 48px 0 40px;
+  animation: riseIn 1s .1s cubic-bezier(.22,1,.36,1) both;
+}
+
+#hero-logo-img {
+  height: 220px;
+  width: auto;
+  mix-blend-mode: screen;
+  filter: brightness(1.6);
+  display: block;
+}
+
+/* Domain Runner – Börsenticker-Stil */
+#domain-runner {
+  position: relative; z-index: 10;
+  width: 100%;
+  border-top: 1px solid rgba(45,107,228,0.25);
+  overflow: hidden;
+  background: rgba(0,4,12,0.95);
+  padding: 10px 0;
+  flex-shrink: 0;
+  animation: riseIn 1s .5s cubic-bezier(.22,1,.36,1) both;
+}
+
+.runner-track {
+  display: inline-flex;
+  white-space: nowrap;
+  animation: runnerScroll 120s linear infinite;
+  will-change: transform;
+}
+.runner-track:hover { animation-play-state: paused; }
+
+.runner-item {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 0 22px;
+  font-family: var(--fu); font-size: 12px; font-weight: 500;
+  letter-spacing: 0.03em;
+  border-right: 1px solid rgba(255,255,255,0.07);
+  color: rgba(220,230,255,0.55);
+  flex-shrink: 0;
+}
+.runner-item .r-base { color: rgba(220,230,255,0.75); }
+.runner-item .r-tld  { color: var(--blue); }
+.runner-item .r-sep  { color: rgba(255,255,255,0.2); font-size: 9px; }
+.runner-item .r-price {
+  font-family: var(--fu); font-size: 11px; font-weight: 700;
+  color: var(--gold-l); letter-spacing: 0.02em;
+}
+
+@keyframes runnerScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* Override: Hero-Sektion (der Text-Teil) hat keinen Canvas mehr */
+#hero {
+  min-height: auto !important;
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+/* Kein after-fade auf hero nötig da separater stage */
+#hero::after { display: none !important; }
+
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">
+    <img src="data:image/jpeg;base64,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" alt="AI-Domain.ai">
+  </div>
+  <ul class="nav-links" id="nav-c">
+    <li><a href="#portfolio" data-de="Portfolio" data-en="Portfolio">Portfolio</a></li>
+    <li><a href="#agents" data-de="Agents" data-en="Agents">Agents</a></li>
+    <li><a href="#markt" data-de="Markt" data-en="Market">Markt</a></li>
+    <li><a href="#kaufen" data-de="Kaufen" data-en="Buy">Kaufen</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="https://sedo.com/search/?showportfolio=af2HkqQtVastoWpIbWUGcOeDllK0YB44axxJ6E0g"
+       target="_blank" class="nav-sedo" data-de="Sedo Portfolio →" data-en="Sedo Portfolio →">Sedo Portfolio →</a>
+  </div>
+</nav>
+
+<!-- HERO: zwei Teile -->
+
+<!-- Teil 1: Schwarzer Fullscreen-Streifen mit Logo + animierter Domain-Leiste -->
+<div id="hero-stage">
+  <canvas id="hero-canvas"></canvas>
+  <!-- Radial vignette -->
+  <div id="hero-vignette"></div>
+  
+  <!-- Logo zentriert -->
+  <div id="hero-logo-wrap">
+    <img src="data:image/jpeg;base64,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" alt="AI-Domain.ai" id="hero-logo-img">
+  </div>
+
+  <!-- Animierter Domain-Ticker am unteren Rand -->
+  <div id="domain-runner">
+    <div id="domain-runner-track" class="runner-track"><span class="runner-item"><span class="r-base">ai-chatbots</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€28.000</span></span><span class="runner-item"><span class="r-base">image-search</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€18.000</span></span><span class="runner-item"><span class="r-base">ai-factories</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€18.000</span></span><span class="runner-item"><span class="r-base">stock-exchange</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€12.000</span></span><span class="runner-item"><span class="r-base">agi-agent</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€10.000</span></span><span class="runner-item"><span class="r-base">contentdetection</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€10.000</span></span><span class="runner-item"><span class="r-base">online-doctor</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€10.000</span></span><span class="runner-item"><span class="r-base">newtrading</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€9.000</span></span><span class="runner-item"><span class="r-base">ai-invest</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€9.000</span></span><span class="runner-item"><span class="r-base">ai-portfolio</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€8.500</span></span><span class="runner-item"><span class="r-base">ai-risk</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€8.500</span></span><span class="runner-item"><span class="r-base">aiagent</span><span class="r-tld">.services</span><span class="r-sep">·</span><span class="r-price">€8.000</span></span><span class="runner-item"><span class="r-base">freesearch</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€8.000</span></span><span class="runner-item"><span class="r-base">content-detection</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€7.000</span></span><span class="runner-item"><span class="r-base">ai-agents</span><span class="r-tld">.tools</span><span class="r-sep">·</span><span class="r-price">€7.000</span></span><span class="runner-item"><span class="r-base">ethicsagent</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€6.500</span></span><span class="runner-item"><span class="r-base">ai-assistant</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€6.000</span></span><span class="runner-item"><span class="r-base">ai-dna</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ai-trainer</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€7.000</span></span><span class="runner-item"><span class="r-base">ai-agents</span><span class="r-tld">.international</span><span class="r-sep">·</span><span class="r-price">€5.000</span></span><span class="runner-item"><span class="r-base">ai-agents</span><span class="r-tld">.technology</span><span class="r-sep">·</span><span class="r-price">€4.500</span></span><span class="runner-item"><span class="r-base">agivision</span><span class="r-tld">.eu</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">asi</span><span class="r-tld">.direct</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">kindesunterhalt</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.500</span></span><span class="runner-item"><span class="r-base">mieterrechte</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">unterhaltsrechner</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">shoppingworld</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.500</span></span><span class="runner-item"><span class="r-base">bitcoin-world</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€5.500</span></span><span class="runner-item"><span class="r-base">bitcoinworld</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€5.000</span></span><span class="runner-item"><span class="r-base">ai-globalrisk</span><span class="r-tld">.com</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ai-doc</span><span class="r-tld">.online</span><span class="r-sep">·</span><span class="r-price">€2.500</span></span><span class="runner-item"><span class="r-base">ai-health</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€3.000</span></span><span class="runner-item"><span class="r-base">ki-gesundheit</span><span class="r-tld">.com</span><span class="r-sep">·</span><span class="r-price">€2.500</span></span><span class="runner-item"><span class="r-base">artificialintelligence</span><span class="r-tld">.technology</span><span class="r-sep">·</span><span class="r-price">€6.000</span></span><span class="runner-item"><span class="r-base">ki-translator</span><span class="r-tld">.com</span><span class="r-sep">·</span><span class="r-price">€3.000</span></span><span class="runner-item"><span class="r-base">aichat</span><span class="r-tld">.jetzt</span><span class="r-sep">·</span><span class="r-price">€1.500</span></span><span class="runner-item"><span class="r-base">kichat</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">kuenstliche-intelligenz</span><span class="r-tld">.app</span><span class="r-sep">·</span><span class="r-price">€2.500</span></span><span class="runner-item"><span class="r-base">ki</span><span class="r-tld">.technology</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ki-fabriken</span><span class="r-tld">.de</span><span class="r-sep">·</span><span class="r-price">€2.000</span></span><span class="runner-item"><span class="r-base">aifactories</span><span class="r-tld">.eu</span><span class="r-sep">·</span><span class="r-price">€2.000</span></span><span class="runner-item"><span class="r-base">aiethics</span><span class="r-tld">.institute</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">superai</span><span class="r-tld">.finance</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">superai</span><span class="r-tld">.expert</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ai-finance</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€1.800</span></span><span class="runner-item"><span class="r-base">ai-finance</span><span class="r-tld">.info</span><span class="r-sep">·</span><span class="r-price">€1.500</span></span><span class="runner-item"><span class="r-base">ai-chatbots</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€28.000</span></span><span class="runner-item"><span class="r-base">image-search</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€18.000</span></span><span class="runner-item"><span class="r-base">ai-factories</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€18.000</span></span><span class="runner-item"><span class="r-base">stock-exchange</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€12.000</span></span><span class="runner-item"><span class="r-base">agi-agent</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€10.000</span></span><span class="runner-item"><span class="r-base">contentdetection</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€10.000</span></span><span class="runner-item"><span class="r-base">online-doctor</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€10.000</span></span><span class="runner-item"><span class="r-base">newtrading</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€9.000</span></span><span class="runner-item"><span class="r-base">ai-invest</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€9.000</span></span><span class="runner-item"><span class="r-base">ai-portfolio</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€8.500</span></span><span class="runner-item"><span class="r-base">ai-risk</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€8.500</span></span><span class="runner-item"><span class="r-base">aiagent</span><span class="r-tld">.services</span><span class="r-sep">·</span><span class="r-price">€8.000</span></span><span class="runner-item"><span class="r-base">freesearch</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€8.000</span></span><span class="runner-item"><span class="r-base">content-detection</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€7.000</span></span><span class="runner-item"><span class="r-base">ai-agents</span><span class="r-tld">.tools</span><span class="r-sep">·</span><span class="r-price">€7.000</span></span><span class="runner-item"><span class="r-base">ethicsagent</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€6.500</span></span><span class="runner-item"><span class="r-base">ai-assistant</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€6.000</span></span><span class="runner-item"><span class="r-base">ai-dna</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ai-trainer</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€7.000</span></span><span class="runner-item"><span class="r-base">ai-agents</span><span class="r-tld">.international</span><span class="r-sep">·</span><span class="r-price">€5.000</span></span><span class="runner-item"><span class="r-base">ai-agents</span><span class="r-tld">.technology</span><span class="r-sep">·</span><span class="r-price">€4.500</span></span><span class="runner-item"><span class="r-base">agivision</span><span class="r-tld">.eu</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">asi</span><span class="r-tld">.direct</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">kindesunterhalt</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.500</span></span><span class="runner-item"><span class="r-base">mieterrechte</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">unterhaltsrechner</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">shoppingworld</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.500</span></span><span class="runner-item"><span class="r-base">bitcoin-world</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€5.500</span></span><span class="runner-item"><span class="r-base">bitcoinworld</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€5.000</span></span><span class="runner-item"><span class="r-base">ai-globalrisk</span><span class="r-tld">.com</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ai-doc</span><span class="r-tld">.online</span><span class="r-sep">·</span><span class="r-price">€2.500</span></span><span class="runner-item"><span class="r-base">ai-health</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€3.000</span></span><span class="runner-item"><span class="r-base">ki-gesundheit</span><span class="r-tld">.com</span><span class="r-sep">·</span><span class="r-price">€2.500</span></span><span class="runner-item"><span class="r-base">artificialintelligence</span><span class="r-tld">.technology</span><span class="r-sep">·</span><span class="r-price">€6.000</span></span><span class="runner-item"><span class="r-base">ki-translator</span><span class="r-tld">.com</span><span class="r-sep">·</span><span class="r-price">€3.000</span></span><span class="runner-item"><span class="r-base">aichat</span><span class="r-tld">.jetzt</span><span class="r-sep">·</span><span class="r-price">€1.500</span></span><span class="runner-item"><span class="r-base">kichat</span><span class="r-tld">.ai</span><span class="r-sep">·</span><span class="r-price">€4.000</span></span><span class="runner-item"><span class="r-base">kuenstliche-intelligenz</span><span class="r-tld">.app</span><span class="r-sep">·</span><span class="r-price">€2.500</span></span><span class="runner-item"><span class="r-base">ki</span><span class="r-tld">.technology</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ki-fabriken</span><span class="r-tld">.de</span><span class="r-sep">·</span><span class="r-price">€2.000</span></span><span class="runner-item"><span class="r-base">aifactories</span><span class="r-tld">.eu</span><span class="r-sep">·</span><span class="r-price">€2.000</span></span><span class="runner-item"><span class="r-base">aiethics</span><span class="r-tld">.institute</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">superai</span><span class="r-tld">.finance</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">superai</span><span class="r-tld">.expert</span><span class="r-sep">·</span><span class="r-price">€3.500</span></span><span class="runner-item"><span class="r-base">ai-finance</span><span class="r-tld">.world</span><span class="r-sep">·</span><span class="r-price">€1.800</span></span><span class="runner-item"><span class="r-base">ai-finance</span><span class="r-tld">.info</span><span class="r-sep">·</span><span class="r-price">€1.500</span></span></div>
+  </div>
+</div>
+
+<!-- Teil 2: Textteil des Hero -->
+<section id="hero">
+  <div class="hero-inner">
+    <span class="hero-label">
+      <span class="hero-label-pip"></span>
+      <span data-de="Premium KI-Domain Portfolio · Hamburg" data-en="Premium AI Domain Portfolio · Hamburg">Premium KI-Domain Portfolio · Hamburg</span>
+    </span>
+    <h1 class="hero-h1" data-de="Wer die Domain hat,<br>baut <em>die Kategorie.</em>" data-en="Whoever owns the domain<br>builds <em>the category.</em>">
+      Wer die Domain hat,<br>baut <em>die Kategorie.</em>
+    </h1>
+    <p class="hero-sub" data-de="Eine .ai-Domain ist mehr als eine Adresse. Sie ist das erste Signal an Kunden, Investoren und Talente: Wir sind hier, um zu bleiben." data-en="An .ai domain is more than an address. It is the first signal to customers, investors and talent: We are here to stay.">
+      Eine .ai-Domain ist mehr als eine Adresse. Sie ist das erste Signal an Kunden, Investoren und Talente: Wir sind hier, um zu bleiben.
+    </p>
+    <div class="hero-ctas">
+      <a href="#portfolio" class="cta-primary" data-de="Portfolio entdecken" data-en="Discover Portfolio">Portfolio entdecken</a>
+      <a href="https://sedo.com/search/?showportfolio=af2HkqQtVastoWpIbWUGcOeDllK0YB44axxJ6E0g"
+         target="_blank" class="cta-secondary" data-de="Auf Sedo ansehen" data-en="View on Sedo">Auf Sedo ansehen</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span data-de="Scroll" data-en="Scroll">Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ticker-track" id="ticker-track"></div>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto reveal">
+  <div class="manifesto-grid">
+    <div class="manifesto-left">
+      <span class="tag" data-de="Warum eine AI-Domain?" data-en="Why an AI Domain?">Warum eine AI-Domain?</span>
+      <h2 data-de="Die Adresse ist<br>das erste Statement<br>Ihres Unternehmens." data-en="The address is<br>the first statement<br>of your business.">
+        Die Adresse ist<br>das erste Statement<br>Ihres Unternehmens.
+      </h2>
+    </div>
+    <div class="manifesto-right">
+      <div class="manifesto-divider"></div>
+      <p data-de="<strong>Für Gründer:</strong> Die richtigen Domains sind endlich. Jeden Tag werden .ai-Domains an Startups weltweit verkauft, die wissen, dass Kategorieleadership mit dem richtigen Namen beginnt." data-en="<strong>For founders:</strong> The right domains are finite. Every day .ai domains are sold to startups worldwide who know that category leadership begins with the right name."><strong>Für Gründer:</strong> Die richtigen Domains sind endlich. Jeden Tag werden .ai-Domains an Startups weltweit verkauft, die wissen, dass Kategorieleadership mit dem richtigen Namen beginnt.</p>
+      <p data-de="<strong>Für Unternehmen:</strong> Ob neues Produkt, neue Marke oder KI-Transformation — die passende Domain ist die Grundlage glaubwürdiger KI-Positionierung. Und für Investoren: .ai-Domains erzielen 5,6% Sell-Through-Rate — die höchste aller TLDs." data-en="<strong>For businesses:</strong> Whether new product, new brand or AI transformation — the right domain is the foundation of credible AI positioning. And for investors: .ai domains achieve a 5.6% sell-through rate — the highest of all TLDs."><strong>Für Unternehmen:</strong> Ob neues Produkt, neue Marke oder KI-Transformation — die passende Domain ist die Grundlage glaubwürdiger KI-Positionierung. Für Investoren: 5,6% Sell-Through-Rate — die höchste aller TLDs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<div class="audience reveal">
+  <div class="audience-inner">
+    <div class="audience-card">
+      <span class="aud-number">01</span>
+      <span class="aud-type" data-de="Gründer & Startups" data-en="Founders & Startups">Gründer & Startups</span>
+      <div class="aud-title" data-de="Setz dein Zeichen, bevor es jemand anderes tut." data-en="Make your mark before someone else does.">Setz dein Zeichen, bevor es jemand anderes tut.</div>
+      <p class="aud-body" data-de="Investoren, Talente und Kunden lesen .ai als Qualitätssignal. Die besten Namen gehen täglich weg." data-en="Investors, talent and customers read .ai as a quality signal. The best names go daily.">Investoren, Talente und Kunden lesen .ai als Qualitätssignal. Die besten Namen gehen täglich weg.</p>
+    </div>
+    <div class="audience-card">
+      <span class="aud-number">02</span>
+      <span class="aud-type" data-de="KMUs & Selbstständige" data-en="SMEs & Freelancers">KMUs & Selbstständige</span>
+      <div class="aud-title" data-de="Positioniere dich als Vorreiter in deiner Branche." data-en="Position yourself as a pioneer in your sector.">Positioniere dich als Vorreiter in deiner Branche.</div>
+      <p class="aud-body" data-de="Eine .ai-Domain zeigt Kunden und Partnern: Ich bin bereits dort, wo andere noch hinwollen." data-en="An .ai domain shows customers and partners: I've already arrived where others still want to go.">Eine .ai-Domain zeigt Kunden und Partnern: Ich bin bereits dort, wo andere noch hinwollen.</p>
+    </div>
+    <div class="audience-card">
+      <span class="aud-number">03</span>
+      <span class="aud-type" data-de="Konzerne & Enterprises" data-en="Enterprises & Corporations">Konzerne & Enterprises</span>
+      <div class="aud-title" data-de="Sichere die digitale Identität eurer KI-Strategie." data-en="Secure the digital identity of your AI strategy.">Sichere die digitale Identität eurer KI-Strategie.</div>
+      <p class="aud-body" data-de="Ob Produkt, Spin-off oder Initiative — die passende Domain ist die Grundlage jeder glaubwürdigen KI-Marke." data-en="Whether product, spin-off or initiative — the right domain is the foundation of every credible AI brand.">Ob Produkt, Spin-off oder Initiative — die passende Domain ist die Grundlage jeder glaubwürdigen KI-Marke.</p>
+    </div>
+    <div class="audience-card">
+      <span class="aud-number">04</span>
+      <span class="aud-type" data-de="Investoren & Portfolios" data-en="Investors & Portfolios">Investoren & Portfolios</span>
+      <div class="aud-title" data-de="Premium-Domains: digitale Grundstücke mit Rendite." data-en="Premium domains: digital real estate with returns.">Premium-Domains: digitale Grundstücke mit Rendite.</div>
+      <p class="aud-body" data-de="$11,7 Mrd. Aftermarket-Volumen 2024. Prognose: $20 Mrd.+ 2025. Sell-Through-Rate 5,6% — Spitzenwert aller TLDs." data-en="$11.7B aftermarket volume 2024. Forecast: $20B+ 2025. Sell-through rate 5.6% — top value of all TLDs.">$11,7 Mrd. Aftermarket-Volumen 2024. Prognose: $20 Mrd.+ 2025. Sell-Through-Rate 5,6%.</p>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-band reveal">
+  <div class="stat-cell">
+    <span class="s-num blue" id="cnt-el">—</span>
+    <span class="s-label" data-de="Verfügbare Domains" data-en="Available Domains">Verfügbare Domains</span>
+  </div>
+  <div class="stat-cell">
+    <span class="s-num">$11,7 Mrd.</span>
+    <span class="s-label" data-de=".ai Aftermarket 2024" data-en=".ai Aftermarket 2024">.ai Aftermarket 2024</span>
+  </div>
+  <div class="stat-cell">
+    <span class="s-num gold">5,6%</span>
+    <span class="s-label" data-de="Sell-Through-Rate — höchste aller TLDs" data-en="Sell-Through Rate — highest of all TLDs">Sell-Through-Rate<br>höchste aller TLDs</span>
+  </div>
+  <div class="stat-cell">
+    <span class="s-num">551.000</span>
+    <span class="s-label" data-de=".ai Registrierungen Jan 2025" data-en=".ai Registrations Jan 2025">.ai Registrierungen<br>Jan 2025</span>
+  </div>
+  <div class="stat-cell">
+    <span class="s-num gold">€6.525</span>
+    <span class="s-label" data-de="Ø Sedo Verkaufspreis .ai" data-en="Ø Sedo Sale Price .ai">Ø Sedo Verkaufspreis .ai</span>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section class="portfolio" id="portfolio">
+  <div class="sec-head reveal">
+    <div>
+      <span class="sec-tag" data-de="Zum Verkauf" data-en="For Sale">Zum Verkauf</span>
+      <h2 class="sec-h2" data-de="Das <em>Portfolio</em>" data-en="The <em>Portfolio</em>">Das <em>Portfolio</em></h2>
+    </div>
+    <span class="dom-count-badge" id="dom-count">— Domains</span>
+  </div>
+  <div class="controls reveal reveal-d1">
+    <div class="search-wrap">
+      <span class="search-ico">⌕</span>
+      <input type="text" class="search-input" id="search-inp"
+             placeholder="domain suchen…" data-ph-de="domain suchen…" data-ph-en="search domain…">
+    </div>
+    <div id="filter-row" style="display:flex;gap:8px;flex-wrap:wrap;"></div>
+  </div>
+  <div class="dom-grid" id="dom-grid"></div>
+</section>
+
+<!-- AGENTS -->
+<section class="agents-block" id="agents">
+  <div class="agents-inner">
+    <div class="agents-top reveal">
+      <div>
+        <span class="sec-tag">Agents-Cluster 2025/26</span>
+        <h2 class="agents-h2" data-de="AI Agents sind die<br><em>nächste große Welle.</em>" data-en="AI Agents are the<br><em>next big wave.</em>">AI Agents sind die<br><em>nächste große Welle.</em></h2>
+      </div>
+      <div class="agents-text">
+        <p data-de="354 Agent-Unternehmen haben $228 Milliarden eingesammelt. KI-Agenturen entstehen täglich in Masse. Der Markt wächst von $7,9 Mrd. auf $69 Mrd. bis 2032 — CAGR 46%." data-en="354 agent companies have raised $228 billion. AI agencies are forming en masse daily. The market grows from $7.9B to $69B by 2032 — CAGR 46%.">354 Agent-Unternehmen haben $228 Milliarden eingesammelt. Der Markt wächst auf $69 Mrd. bis 2032 — CAGR 46%.</p>
+      </div>
+    </div>
+    <div class="agents-nums reveal reveal-d1">
+      <div class="agents-num"><span class="an-n">$69 Mrd.</span><span class="an-l" data-de="Marktpotenzial 2032" data-en="Market Potential 2032">Marktpotenzial 2032</span></div>
+      <div class="agents-num"><span class="an-n">46%</span><span class="an-l">CAGR</span></div>
+      <div class="agents-num"><span class="an-n">354</span><span class="an-l" data-de="Agent-Firmen finanziert" data-en="Agent companies funded">Agent-Firmen finanziert</span></div>
+      <div class="agents-num"><span class="an-n">$228 Mrd.</span><span class="an-l" data-de="Eingesammeltes Kapital" data-en="Capital raised">Eingesammeltes Kapital</span></div>
+    </div>
+    <div class="dom-grid reveal reveal-d2" id="agrid"></div>
+  </div>
+</section>
+
+<!-- MARKET -->
+<section class="market" id="markt">
+  <div class="market-grid reveal">
+    <div class="market-copy">
+      <span class="sec-tag" data-de="Marktkontext" data-en="Market Context">Marktkontext</span>
+      <h2 data-de="Warum <em>jetzt</em><br>der richtige Zeitpunkt." data-en="Why <em>now</em> is<br>exactly the right time.">Warum <em>jetzt</em><br>der richtige Zeitpunkt.</h2>
+      <p data-de=".ai ist von einer Nische zur aktivsten TLD im Aftermarket aufgestiegen. Rang 3 bei Afternic nach Umsatz — mit einer Sell-Through-Rate, die alle anderen in den Schatten stellt." data-en=".ai has risen from a niche to the most active aftermarket TLD. Rank 3 on Afternic by revenue — with a sell-through rate that eclipses all others.">.ai ist von einer Nische zur aktivsten TLD aufgestiegen. Rang 3 bei Afternic nach Umsatz — Sell-Through-Rate unübertroffen.</p>
+      <p data-de="73% aller Sedo-Verkäufe laufen über Festpreise. Der richtige Preis schlägt Verhandlungsgeschick. Dieses Portfolio ist auf Verkauf optimiert — nicht auf Ego." data-en="73% of all Sedo sales run at fixed prices. The right price beats negotiation skills. This portfolio is optimised for sales — not ego.">73% aller Sedo-Verkäufe laufen über Festpreise. Dieses Portfolio ist auf Verkauf optimiert — nicht auf Ego.</p>
+      <div class="market-note" data-de="⏰ März 2026: Die .ai-Registry erhöht Wholesale-Gebühren um +14%. Käufer haben jetzt einen konkreten Anlass zu handeln." data-en="⏰ March 2026: The .ai registry raises wholesale fees by +14%. Buyers now have a concrete reason to act.">⏰ März 2026: Die .ai-Registry erhöht Wholesale-Gebühren um +14%. Käufer haben jetzt einen konkreten Anlass zu handeln.</div>
+    </div>
+    <div class="market-facts">
+      <div class="mf"><div class="mf-n blue">$20 Mrd.</div><div class="mf-l" data-de=".ai Aftermarket Prognose 2025" data-en=".ai Aftermarket Forecast 2025">.ai Aftermarket<br>Prognose 2025</div></div>
+      <div class="mf"><div class="mf-n green">+800%</div><div class="mf-l" data-de=".ai Wachstum seit 2022" data-en=".ai Growth since 2022">.ai Wachstum<br>seit 2022</div></div>
+      <div class="mf"><div class="mf-n gold">$1 Mio.</div><div class="mf-l">fin.ai · 2025</div></div>
+      <div class="mf"><div class="mf-n blue">#3</div><div class="mf-l" data-de=".ai bei Afternic nach Umsatz" data-en=".ai on Afternic by revenue">.ai bei Afternic<br>nach Umsatz</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAFFIC -->
+<section class="traffic">
+  <div class="traffic-inner reveal">
+    <span class="sec-tag" data-de="Nachgewiesene Nachfrage" data-en="Proven Demand">Nachgewiesene Nachfrage</span>
+    <h2 class="sec-h2" data-de="Live-Traffic aus <em>Sedo-Daten</em>" data-en="Live Traffic from <em>Sedo Data</em>">Live-Traffic aus <em>Sedo-Daten</em></h2>
+    <div class="tlist" id="tlist"></div>
+  </div>
+</section>
+
+<!-- HOW TO -->
+<section class="howto" id="kaufen">
+  <div class="reveal">
+    <span class="sec-tag" data-de="Kaufprozess" data-en="Buying Process">Kaufprozess</span>
+    <h2 class="sec-h2" data-de="In vier Schritten zur <em>eigenen AI-Domain</em>" data-en="Four steps to your <em>own AI domain</em>">In vier Schritten zur <em>eigenen AI-Domain</em></h2>
+  </div>
+  <div class="steps-grid reveal reveal-d1">
+    <div class="step">
+      <span class="step-n">01</span>
+      <div class="step-t" data-de="Domain wählen" data-en="Choose Domain">Domain wählen</div>
+      <p class="step-d" data-de="Wählen Sie Ihre Wunsch-Domain aus dem Portfolio oder direkt auf Sedo.com." data-en="Choose your desired domain from the portfolio or directly on Sedo.com.">Wählen Sie Ihre Wunsch-Domain aus dem Portfolio oder direkt auf Sedo.com.</p>
+    </div>
+    <div class="step">
+      <span class="step-n">02</span>
+      <div class="step-t" data-de="Kaufen oder verhandeln" data-en="Buy or negotiate">Kaufen oder verhandeln</div>
+      <p class="step-d" data-de="Festpreise per 'Buy Now'. Für ausgewählte Domains: 'Make Offer' über Sedo." data-en="Fixed prices via 'Buy Now'. For selected domains: 'Make Offer' via Sedo.">Festpreise per 'Buy Now'. Für ausgewählte Domains: 'Make Offer' über Sedo.</p>
+    </div>
+    <div class="step">
+      <span class="step-n">03</span>
+      <div class="step-t" data-de="Sicherer Treuhand-Transfer" data-en="Secure escrow transfer">Sicherer Treuhand-Transfer</div>
+      <p class="step-d" data-de="Sedo hält die Zahlung treuhänderisch bis zur vollständigen Übertragung der Domain." data-en="Sedo holds payment in escrow until the complete domain transfer.">Sedo hält Zahlung treuhänderisch bis zur vollständigen Domain-Übertragung.</p>
+    </div>
+    <div class="step">
+      <span class="step-n">04</span>
+      <div class="step-t" data-de="Domain ist Ihres" data-en="Domain is yours">Domain ist Ihres</div>
+      <p class="step-d" data-de="Transfer in 24–72 Stunden direkt auf Ihren Registrar. Bereit für die Zukunft." data-en="Transfer within 24–72 hours directly to your registrar. Ready for the future.">Transfer in 24–72 Stunden. Direkt auf Ihren Registrar. Bereit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="data:image/jpeg;base64,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" alt="AI-Domain.ai">
+        <p class="footer-claim" data-de="„Die Adresse, die sagt<br>wer du sein wirst."" data-en="„The address that tells<br>the world who you'll become."">
+          „Die Adresse, die sagt<br>wer du sein wirst."
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4 data-de="Kontakt" data-en="Contact">Kontakt</h4>
+        <p>
+          <a href="mailto:kontakt@ki.services">kontakt@ki.services</a><br>
+          <a href="https://sedo.com/search/?showportfolio=af2HkqQtVastoWpIbWUGcOeDllK0YB44axxJ6E0g" target="_blank">
+            Sedo Portfolio →
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4>Impressum</h4>
+        <address>
+          Gemäß §5 DDG<br><br>
+          KI.services i.Gr.<br>
+          c/o IP-Management #8577<br>
+          Ludwig-Erhard-Straße 18<br>
+          20459 Hamburg<br><br>
+          <a href="mailto:kontakt@ki.services">kontakt@ki.services</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 KI.services i.Gr. · Hamburg</span>
+      <span class="footer-copy" data-de="Alle Preise EUR netto · Sedo-Provision nicht enthalten" data-en="All prices EUR net · Sedo commission not included">Alle Preise EUR netto · Sedo-Provision nicht enthalten</span>
+    </div>
+  </div>
+</footer>
+
+<!-- LANG -->
+<div class="lang-toggle">
+  <button class="lang-btn on" onclick="setLang('de')">DE</button>
+  <button class="lang-btn"   onclick="setLang('en')">EN</button>
+</div>
+
+<!-- NEURAL CANVAS -->
+<script>
+(function(){
+  var cv=document.getElementById('hero-canvas');
+  var hero=document.getElementById('hero');
+  var cx=cv.getContext('2d');
+  var nodes=[],W=0,H=0;
+  function sz(){W=cv.width=hero.offsetWidth||window.innerWidth;H=cv.height=hero.offsetHeight||window.innerHeight;}
+  function mk(){return{x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.28,vy:(Math.random()-.5)*.28,r:Math.random()*1.2+.8,ph:Math.random()*6.28};}
+  sz();
+  var n=Math.min(Math.floor(W*H/15000),65);
+  for(var i=0;i<n;i++)nodes.push(mk());
+  function frame(){
+    cx.clearRect(0,0,W,H);
+    var D=175;
+    for(var i=0;i<nodes.length;i++)for(var j=i+1;j<nodes.length;j++){
+      var dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<D){cx.beginPath();cx.moveTo(nodes[i].x,nodes[i].y);cx.lineTo(nodes[j].x,nodes[j].y);cx.strokeStyle='rgba(45,107,228,'+((1-d/D)*.3)+')';cx.lineWidth=.6;cx.stroke();}
+    }
+    nodes.forEach(function(n){
+      n.ph+=.012;var p=.5+.5*Math.sin(n.ph),r=n.r*(.85+.3*p);
+      var g=cx.createRadialGradient(n.x,n.y,0,n.x,n.y,r*7);
+      g.addColorStop(0,'rgba(45,107,228,'+(.28*p)+')');g.addColorStop(1,'rgba(0,0,0,0)');
+      cx.beginPath();cx.arc(n.x,n.y,r*7,0,6.28);cx.fillStyle=g;cx.fill();
+      cx.beginPath();cx.arc(n.x,n.y,r,0,6.28);
+      cx.fillStyle=p>.78?'rgba(77,135,255,'+(.9+.1*p)+')':'rgba(45,107,228,'+(.9+.1*p)+')';
+      cx.fill();
+      n.x+=n.vx;n.y+=n.vy;
+      if(n.x<-8||n.x>W+8)n.vx=-n.vx;if(n.y<-8||n.y>H+8)n.vy=-n.vy;
+    });
+    requestAnimationFrame(frame);
+  }
+  frame();
+  window.addEventListener('resize',sz);
+})();
+</script>
+
+<!-- DOMAIN LOGIC -->
+<script>
+// AI-Domain.ai Portfolio – alle Domains
+// Nicht zum Verkauf: ki.services, ai-domain.ai, ki-voice.de
+
+const SEDO_PORTFOLIO = "https://sedo.com/search/?showportfolio=af2HkqQtVastoWpIbWUGcOeDllK0YB44axxJ6E0g";
+
+const domains = [
+
+  // ── TIER S – PREMIUM ────────────────────────────────────────────────────
+  {
+    name: "ai-chatbots.ai",
+    price: 28000,
+    tier: "S",
+    category: "chat",
+    badge: "premium",
+    desc_de: "Die ultimative KI-Chatbot-Plattform-Domain. Plural + .ai = weltweit einzigartig.",
+    desc_en: "The ultimate AI chatbot platform domain. Plural + .ai = globally unique.",
+    traffic: null,
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "image-search.ai",
+    price: 18000,
+    tier: "S",
+    category: "core",
+    badge: "premium",
+    desc_de: "Visual AI / Reverse Image Search – einer der größten AI-Use-Cases 2025.",
+    desc_en: "Visual AI / reverse image search – one of the biggest AI use cases of 2025.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-factories.ai",
+    price: 18000,
+    tier: "S",
+    category: "industry",
+    badge: "hot",
+    desc_de: "DAS Infrastruktur-Buzzword: NVIDIA, Microsoft & Google bauen 'AI Factories' für Milliarden.",
+    desc_en: "THE infrastructure buzzword: NVIDIA, Microsoft & Google build 'AI Factories' for billions.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "stock-exchange.ai",
+    price: 12000,
+    tier: "S",
+    category: "finance",
+    badge: "premium",
+    desc_de: "AI-gestützte Börsenwelt. Für FinTech-Unicorns und Trading-Plattformen der Zukunft.",
+    desc_en: "AI-powered stock trading. For FinTech unicorns and next-gen trading platforms.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "agi-agent.ai",
+    price: 10000,
+    tier: "S",
+    category: "agents",
+    badge: "hot",
+    desc_de: "AGI + Agent + .ai = dreifaches Premium. Das Ziel aller großen AI-Labs in einer Domain.",
+    desc_en: "AGI + Agent + .ai = triple premium. The goal of all major AI labs in one domain.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "contentdetection.ai",
+    price: 10000,
+    tier: "S",
+    category: "core",
+    badge: "hot",
+    desc_de: "Deepfake-Erkennung & AI-Content-Watermarking. EU AI Act macht es zur gesetzlichen Pflicht.",
+    desc_en: "Deepfake detection & AI content watermarking. EU AI Act makes it legally mandatory.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "online-doctor.ai",
+    price: 10000,
+    tier: "S",
+    category: "health",
+    badge: "premium",
+    desc_de: "Telemedizin + AI = Top-VC-Investmentthema. Exact-Match für die digitale Gesundheitsversorgung.",
+    desc_en: "Telemedicine + AI = top VC investment theme. Exact match for digital healthcare.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "newtrading.ai",
+    price: 9000,
+    tier: "S",
+    category: "finance",
+    badge: "hot",
+    desc_de: "Next-Gen AI Trading. Für Handelsplattformen der zweiten Generation.",
+    desc_en: "Next-gen AI trading. For second-generation trading platforms.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-invest.ai",
+    price: 9000,
+    tier: "S",
+    category: "finance",
+    badge: "premium",
+    desc_de: "AI Invest + .ai – perfekt für Robo-Advisor und AI-Investment-Plattformen. Bis 2028 gesichert.",
+    desc_en: "AI Invest + .ai – perfect for robo-advisors and AI investment platforms. Secured until 2028.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-portfolio.ai",
+    price: 8500,
+    tier: "S",
+    category: "finance",
+    badge: "premium",
+    desc_de: "AI Portfolio Management + .ai. Für Vermögensverwalter und FinTech-Startups. Bis 2028.",
+    desc_en: "AI portfolio management + .ai. For asset managers and FinTech startups. Until 2028.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-risk.ai",
+    price: 8500,
+    tier: "S",
+    category: "finance",
+    badge: "hot",
+    desc_de: "EU AI Act = Risk-Management-Pflicht. Für Banken, Versicherungen & Compliance-Startups.",
+    desc_en: "EU AI Act = risk management obligation. For banks, insurers & compliance startups.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "aiagent.services",
+    price: 8000,
+    tier: "S",
+    category: "agents",
+    badge: "hot",
+    desc_de: "Die natürlichste Domain für AI-Agenten-Dienstleister. 354 Agent-Firmen weltweit als Käufer.",
+    desc_en: "The most natural domain for AI agent service providers. 354 agent firms worldwide as buyers.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "freesearch.ai",
+    price: 8000,
+    tier: "S",
+    category: "core",
+    badge: "premium",
+    desc_de: "KI-Suche ohne Bezahlschranke. Für Perplexity-Konkurrenten und Open-Source-Suchprojekte.",
+    desc_en: "AI search without paywall. For Perplexity competitors and open-source search projects.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "content-detection.ai",
+    price: 7000,
+    tier: "S",
+    category: "core",
+    badge: "hot",
+    desc_de: "Mit Bindestrich-Variante für Content Detection. Deepfake & AI-Text-Erkennung.",
+    desc_en: "Hyphenated variant for content detection. Deepfake & AI text recognition.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-agents.tools",
+    price: 7000,
+    tier: "S",
+    category: "agents",
+    badge: "hot",
+    desc_de: ".tools TLD = top für Entwickler-Startups. Agent-Tools-Plattform für den $69-Mrd.-Markt.",
+    desc_en: ".tools TLD = top for developer startups. Agent tools platform for the $69B market.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ethicsagent.ai",
+    price: 6500,
+    tier: "S",
+    category: "agents",
+    badge: "hot",
+    desc_de: "EU AI Act = AI-Ethics-Compliance Pflicht. Für Governance-Tools und Beratungsunternehmen.",
+    desc_en: "EU AI Act = AI ethics compliance mandatory. For governance tools and consulting firms.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+
+  // ── TIER A – HIGH VALUE ──────────────────────────────────────────────────
+  {
+    name: "airobots.world",
+    price: null, // Verhandlungsbasis
+    tier: "A",
+    category: "core",
+    badge: "hot",
+    traffic: "280 Uniques/Monat",
+    desc_de: "Nachgewiesene Nachfrage: 280 monatliche Besucher. Nur auf Anfrage – Verhandlungsbasis.",
+    desc_en: "Proven demand: 280 monthly visitors. On request only – price on application.",
+    sedoUrl: SEDO_PORTFOLIO,
+    makeOffer: true,
+  },
+  {
+    name: "ai-assistant.world",
+    price: 6000,
+    tier: "A",
+    category: "chat",
+    badge: "premium",
+    traffic: "261 Uniques/Monat",
+    desc_de: "261 monatliche Besucher beweisen: die Nachfrage ist real. Meistgesuchter KI-Begriff + .world.",
+    desc_en: "261 monthly visitors prove: demand is real. Most searched AI term + .world.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-dna.world",
+    price: 3500,
+    tier: "A",
+    category: "core",
+    badge: "hot",
+    traffic: "101 Uniques, 95 Klicks",
+    desc_de: "94% Click-Rate – jemand will diese Domain. KI-DNA als Metapher für den Kern jedes AI-Systems.",
+    desc_en: "94% click rate – someone wants this domain. AI DNA as metaphor for the core of any AI system.",
+    sedoUrl: SEDO_PORTFOLIO,
+    makeOffer: true,
+  },
+  {
+    name: "ai-trainer.ai",
+    price: 7000,
+    tier: "A",
+    category: "agents",
+    badge: "premium",
+    desc_de: "AI Trainer + .ai für Corporate Training, EdTech-Plattformen. Bis 2027 registriert.",
+    desc_en: "AI trainer + .ai for corporate training, EdTech platforms. Registered until 2027.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-agents.international",
+    price: 5000,
+    tier: "A",
+    category: "agents",
+    badge: null,
+    desc_de: "AI Agents + .international – für global operierende KI-Agenturen.",
+    desc_en: "AI Agents + .international – for globally operating AI agencies.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-agents.technology",
+    price: 4500,
+    tier: "A",
+    category: "agents",
+    badge: null,
+    desc_de: "AI Agents + .technology – starkes B2B-Signal für Agent-Hersteller.",
+    desc_en: "AI Agents + .technology – strong B2B signal for agent manufacturers.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "agivision.eu",
+    price: 4000,
+    tier: "A",
+    category: "agents",
+    badge: "premium",
+    desc_de: "AGI Vision für den europäischen Markt. Für EU-AI-Institutionen und Forschungsprojekte.",
+    desc_en: "AGI vision for the European market. For EU AI institutions and research projects.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "asi.direct",
+    price: 4000,
+    tier: "A",
+    category: "core",
+    badge: "hot",
+    desc_de: "ASI (Artificial Super Intelligence) – das Buzzword der nächsten 2 Jahre. Early-Mover-Vorteil.",
+    desc_en: "ASI (Artificial Super Intelligence) – the buzzword of the next 2 years. Early mover advantage.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "kindesunterhalt.ai",
+    price: 4500,
+    tier: "A",
+    category: "legal",
+    badge: "hot",
+    desc_de: "LegalTech DE + .ai. KI-gestütztes Familienrecht – einzigartige Nische für den DACH-Markt.",
+    desc_en: "LegalTech DE + .ai. AI-powered family law – unique niche for the DACH market.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "mieterrechte.ai",
+    price: 4000,
+    tier: "A",
+    category: "legal",
+    badge: "hot",
+    desc_de: "Mieterrecht + AI + .ai. Massive Nachfrage durch Mietpreisdebatte. LegalTech für Deutschland.",
+    desc_en: "Tenants' rights + AI + .ai. Massive demand due to rental debate. LegalTech for Germany.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "unterhaltsrechner.ai",
+    price: 3500,
+    tier: "A",
+    category: "legal",
+    badge: null,
+    desc_de: "AI-Unterhaltsrechner – klarer Use Case für Familienrechts-Portale und LegalTech-Apps.",
+    desc_en: "AI maintenance calculator – clear use case for family law portals and LegalTech apps.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "shoppingworld.ai",
+    price: 4500,
+    tier: "A",
+    category: "core",
+    badge: null,
+    desc_de: "E-Commerce + AI + .ai. Für AI-gestützte Shopping-Plattformen und Retailer-Innovation.",
+    desc_en: "E-commerce + AI + .ai. For AI-powered shopping platforms and retail innovation.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "bitcoin-world.ai",
+    price: 5500,
+    tier: "A",
+    category: "finance",
+    badge: null,
+    desc_de: "Bitcoin + .ai – für die Schnittstelle von Krypto und künstlicher Intelligenz.",
+    desc_en: "Bitcoin + .ai – for the intersection of crypto and artificial intelligence.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "bitcoinworld.ai",
+    price: 5000,
+    tier: "A",
+    category: "finance",
+    badge: null,
+    desc_de: "Bitcoin World + .ai. Crypto-AI-Fusion für Plattformen und Medien.",
+    desc_en: "Bitcoin World + .ai. Crypto-AI fusion for platforms and media.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-globalrisk.com",
+    price: 3500,
+    tier: "A",
+    category: "finance",
+    badge: null,
+    desc_de: ".com + Global Risk AI. Für Unternehmensberatungen und Risikomanagement-Firmen.",
+    desc_en: ".com + Global Risk AI. For management consultancies and risk management firms.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-doc.online",
+    price: 2500,
+    tier: "A",
+    category: "health",
+    badge: null,
+    traffic: "49 Uniques, 46 Klicks",
+    desc_de: "94% Click-Rate auch hier. AI-Doktor online – für Telemedizin-Plattformen.",
+    desc_en: "94% click rate here too. AI doctor online – for telemedicine platforms.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-health.world",
+    price: 3000,
+    tier: "A",
+    category: "health",
+    badge: null,
+    desc_de: "AI Health global. Für MedTech-Startups und digitale Gesundheitsplattformen weltweit.",
+    desc_en: "AI health global. For MedTech startups and digital health platforms worldwide.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ki-gesundheit.com",
+    price: 2500,
+    tier: "A",
+    category: "health",
+    badge: null,
+    desc_de: ".com + KI-Gesundheit auf Deutsch. Premium für den deutschen Gesundheitsmarkt.",
+    desc_en: ".com + AI health in German. Premium for the German healthcare market.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "artificialintelligence.technology",
+    price: 6000,
+    tier: "A",
+    category: "core",
+    badge: "premium",
+    desc_de: "SEO-Exact-Match: 'artificial intelligence' + .technology. Für Content-Plattformen und Agenturen.",
+    desc_en: "SEO exact match: 'artificial intelligence' + .technology. For content platforms and agencies.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ki.services",
+    price: null,
+    tier: "🔒",
+    category: null,
+    notForSale: true,
+  },
+  {
+    name: "ai-domain.ai",
+    price: null,
+    tier: "🔒",
+    category: null,
+    notForSale: true,
+  },
+  {
+    name: "ki-voice.de",
+    price: null,
+    tier: "🔒",
+    category: null,
+    notForSale: true,
+  },
+
+  // ── KI DEUTSCH CLUSTER ───────────────────────────────────────────────────
+  {
+    name: "ki-translator.com",
+    price: 3000,
+    tier: "A",
+    category: "ki-deutsch",
+    badge: null,
+    desc_de: ".com + KI-Übersetzung auf Deutsch. Für Translation-Startups im DACH-Markt.",
+    desc_en: ".com + AI translation in German. For translation startups in the DACH market.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "aichat.jetzt",
+    price: 1500,
+    tier: "B",
+    category: "chat",
+    badge: null,
+    desc_de: "aichat.jetzt – zeitgemäß und modern. Einzigartiges deutsches .jetzt-TLD.",
+    desc_en: "aichat.jetzt – timely and modern. Unique German .jetzt TLD.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "kichat.ai",
+    price: 4000,
+    tier: "A",
+    category: "ki-deutsch",
+    badge: "hot",
+    desc_de: "Deutsch + .ai = Premium. Für den DACH-Markt mit .ai-Bonus. KI-Chat-Startups.",
+    desc_en: "German + .ai = premium. For the DACH market with .ai bonus. AI chat startups.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "kuenstliche-intelligenz.app",
+    price: 2500,
+    tier: "A",
+    category: "ki-deutsch",
+    badge: null,
+    desc_de: "Deutsches Exact-Match + .app. SEO-Gold für den DACH-Markt.",
+    desc_en: "German exact match + .app. SEO gold for the DACH market.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ki.technology",
+    price: 3500,
+    tier: "A",
+    category: "ki-deutsch",
+    badge: null,
+    desc_de: "Sehr kurz: ki.technology. Für deutsche Tech-Unternehmen im KI-Bereich.",
+    desc_en: "Very short: ki.technology. For German tech companies in the AI sector.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ki-fabriken.de",
+    price: 2000,
+    tier: "A",
+    category: "ki-deutsch",
+    badge: null,
+    desc_de: "KI-Fabriken auf Deutsch. Das Pendant zu 'AI Factories' für den deutschen Markt.",
+    desc_en: "AI factories in German. The counterpart to 'AI Factories' for the German market.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "aifactories.eu",
+    price: 2000,
+    tier: "A",
+    category: "industry",
+    badge: null,
+    desc_de: "AI Factories + .eu – Industrie 4.0 für den europäischen Markt.",
+    desc_en: "AI Factories + .eu – Industry 4.0 for the European market.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "aiethics.institute",
+    price: 3500,
+    tier: "A",
+    category: "agents",
+    badge: "hot",
+    desc_de: "AI Ethics Institute – für Forschungsinstitute, Think Tanks. EU AI Act macht es topaktuell.",
+    desc_en: "AI ethics institute – for research institutions, think tanks. EU AI Act makes it topical.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "superai.finance",
+    price: 3500,
+    tier: "A",
+    category: "finance",
+    badge: null,
+    desc_de: "Super AI + .finance = Premium-FinTech. Für AI-Investment-Plattformen.",
+    desc_en: "Super AI + .finance = premium FinTech. For AI investment platforms.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "superai.expert",
+    price: 3500,
+    tier: "A",
+    category: "core",
+    badge: null,
+    desc_de: "Super AI + .expert = Premium-Positionierung für Beratungsunternehmen.",
+    desc_en: "Super AI + .expert = premium positioning for consulting firms.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-finance.world",
+    price: 1800,
+    tier: "A",
+    category: "finance",
+    badge: null,
+    traffic: "40 Uniques/Monat",
+    desc_de: "Nachgewiesener Traffic: 40 monatliche Besucher. AI Finance global.",
+    desc_en: "Proven traffic: 40 monthly visitors. AI finance global.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+  {
+    name: "ai-finance.info",
+    price: 1500,
+    tier: "B",
+    category: "finance",
+    badge: null,
+    traffic: "48 Uniques, 40 Klicks",
+    desc_de: "83% Click-Rate! AI Finance Info – nachweislich hohe Kaufbereitschaft.",
+    desc_en: "83% click rate! AI finance info – demonstrably high purchase intent.",
+    sedoUrl: SEDO_PORTFOLIO,
+  },
+];
+
+// Nur verkäufliche Domains exportieren
+const saleDomains = domains.filter(d => !d.notForSale);
+
+// Kategorien
+const categories = {
+  all:       { de: "Alle",        en: "All" },
+  agents:    { de: "🤖 Agents",   en: "🤖 Agents" },
+  finance:   { de: "💰 Finance",  en: "💰 Finance" },
+  health:    { de: "🏥 Health",   en: "🏥 Health" },
+  chat:      { de: "💬 Chat & AI", en: "💬 Chat & AI" },
+  core:      { de: "⚡ AI Core",  en: "⚡ AI Core" },
+  industry:  { de: "🏭 Industry", en: "🏭 Industry" },
+  "ki-deutsch": { de: "🇩🇪 KI Deutsch", en: "🇩🇪 KI German" },
+  legal:     { de: "⚖️ LegalTech", en: "⚖️ LegalTech" },
+};
+
+
+var lang='de';
+
+function setLang(l){
+  lang=l;
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('on',b.textContent===l.toUpperCase());});
+  document.querySelectorAll('[data-de]').forEach(function(el){var t=el.getAttribute('data-'+l);if(t)el.innerHTML=t;});
+  document.querySelectorAll('[data-ph-de]').forEach(function(el){el.placeholder=el.getAttribute('data-ph-'+l);});
+  renderAll();
+}
+
+function dom(name){var i=name.lastIndexOf('.');return i<0?'<span>'+name+'</span>':'<span>'+name.slice(0,i)+'</span><span class="tld">'+name.slice(i)+'</span>';}
+
+function priceHTML(d){
+  if(d.makeOffer)return'<span class="dprice on-req">'+(lang==='de'?'Angebot machen':'Make Offer')+'</span>';
+  if(!d.price)   return'<span class="dprice on-req">'+(lang==='de'?'Auf Anfrage':'On Request')+'</span>';
+  return'<span class="dprice'+(d.tier==='S'?' s-price':'')+'">€'+d.price.toLocaleString('de-DE')+'</span>';
+}
+
+function card(d){
+  var isS=d.tier==='S';
+  var tags='';
+  if(isS)tags+='<span class="dtag dtag-s">Tier S</span>';
+  if(d.badge==='hot')tags+='<span class="dtag dtag-hot">Hot</span>';
+  else if(d.badge==='premium'&&!isS)tags+='<span class="dtag dtag-p">Premium</span>';
+  var tr=d.traffic?'<div class="dtraffic">'+d.traffic+'</div>':'';
+  var desc=d['desc_'+lang]||d.desc_de||'';
+  var btn=d.makeOffer?(lang==='de'?'Angebot →':'Offer →'):(lang==='de'?'Sedo →':'Sedo →');
+  return'<div class="dcard'+(isS?' gold-line':'')+'" onclick="window.open(''+d.sedoUrl+'','_blank')">'+
+    '<div class="dcard-topline"></div>'+
+    '<div class="dcard-head"><div class="dname">'+dom(d.name)+'</div><div class="dtags">'+tags+'</div></div>'+
+    tr+'<div class="ddesc">'+desc+'</div>'+
+    '<div class="dfoot">'+priceHTML(d)+
+    '<a href="'+d.sedoUrl+'" target="_blank" class="dbuy" onclick="event.stopPropagation()">'+btn+'</a>'+
+    '</div></div>';
+}
+
+// Ticker
+var TICK=[
+  {n:'image-search.ai',p:'€18.000'},{n:'ai-chatbots.ai',p:'€28.000'},{n:'ai-factories.ai',p:'€18.000'},
+  {n:'agi-agent.ai',p:'€10.000'},{n:'stock-exchange.ai',p:'€12.000'},{n:'contentdetection.ai',p:'€10.000'},
+  {n:'aiagent.services',p:'€8.000'},{n:'ai-invest.ai',p:'€9.000'},{n:'freesearch.ai',p:'€8.000'},
+  {n:'online-doctor.ai',p:'€10.000'},{n:'ai-portfolio.ai',p:'€8.500'},{n:'ai-risk.ai',p:'€8.500'},
+  {n:'ethicsagent.ai',p:'€6.500'},{n:'ai-trainer.ai',p:'€7.000'},{n:'bitcoin-world.ai',p:'€5.500'},
+  {n:'asi.direct',p:'€4.000'},{n:'shoppingworld.ai',p:'€4.500'},{n:'ki.technology',p:'€3.500'},
+];
+function buildTicker(){
+  var dbl=TICK.concat(TICK);
+  document.getElementById('ticker-track').innerHTML=dbl.map(function(d){
+    return'<span class="ticker-item"><span class="t-name">'+d.n+'</span><span class="t-sep">·</span><span class="t-price">'+d.p+'</span></span>';
+  }).join('');
+}
+
+// Traffic
+var TR=[
+  {n:'airobots.world',u:280,c:0},{n:'ai-assistant.world',u:261,c:0},{n:'ai-dna.world',u:101,c:95},
+  {n:'ai-doc.online',u:49,c:46},{n:'ai-finance.info',u:48,c:40},{n:'ai-finance.world',u:40,c:25},
+  {n:'ai-app.uk',u:26,c:16},{n:'ai-health.ch',u:22,c:14},{n:'ai-chatbots.eu',u:14,c:12},
+  {n:'ai-assistant.international',u:14,c:13},
+];
+function renderTraffic(){
+  var mx=TR[0].u;
+  document.getElementById('tlist').innerHTML=TR.map(function(d,i){
+    var sd=saleDomains.find(function(x){return x.name===d.n;});
+    var url=sd?sd.sedoUrl:SEDO_PORTFOLIO;
+    var ctr=d.c>0?Math.round(d.c/d.u*100)+'% CTR':'—';
+    return'<a href="'+url+'" target="_blank" class="trow">'+
+      '<span class="t-rank">#'+(i+1)+'</span>'+
+      '<span class="t-domain">'+dom(d.n)+'</span>'+
+      '<div class="t-bar-bg"><div class="t-bar-fill" data-w="'+Math.round(d.u/mx*100)+'"></div></div>'+
+      '<span class="t-uniq">'+d.u+' Uniques</span>'+
+      '<span class="t-ctr">'+ctr+'</span>'+
+      '</a>';
+  }).join('');
+  setTimeout(function(){
+    document.querySelectorAll('.t-bar-fill').forEach(function(el){el.style.width=el.getAttribute('data-w')+'%';});
+  },200);
+}
+
+// Filters
+var CATS={all:{de:'Alle',en:'All'},agents:{de:'Agents',en:'Agents'},finance:{de:'Finance',en:'Finance'},
+  health:{de:'Health',en:'Health'},chat:{de:'Chat',en:'Chat'},core:{de:'AI Core',en:'AI Core'},
+  industry:{de:'Industry',en:'Industry'},'ki-deutsch':{de:'KI Deutsch',en:'KI German'},legal:{de:'Legal',en:'Legal'}};
+var af='all',sv='';
+
+function filtered(){return saleDomains.filter(function(d){return(af==='all'||d.category===af)&&d.name.indexOf(sv)>-1;});}
+
+function renderFilters(){
+  document.getElementById('filter-row').innerHTML=Object.entries(CATS).map(function(e){
+    var k=e[0],v=e[1];
+    var cnt=k==='all'?saleDomains.length:saleDomains.filter(function(d){return d.category===k;}).length;
+    return'<button class="filter-pill'+(af===k?' on':'')+'" onclick="setF(''+k+'')">'+(v[lang]||v.de)+' <span style="opacity:.4;font-size:10px">'+cnt+'</span></button>';
+  }).join('');
+}
+function setF(f){af=f;renderFilters();renderGrid();}
+function renderGrid(){
+  var f=filtered();
+  document.getElementById('dom-count').textContent=f.length+' Domains';
+  document.getElementById('dom-grid').innerHTML=f.length?f.map(card).join(''):
+    '<p style="grid-column:1/-1;padding:48px 0;font-family:var(--fu);font-size:13px;color:var(--grey);">'+(lang==='de'?'Keine Domains gefunden.':'No domains found.')+'</p>';
+}
+function renderAgents(){
+  var ag=saleDomains.filter(function(d){return d.category==='agents';});
+  document.getElementById('agrid').innerHTML=ag.map(card).join('');
+}
+
+document.getElementById('search-inp').addEventListener('input',function(e){sv=e.target.value.toLowerCase().trim();renderGrid();});
+
+// Counter
+function animCnt(el,target){
+  var s=Date.now();(function t(){var p=Math.min((Date.now()-s)/1600,1),e=1-Math.pow(1-p,3);
+    el.textContent=Math.round(e*target)+'+';if(p<1)requestAnimationFrame(t);})();
+}
+
+// Scroll reveal
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+
+function renderAll(){renderFilters();renderGrid();renderAgents();}
+
+buildTicker();
+
+// ── Domain Runner ──────────────────────────────────────────
+(function() {
+  // Build runner from saleDomains
+  var track = document.getElementById('domain-runner-track');
+  if (!track) return;
+  
+  // Use all sale domains with prices
+  var items = saleDomains.map(function(d) {
+    var dot = d.name.lastIndexOf('.');
+    var base = dot < 0 ? d.name : d.name.slice(0, dot);
+    var tld  = dot < 0 ? '' : d.name.slice(dot);
+    var price = d.price ? '€' + d.price.toLocaleString('de-DE') : '';
+    return { base: base, tld: tld, price: price };
+  });
+  
+  // Duplicate for seamless loop
+  var doubled = items.concat(items);
+  
+  track.innerHTML = doubled.map(function(d) {
+    return '<span class="runner-item">' +
+      '<span>' + d.base + '</span><span class="r-tld">' + d.tld + '</span>' +
+      (d.price ? '<span class="r-dot"></span><span class="r-price">' + d.price + '</span>' : '') +
+      '</span>';
+  }).join('');
+})();
+
+renderAll();
+renderTraffic();
+setTimeout(function(){animCnt(document.getElementById('cnt-el'),saleDomains.length);},800);
+</script>
+</body>
+</html>
