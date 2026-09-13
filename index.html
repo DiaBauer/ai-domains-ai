@@ -70,9 +70,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;display:flex;ali
   font-weight:600;letter-spacing:.06em;color:var(--blue);transition:all .22s}
 .nav-cta:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
 
+/* HINWEIS-LEISTE „Website im Aufbau“ — zum Entfernen: diesen Block, das <div class="wip"> und wipFit() löschen */
+.wip{position:fixed;top:0;left:0;right:0;z-index:510;display:flex;align-items:center;justify-content:center;gap:10px;
+  padding:8px 40px;background:#221C0C;border-bottom:1px solid rgba(201,168,76,.35);
+  font-size:12px;line-height:1.5;letter-spacing:.02em;color:var(--gold-l);text-align:center}
+.wip b{font-weight:600;color:#F3DFA2}
+.wip i{width:7px;height:7px;border-radius:50%;background:var(--gold);flex-shrink:0;display:block}
+nav{top:var(--wip,0px)}
+html{scroll-padding-top:var(--wip,0px)}
+@media(max-width:1080px){.wip{padding:8px 16px}}
+
 /* HERO */
 #hero{position:relative;min-height:92vh;display:grid;grid-template-columns:1.05fr .95fr;
   padding-top:64px;overflow:hidden}
+#hero{padding-top:calc(64px + var(--wip,0px))} /* Hinweis-Leiste */
 #mesh{position:absolute;inset:0;z-index:0;opacity:.5;pointer-events:none}
 .hero-l{position:relative;z-index:5;padding:90px 56px 90px 80px;display:flex;flex-direction:column;
   justify-content:center;border-right:1px solid var(--rule)}
@@ -617,6 +628,12 @@ body[data-theme="light"] .ov{background:rgba(240,242,248,.85)}
 </head>
 <body>
 
+<!-- HINWEIS-LEISTE: Website im Aufbau (EN/DE über data-en/data-de) -->
+<div class="wip" role="status"><i></i><span
+  data-de="<b>Website im Aufbau.</b> Einzelne Funktionen sind noch nicht verfügbar. Alle Angaben ohne Gewähr, Angebote freibleibend und unverbindlich."
+  data-en="<b>Website under construction.</b> Some features are not yet available. All information without guarantee; all offers are non-binding and subject to change."><b>Website under construction.</b> Some features are not yet available. All information without guarantee; all offers are non-binding and subject to change.</span></div>
+
+
 <nav>
   <a href="#hero" class="nav-wordmark" aria-label="AI-DOMAIN.AI – Startseite">AI-DOMAIN.AI</a>
   <div class="nav-mid">
@@ -995,6 +1012,7 @@ function setLang(l){
   document.querySelector('.hr-all').textContent=UI.all[l];
   document.getElementById('hr-count').textContent=UI.total[l];
   renderHero(); renderFinderOpts(); renderFinder(); renderFilters(); renderGrid(); renderPakete(); renderFAQ(); renderSales(); renderSort(); renderTray(); renderTicker(); rotStart();
+  wipFit();
 }
 
 // ══ WÄHRUNG ══
@@ -1490,7 +1508,18 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
 }),{threshold:.1});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 
+// ══ HINWEIS-LEISTE ══
+// Höhe der Leiste messen, damit Nav und Hero darunter beginnen (Text wechselt mit der Sprache, bricht mobil um)
+function wipFit(){
+  const w=document.querySelector('.wip');
+  document.documentElement.style.setProperty('--wip',(w?w.offsetHeight:0)+'px');
+}
+window.addEventListener('resize',wipFit);
+// Nachmessen, sobald sich die Höhe ändert (z. B. wenn die Webfont nachlädt und der Text neu umbricht)
+if(window.ResizeObserver){ const w=document.querySelector('.wip'); if(w) new ResizeObserver(wipFit).observe(w); }
+
 // ══ START ══
+wipFit();
 setCur('USD');
 renderSort();
 renderPakete();
