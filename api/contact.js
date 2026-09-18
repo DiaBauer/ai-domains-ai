@@ -1,4 +1,4 @@
-// AI-DOMAIN.AI contact form — Vercel Node Function (D2: website → function → Resend → info@ai-domain.ai).
+// AI-DOMAIN.AI contact form — Vercel Node Function, ES module (package.json "type": "module") (D2: website → function → Resend → info@ai-domain.ai).
 // No form database, no tracking, no logging of message content, IP only transient for rate limiting.
 // Fails gracefully (503) when RESEND_API_KEY / CONTACT_FROM / CONTACT_TO are not configured — never breaks the build.
 // Env (set in Vercel, never in the repo): RESEND_API_KEY, CONTACT_FROM (verified @ai-domain.ai sender), CONTACT_TO (info@ai-domain.ai).
@@ -31,7 +31,7 @@ async function readBody(req) {
   try { return JSON.parse(raw); } catch { return {}; }
 }
 
-module.exports = async (req, res) => {
+export default async function handler(req, res) {
   if (req.method !== 'POST') return send(res, 405, { ok: false });
 
   const ip = String(req.headers['x-forwarded-for'] || '').split(',')[0].trim() || 'unknown';
@@ -91,4 +91,4 @@ module.exports = async (req, res) => {
   } finally {
     clearTimeout(timer);
   }
-};
+}
