@@ -1,0 +1,7 @@
+---
+import DomainDetailPage from '../../../components/pages/DomainDetailPage.astro';
+import { DOMAINS } from '../../../lib/domains';
+export function getStaticPaths() { return DOMAINS.map((d) => ({ params: { slug: d.slug }, props: { domain: d } })); }
+const { domain } = Astro.props;
+---
+<DomainDetailPage lang="de" domain={domain} />

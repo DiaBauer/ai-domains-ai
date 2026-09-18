@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import SectionHead from '../SectionHead.astro';
+import FaqList from '../FaqList.astro';
+import { FAQ } from '../../i18n/faq';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { breadcrumbs, faqPage } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/faq/');
+const T = lang === 'en'
+  ? { title: 'FAQ — buying a domain from AI-DOMAIN.AI via Sedo', desc: 'Answers on what is included, how the Sedo transfer works, registrars, costs, payment options and how prices are set.', k: 'FAQ', h: 'Short <em>answers</em>.', lead: 'Verified process facts only. If your question is not here, a short message is enough.' }
+  : { title: 'FAQ — Domainkauf bei AI-DOMAIN.AI über Sedo', desc: 'Antworten dazu, was enthalten ist, wie die Sedo-Übertragung abläuft, Registrare, Kosten, Zahlungsoptionen und Preisbildung.', k: 'FAQ', h: 'Kurze <em>Antworten</em>.', lead: 'Nur verifizierte Prozessfakten. Wenn Ihre Frage fehlt, genügt eine kurze Nachricht.' };
+const jsonld = [faqPage(FAQ.map((f) => ({ q: f.q[lang], a: f.a[lang] }))), breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.faq'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.faq'), path }]} />
+      <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+      <div class="measure-wide"><FaqList lang={lang} /></div>
+      <p class="mt-2"><a class="btn btn-secondary" href={localePath(lang, '/contact/')}>{ui(lang, 'cta.enquire')} <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+</Base>
+<style>.measure-wide { max-width: 860px; }</style>

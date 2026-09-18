@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import SectionHead from '../SectionHead.astro';
+import { GUIDES } from '../../i18n/guides';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { breadcrumbs, collectionPage } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/guides/');
+const T = lang === 'en'
+  ? { title: 'Guides — buying and valuing premium AI domains', desc: 'Two guides: how a Sedo purchase works from the buyer’s side, and how AI domains are priced — with verified market figures and no filler.', k: 'Guides', h: 'Two guides, <em>no filler</em>.', lead: 'Written to answer real buyer questions with verified facts and sources.', read: 'Read the guide' }
+  : { title: 'Guides — Premium-KI-Domains kaufen und bewerten', desc: 'Zwei Guides: wie ein Sedo-Kauf aus Käufersicht abläuft und wie KI-Domains bepreist werden — mit verifizierten Marktzahlen und ohne Füllstoff.', k: 'Guides', h: 'Zwei Guides, <em>kein Füllstoff</em>.', lead: 'Geschrieben, um echte Käuferfragen mit verifizierten Fakten und Quellen zu beantworten.', read: 'Guide lesen' };
+const jsonld = [collectionPage(lang, T.title, path, T.desc), breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.guides'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.guides'), path }]} />
+      <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+      <div class="grid grid-2">
+        {GUIDES.map((g) => (
+          <a class="card is-link rv" href={localePath(lang, `/guides/${g.slug}/`)}>
+            <div class="kicker">{g.kicker[lang]}</div>
+            <h2 class="gt">{g.title[lang]}</h2>
+            <p class="muted">{g.description[lang]}</p>
+            <span class="btn btn-tertiary btn-sm">{T.read} →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+<style>.gt { font-size: 1.5rem; margin: 8px 0 10px; }</style>

@@ -1,0 +1,33 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import SectionHead from '../SectionHead.astro';
+import BundleCards from '../BundleCards.astro';
+import { BUNDLES } from '../../lib/domains';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { LEGAL } from '../../config/legal';
+import { SITE } from '../../config/site';
+import { breadcrumbs, collectionPage } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/bundles/');
+const T = lang === 'en'
+  ? { title: `Domain bundles — ${BUNDLES.length} families that belong together`, desc: 'Five domain families from the portfolio as bundles: .bayern AI naming rights, call agents, SuperAI, AI University, Health Assistant — plus custom bundles on request.',
+      k: 'Bundles', h: 'Domains that <em>belong together</em>.', lead: 'Whoever takes a name should take the adjacent spellings — the .bayern set, a family across extensions, a product name in two markets. Five bundles are priced; any other combination can be requested.',
+      note: 'Bundle prices were set by the owner and are asking prices. A bundle is bought via Sedo domain by domain or arranged after your enquiry; the process is the same as for single domains.' }
+  : { title: `Domain-Pakete — ${BUNDLES.length} Familien, die zusammengehören`, desc: 'Fünf Domain-Familien aus dem Portfolio als Pakete: .bayern-Namensrechte KI, Call Agents, SuperAI, AI University, Health Assistant — plus individuelle Pakete auf Anfrage.',
+      k: 'Pakete', h: 'Domains, die <em>zusammengehören</em>.', lead: 'Wer einen Namen besetzt, sollte die naheliegenden Schreibweisen mitnehmen — das .bayern-Set, eine Familie über mehrere Endungen, ein Produktname in zwei Märkten. Fünf Pakete sind bepreist; jede andere Kombination kann angefragt werden.',
+      note: 'Paketpreise wurden von der Inhaberin festgelegt und sind Angebotspreise. Ein Paket wird über Sedo Domain für Domain gekauft oder nach Ihrer Anfrage vereinbart; der Ablauf entspricht dem Kauf einzelner Domains.' };
+const jsonld = [collectionPage(lang, T.title, path, T.desc), breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.bundles'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.bundles'), path }]} />
+      <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+      <BundleCards lang={lang} />
+      <p class="small muted mt-2 measure">{T.note} {SITE.sedo.standard[lang]} {LEGAL.priceNotice[lang]}</p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,115 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import SectionHead from '../SectionHead.astro';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { CONTACT } from '../../config/contact';
+import { LEGAL } from '../../config/legal';
+import { SITE } from '../../config/site';
+import { BUNDLES } from '../../lib/domains';
+import { breadcrumbs } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/contact/');
+const T = lang === 'en'
+  ? { title: 'Contact — enquiries about domains, bundles and payment options', desc: 'Send an enquiry about a domain, a bundle or payment options. We use your details solely to handle your enquiry. Operator: Diana Bauer, Erfurt, Germany.',
+      k: 'Contact', h: 'A short message is <em>enough</em>.', lead: 'For pricing, payment options or questions about the transfer. We’ll get back to you as soon as possible.', direct: 'Or write directly to', op: 'Operator', ctx: 'Context of your enquiry', ctxNone: 'none — mention the domain in your message if you like' }
+  : { title: 'Kontakt — Anfragen zu Domains, Paketen und Zahlungsoptionen', desc: 'Anfrage zu einer Domain, einem Paket oder zu Zahlungsoptionen senden. Ihre Angaben verwenden wir ausschließlich zur Bearbeitung der Anfrage. Betreiberin: Diana Bauer, Erfurt.',
+      k: 'Kontakt', h: 'Eine kurze Nachricht <em>genügt</em>.', lead: 'Für Preisanfragen, Zahlungsoptionen oder Fragen zur Übertragung. Wir melden uns so bald wie möglich.', direct: 'Oder schreiben Sie direkt an', op: 'Betreiberin', ctx: 'Kontext Ihrer Anfrage', ctxNone: 'keiner — nennen Sie die Domain gern in Ihrer Nachricht' };
+const bundleNames = Object.fromEntries(BUNDLES.map((b) => [b.id, b.name[lang]]));
+const jsonld = [breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.contact'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell contact">
+      <div>
+        <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.contact'), path }]} />
+        <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+        <form class="form glass" id="cform" method="post" action={CONTACT.endpoint} novalidate data-bundles={JSON.stringify(bundleNames)}>
+          <p class="ctx small muted" id="ctx" hidden><strong>{T.ctx}:</strong> <span id="ctx-val"></span></p>
+          <input type="hidden" name="lang" value={lang} />
+          <input type="hidden" name="source" value="ai-domain.ai" />
+          <div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
+          <div class="grid grid-2">
+            <div class="field"><label for="f-name">{ui(lang, 'form.name')} <span aria-hidden="true">*</span></label><input id="f-name" name="name" type="text" required autocomplete="name" maxlength="120" /></div>
+            <div class="field"><label for="f-email">{ui(lang, 'form.email')} <span aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" required autocomplete="email" maxlength="200" /></div>
+          </div>
+          <div class="grid grid-2">
+            <div class="field"><label for="f-subject">{ui(lang, 'form.subject')}</label>
+              <select id="f-subject" name="subject">
+                <option value="buy">{ui(lang, 'form.subject.buy')}</option>
+                <option value="bundle">{ui(lang, 'form.subject.bundle')}</option>
+                <option value="payment">{ui(lang, 'form.subject.payment')}</option>
+                <option value="other">{ui(lang, 'form.subject.other')}</option>
+              </select></div>
+            <div class="field"><label for="f-domain">{ui(lang, 'form.domain')}</label><input id="f-domain" name="domain" type="text" maxlength="80" autocomplete="off" class="notranslate" translate="no" /></div>
+          </div>
+          <div class="field"><label for="f-message">{ui(lang, 'form.message')} <span aria-hidden="true">*</span></label><textarea id="f-message" name="message" required maxlength="4000"></textarea></div>
+          <p class="small muted req">* {ui(lang, 'form.requiredMark')}</p>
+          <button class="btn btn-primary" type="submit" id="f-send">{ui(lang, 'form.send')}</button>
+          <div class="form-msg" id="f-result" role="status" aria-live="polite" hidden></div>
+          <p class="small muted notice">{ui(lang, 'form.notice')} <a href={localePath(lang, '/privacy/')}>{ui(lang, 'form.noticeLink')}</a>.</p>
+        </form>
+      </div>
+      <aside class="side">
+        <div class="card">
+          <div class="kicker">{T.direct}</div>
+          <p><a class="mail" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+          <div class="kicker mt-1">{T.op}</div>
+          <address class="small muted addr">{SITE.brand}<br />{LEGAL.operator.name}<br />{LEGAL.operator.street}<br />{LEGAL.operator.postalCode} {LEGAL.operator.city}<br />{LEGAL.operator.country[lang]}</address>
+        </div>
+        <div class="card mt-1"><p class="small muted" style="margin:0">{SITE.sedo.standard[lang]}</p></div>
+      </aside>
+    </div>
+  </section>
+</Base>
+<script>
+  // Contact form: progressive enhancement. Context from URL (?domain=, ?bundle=, ?subject=, ?domains=) — URL state, no storage.
+  const f = document.getElementById('cform') as HTMLFormElement;
+  const out = document.getElementById('f-result')!;
+  const btn = document.getElementById('f-send') as HTMLButtonElement;
+  const lang = (f.querySelector('input[name=lang]') as HTMLInputElement).value;
+  const T = lang === 'de'
+    ? { send: 'Wird gesendet…', ok: 'Vielen Dank. Ihre Anfrage ist angekommen — wir melden uns so bald wie möglich.', err: 'Da ist etwas schiefgelaufen. Schreiben Sie uns bitte direkt an info@ai-domain.ai.', cfg: 'Das Formular ist noch nicht angebunden. Bitte schreiben Sie an info@ai-domain.ai.', req: 'Bitte Name, E-Mail und Nachricht ausfüllen.', mail: 'Bitte eine gültige E-Mail-Adresse eingeben.', btn: 'Anfrage senden', bundleMsg: (n: string) => `Ich interessiere mich für das Paket „${n}“. Bitte senden Sie mir Details zu Verfügbarkeit und Konditionen.`, domainMsg: (d: string) => `Ich interessiere mich für ${d}. Bitte senden Sie mir Details zu Verfügbarkeit und Konditionen.`, customMsg: (ds: string) => `Ich möchte ein individuelles Paket anfragen für: ${ds}. Bitte senden Sie mir einen Vorschlag.` }
+    : { send: 'Sending…', ok: "Thank you. Your enquiry has arrived — we'll get back to you as soon as possible.", err: 'Something went wrong. Please write directly to info@ai-domain.ai.', cfg: 'The form is not connected yet. Please write to info@ai-domain.ai.', req: 'Please fill in name, e-mail and message.', mail: 'Please enter a valid e-mail address.', btn: 'Send enquiry', bundleMsg: (n: string) => `I am interested in the “${n}” bundle. Please send me details on availability and terms.`, domainMsg: (d: string) => `I am interested in ${d}. Please send me details on availability and terms.`, customMsg: (ds: string) => `I would like to request a custom bundle for: ${ds}. Please send me a proposal.` };
+  const p = new URLSearchParams(location.search);
+  const subject = f.elements.namedItem('subject') as HTMLSelectElement;
+  const domain = f.elements.namedItem('domain') as HTMLInputElement;
+  const message = f.elements.namedItem('message') as HTMLTextAreaElement;
+  const ctx = document.getElementById('ctx')!, ctxVal = document.getElementById('ctx-val')!;
+  const bundles = JSON.parse(f.dataset.bundles || '{}');
+  const d = p.get('domain'), b = p.get('bundle'), ds = p.get('domains'), s = p.get('subject');
+  if (d) { domain.value = d; subject.value = 'buy'; message.value = T.domainMsg(d); ctxVal.textContent = d; ctx.hidden = false; }
+  else if (b && bundles[b]) { subject.value = 'bundle'; message.value = T.bundleMsg(bundles[b]); ctxVal.textContent = bundles[b]; ctx.hidden = false; }
+  else if (ds) { subject.value = 'bundle'; message.value = T.customMsg(ds.split(',').join(', ')); ctxVal.textContent = ds.split(',').join(', '); ctx.hidden = false; }
+  else if (s && Array.from(subject.options).some((o) => o.value === s)) { subject.value = s; }
+  const show = (cls: string, text: string) => { out.className = `form-msg ${cls}`; out.textContent = text; out.hidden = false; };
+  f.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = (f.elements.namedItem('name') as HTMLInputElement).value.trim();
+    const email = (f.elements.namedItem('email') as HTMLInputElement).value.trim();
+    if (!name || !email || !message.value.trim()) return show('err', T.req);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) return show('err', T.mail);
+    btn.disabled = true; btn.textContent = T.send;
+    try {
+      const r = await fetch(f.action, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(Object.fromEntries(new FormData(f).entries())) });
+      if (r.ok) { show('ok', T.ok); f.reset(); }
+      else if (r.status === 503) show('err', T.cfg);
+      else show('err', T.err);
+    } catch { show('err', T.err); }
+    btn.disabled = false; btn.textContent = T.btn;
+  });
+</script>
+<style>
+  .contact { display: grid; grid-template-columns: 1.4fr .6fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .form { padding: clamp(20px, 3vw, 32px); display: grid; gap: 16px; }
+  .form .grid { gap: 16px; }
+  .req { margin: -6px 0 0; }
+  .notice { margin: 4px 0 0; }
+  .notice a { color: var(--blue-2); text-decoration: underline; text-underline-offset: 3px; }
+  .mail { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); }
+  .addr { font-style: normal; line-height: 1.7; }
+  .ctx { margin: 0; }
+  @media (max-width: 900px) { .contact { grid-template-columns: 1fr; } }
+</style>

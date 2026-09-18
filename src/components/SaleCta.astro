@@ -1,0 +1,21 @@
+---
+// Truthful CTA per sale mode: Buy on Sedo (live Buy Now) · Ask about this domain (enquiry) · Sold.
+import type { DomainRecord } from '../lib/domains';
+import { localePath, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
+interface Props { domain: DomainRecord; lang: Lang; size?: 'sm' | 'md'; variant?: 'primary' | 'secondary' }
+const { domain: d, lang, size = 'md', variant = 'primary' } = Astro.props;
+const sz = size === 'sm' ? 'btn-sm' : '';
+const askHref = `${localePath(lang, '/contact/')}?domain=${encodeURIComponent(d.domain)}`;
+---
+{d.saleMode === 'buy_now' && (
+  <a class={`btn btn-${variant} ${sz}`} href={d.sedoUrl[lang]} target="_blank" rel="noopener" data-sedo>
+    {ui(lang, 'cta.buy')} <span class="arrow" aria-hidden="true">→</span>
+  </a>
+)}
+{d.saleMode === 'inquiry' && (
+  <a class={`btn btn-${variant === 'primary' ? 'secondary' : variant} ${sz}`} href={askHref}>
+    {ui(lang, 'cta.ask')} <span class="arrow" aria-hidden="true">→</span>
+  </a>
+)}
+{d.saleMode === 'sold' && <span class="chip chip-sold">{ui(lang, 'cta.sold')}</span>}

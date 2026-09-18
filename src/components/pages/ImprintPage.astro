@@ -1,0 +1,63 @@
+---
+// Impressum / Legal Notice — built from L1-DRAFT-IMPRINT-DE/EN.md and src/config/legal.ts. German version is authoritative.
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { LEGAL } from '../../config/legal';
+import { CONTACT } from '../../config/contact';
+import { SITE } from '../../config/site';
+import { breadcrumbs } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/imprint/');
+const o = LEGAL.operator;
+const de = lang === 'de';
+const title = de ? 'Impressum' : 'Legal Notice (Impressum)';
+const desc = de ? `Impressum von AI-DOMAIN.AI — Angaben gemäß § 5 DDG und § 18 MStV. Betreiberin: ${o.name}, ${o.city}.` : `Legal notice of AI-DOMAIN.AI — information pursuant to Section 5 DDG and Section 18 MStV. Operator: ${o.name}, ${o.city}, Germany.`;
+const jsonld = [breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: title, path }])];
+---
+<Base lang={lang} title={title} description={desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: title, path }]} />
+      <div class="prose legal">
+        <h1>{title}</h1>
+        {de ? (
+          <>
+            <p class="small muted">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG) und § 18 Medienstaatsvertrag (MStV)</p>
+            <p>{LEGAL.operatorRole.de}</p>
+            <p class="addr"><strong>{o.name}</strong><br />{o.street}<br />{o.postalCode} {o.city}<br />{o.country.de}</p>
+            <h2>Kontakt</h2>
+            <p>E-Mail: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br />Kontaktformular: <a href={localePath('de', '/contact/')}>{SITE.url}{localePath('de', '/contact/')}</a></p>
+            {LEGAL.ustIdNr && <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: {LEGAL.ustIdNr}</p>}
+            {LEGAL.wIdNr && <p>Wirtschafts-Identifikationsnummer gemäß § 139c AO: {LEGAL.wIdNr}</p>}
+            {LEGAL.sellerStatusStatement.de && <p>{LEGAL.sellerStatusStatement.de}</p>}
+            {LEGAL.contentResponsible && (<><h2>Verantwortlich für die Inhalte nach § 18 Abs. 2 MStV</h2><p>{o.name}, Anschrift wie oben</p></>)}
+            <h2>Hinweis zum Kaufprozess</h2>
+            <p>{SITE.sedo.standard.de} Sedo ist ein externer Domain-Marktplatz und tritt beim Kauf weder als Käufer, Verkäufer, Vertreter noch als Vermittler auf. {SITE.sedo.entities.de} Es gelten die Nutzungsbedingungen von Sedo.</p>
+            {LEGAL.vsbgStatement && (<><h2>Verbraucherstreitbeilegung</h2><p>Zur Teilnahme an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle ist {o.name} weder verpflichtet noch bereit.</p></>)}
+            <p class="small muted">Stand: {LEGAL.lastReviewed}</p>
+          </>
+        ) : (
+          <>
+            <p class="small muted">Information pursuant to Section 5 of the German Digital Services Act (Digitale-Dienste-Gesetz, DDG) and Section 18 of the German Interstate Media Treaty (Medienstaatsvertrag, MStV)</p>
+            <p>{LEGAL.operatorRole.en}</p>
+            <p class="addr"><strong>{o.name}</strong><br />{o.street}<br />{o.postalCode} {o.city}<br />{o.country.en}</p>
+            <h2>Contact</h2>
+            <p>E-mail: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a><br />Contact form: <a href={localePath('en', '/contact/')}>{SITE.url}{localePath('en', '/contact/')}</a></p>
+            {LEGAL.ustIdNr && <p>VAT identification number pursuant to Section 27a UStG: {LEGAL.ustIdNr}</p>}
+            {LEGAL.wIdNr && <p>Business identification number (Wirtschafts-Identifikationsnummer) pursuant to Section 139c AO: {LEGAL.wIdNr}</p>}
+            {LEGAL.sellerStatusStatement.en && <p>{LEGAL.sellerStatusStatement.en}</p>}
+            {LEGAL.contentResponsible && (<><h2>Responsible for content pursuant to Section 18 (2) MStV</h2><p>{o.name}, address as above</p></>)}
+            <h2>Note on the purchase process</h2>
+            <p>{SITE.sedo.standard.en} Sedo is an external domain marketplace and acts neither as buyer, seller, representative nor broker in the purchase. {SITE.sedo.entities.en} Sedo’s terms of use apply.</p>
+            {LEGAL.vsbgStatement && (<><h2>Consumer dispute resolution</h2><p>{o.name} is neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board (Verbraucherschlichtungsstelle).</p></>)}
+            <p class="small muted">{ui('en', 'label.germanPrevails')} <a href={localePath('de', '/imprint/')}>Impressum (Deutsch)</a> · Last reviewed: {LEGAL.lastReviewed}</p>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+</Base>
+<style>.addr { line-height: 1.7; } .legal h1 { margin-bottom: 8px; }</style>

@@ -1,0 +1,63 @@
+---
+// Five real bundles (prices carried over from the previous site) + the approved Custom Bundle CTA card (no price, no saving).
+import { BUNDLES, formatEur } from '../lib/domains';
+import { localePath, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
+import DomainName from './DomainName.astro';
+interface Props { lang: Lang; limit?: number; showCustom?: boolean }
+const { lang, limit = BUNDLES.length, showCustom = true } = Astro.props;
+const bundles = BUNDLES.slice(0, limit);
+const T = lang === 'en'
+  ? { k: 'Your combination', t: 'Custom AI Domain Bundle', txt: 'Interested in a different combination? Select domains from the portfolio and request an individual bundle.', s1: 'Choose any domains from the portfolio — add them to your enquiry from a detail page or the directory.', s2: 'Or name the domains in your message; we will get back to you with a bundle proposal.', btn: ui('en', 'cta.customBundle'), more: 'Browse the portfolio →', for: 'For:', ind: 'individually', bp: 'bundle price', sv: 'saves' }
+  : { k: 'Ihre Kombination', t: 'Individuelles Domain-Paket', txt: 'Sie haben eine andere Kombination im Blick? Wählen Sie Domains aus dem Portfolio und fragen Sie ein individuelles Paket an.', s1: 'Wählen Sie beliebige Domains aus dem Portfolio — über eine Detailseite oder das Verzeichnis zur Anfrage hinzufügen.', s2: 'Oder nennen Sie die Domains in Ihrer Nachricht; wir melden uns mit einem Paketvorschlag.', btn: ui('de', 'cta.customBundle'), more: 'Zum Portfolio →', for: 'Für:', ind: 'einzeln', bp: 'Paketpreis', sv: 'spart' };
+---
+<div class="grid grid-3 bundles">
+  {bundles.map((b) => (
+    <article class={`card bundle rv ${!b.available ? 'is-unavailable' : ''}`} id={`bundle-${b.id}`}>
+      <h3>{b.name[lang]}</h3>
+      <ul class="plain chips">{b.domains.map((d) => <li><a class="pk-chip" href={localePath(lang, `/domains/${d.slug}/`)}><DomainName domain={d} /></a></li>)}</ul>
+      <p class="txt">{b.text[lang]}</p>
+      <p class="for"><strong>{T.for}</strong> {b.audience[lang]}</p>
+      <div class="foot">
+        <div>
+          <div class="old">{T.ind} {formatEur(b.priceIndividualEur, lang)}</div>
+          <div class="new">{formatEur(b.priceBundleEur, lang)}</div>
+          <div class="save">{T.sv} {formatEur(b.savingEur, lang)}</div>
+        </div>
+        <a class="btn btn-secondary btn-sm" href={`${localePath(lang, '/contact/')}?bundle=${b.id}`}>{ui(lang, 'cta.bundle')}</a>
+      </div>
+    </article>
+  ))}
+  {showCustom && (
+    <article class="card bundle custom rv" id="bundle-custom">
+      <div class="kicker">{T.k}</div>
+      <h3>{T.t}</h3>
+      <p class="txt">{T.txt}</p>
+      <ul class="steps"><li>{T.s1}</li><li>{T.s2}</li></ul>
+      <div class="foot foot-custom">
+        <a class="btn btn-primary btn-sm" href={`${localePath(lang, '/contact/')}?subject=bundle`}>{T.btn}</a>
+        <a class="btn btn-tertiary btn-sm" href={localePath(lang, '/domains/')}>{T.more}</a>
+      </div>
+    </article>
+  )}
+</div>
+<style>
+  .bundle { display: flex; flex-direction: column; gap: 12px; }
+  .bundle h3 { font-size: 1.4rem; margin: 0; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pk-chip { display: inline-block; font-size: .78rem; border: 1px solid var(--rule); border-radius: 3px; padding: 4px 8px; color: var(--ink-2); }
+  .pk-chip:hover { border-color: var(--blue); color: var(--ink); }
+  .txt { color: var(--ink-2); font-size: .95rem; flex: 1; margin: 0; }
+  .for { font-size: .85rem; color: var(--muted); margin: 0; }
+  .for strong { color: var(--ink-2); }
+  .foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 1px solid var(--rule); }
+  .old { font-size: .78rem; color: var(--muted); text-decoration: line-through; }
+  .new { font-family: var(--font-display); font-size: 1.6rem; color: var(--gold-2); line-height: 1.1; }
+  .save { font-size: .74rem; color: var(--green); letter-spacing: .04em; margin-top: 3px; }
+  .is-unavailable { opacity: .6; }
+  .custom { background: linear-gradient(135deg, color-mix(in srgb, var(--gold) 12%, transparent), color-mix(in srgb, var(--blue) 6%, transparent) 60%, transparent), var(--surface); position: relative; }
+  .custom::before { content: ''; position: absolute; inset: 12px; border: 1px dashed color-mix(in srgb, var(--gold) 55%, transparent); border-radius: 6px; pointer-events: none; }
+  .custom .steps { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; font-size: .88rem; color: var(--muted); }
+  .custom .steps li::before { content: '—'; color: var(--gold-2); margin-right: 8px; }
+  .foot-custom { border-top: 0; padding-top: 6px; justify-content: flex-start; flex-wrap: wrap; }
+</style>

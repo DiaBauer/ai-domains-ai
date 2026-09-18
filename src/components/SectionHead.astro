@@ -1,0 +1,10 @@
+---
+interface Props { kicker?: string; title: string; lead?: string; class?: string; as?: 'h1' | 'h2' }
+const { kicker, title, lead, class: cls = '', as = 'h2' } = Astro.props;
+const Tag = as as any;
+---
+<div class={`section-head rv ${cls}`}>
+  {kicker && <div class="kicker">{kicker}</div>}
+  <Tag set:html={title} />
+  {lead && <p class="lead">{lead}</p>}
+</div>

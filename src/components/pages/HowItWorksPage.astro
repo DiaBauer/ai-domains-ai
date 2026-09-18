@@ -1,0 +1,81 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import SectionHead from '../SectionHead.astro';
+import FaqList from '../FaqList.astro';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { SITE } from '../../config/site';
+import { LEGAL } from '../../config/legal';
+import { breadcrumbs } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/how-it-works/');
+const T = lang === 'en'
+  ? {
+      title: 'How buying works — Sedo purchase and transfer process',
+      desc: 'How a purchase initiated on AI-DOMAIN.AI works: select a domain, buy or enquire, pay via Sedo, transfer through Sedo’s transfer service. No checkout on this site.',
+      k: 'How it works', h: 'From name to <em>transfer</em>.',
+      lead: `${SITE.sedo.standard.en} AI-DOMAIN.AI has no checkout of its own; the purchase contract, the payment and the transfer are handled within Sedo’s process. This page explains the steps without adding terms of its own.`,
+      steps: [
+        ['1 · Discover and select', 'Browse the portfolio, use the Finder or the categories, open a domain page. Every page shows the EUR asking price and whether the domain is listed for Buy Now at Sedo or available on enquiry.'],
+        ['2 · Buy Now or enquiry', 'For Buy Now domains, "Buy on Sedo" opens the domain’s Sedo offer page: the Buy Now price is a binding fixed price — no negotiation required. For domains marked "enquiry", send a message with the domain name; the sale is then arranged and handled via Sedo as well. A free Sedo account is required to buy.'],
+        ['3 · Payment within Sedo', 'After the purchase, Sedo sends a payment request. You pay into a neutral account provided by Sedo; Sedo releases the payment to the seller only after the domain has been transferred to you. If the transfer does not go through, Sedo refunds the payment. Sedo may charge a fee for certain payment methods; according to Sedo, bank transfer carries no buyer fee.'],
+        ['4 · Transfer through Sedo’s transfer service', 'Sedo’s transfer specialists work with both parties and their registrars; the domain is transferred to a compatible registrar of your choice and registered under your account. For common extensions Sedo states an average of one to ten business days, depending on the registrars involved; less common extensions can take longer.'],
+        ['5 · Completion', 'The transfer is complete when the domain is registered under your registrar account. Sedo then releases the payment to the seller. From that point you renew the domain annually with your own registrar.'],
+      ],
+      whoK: 'Who is who', who: [
+        ['AI-DOMAIN.AI', 'The portfolio site of the owner, Diana Bauer. It presents the domains and links to Sedo. It does not conclude contracts and does not take payments.'],
+        ['Sedo', 'The external marketplace and transfer service. ' + SITE.sedo.role.en + ' ' + SITE.sedo.entities.en + ' Sedo’s terms of use apply.'],
+        ['You', 'The buyer: you conclude the purchase in Sedo’s process, pay via Sedo and receive the domain at your registrar.'],
+      ],
+      priceK: 'Prices', price: LEGAL.priceNotice.en + ' ' + LEGAL.usdNotice.en,
+      noTerms: 'AI-DOMAIN.AI does not publish its own terms and conditions for the sale: the contract is concluded and handled in Sedo’s process under Sedo’s terms. This page is information, not a contract.',
+      links: 'Sedo: transfer service', faqK: 'Questions',
+    }
+  : {
+      title: 'So funktioniert der Kauf — Sedo-Kauf- und Übertragungsprozess',
+      desc: 'So läuft ein über AI-DOMAIN.AI initiierter Kauf: Domain auswählen, kaufen oder anfragen, Zahlung über Sedo, Übertragung über Sedos Transfer-Service. Kein Checkout hier.',
+      k: 'So funktioniert der Kauf', h: 'Vom Namen zur <em>Übertragung</em>.',
+      lead: `${SITE.sedo.standard.de} AI-DOMAIN.AI hat keinen eigenen Checkout; Kaufvertrag, Zahlung und Übertragung laufen im Sedo-Prozess. Diese Seite erklärt die Schritte, ohne eigene Bedingungen hinzuzufügen.`,
+      steps: [
+        ['1 · Entdecken und auswählen', 'Portfolio durchsehen, Finder oder Kategorien nutzen, Domainseite öffnen. Jede Seite zeigt den EUR-Angebotspreis und ob die Domain bei Sedo für den Sofortkauf gelistet oder auf Anfrage verfügbar ist.'],
+        ['2 · Sofortkauf oder Anfrage', 'Bei Sofortkauf-Domains öffnet „Bei Sedo kaufen“ die Sedo-Angebotsseite der Domain: Der Sofortkaufpreis ist ein verbindlicher Festpreis — keine Verhandlung nötig. Bei Domains „auf Anfrage“ senden Sie eine Nachricht mit dem Domainnamen; der Verkauf wird dann vereinbart und ebenfalls über Sedo abgewickelt. Zum Kauf ist ein kostenloses Sedo-Konto erforderlich.'],
+        ['3 · Zahlung im Sedo-Prozess', 'Nach dem Kauf sendet Sedo eine Zahlungsaufforderung. Sie zahlen auf ein von Sedo bereitgestelltes Konto; Sedo zahlt den Kaufpreis erst an die Verkäuferin aus, wenn die Domain auf Sie übertragen ist. Kommt die Übertragung nicht zustande, wird der Betrag laut Sedo zurückerstattet. Für bestimmte Zahlungsarten kann Sedo eine Gebühr erheben; laut Sedo ist die Überweisung für Käufer gebührenfrei.'],
+        ['4 · Übertragung über Sedos Transfer-Service', 'Sedos Transfer-Spezialisten arbeiten mit beiden Seiten und deren Registraren zusammen; die Domain wird zu einem kompatiblen Registrar Ihrer Wahl übertragen und auf Ihr Konto eingetragen. Für gängige Endungen nennt Sedo durchschnittlich ein bis zehn Werktage, abhängig von den beteiligten Registraren; weniger übliche Endungen können länger dauern.'],
+        ['5 · Abschluss', 'Die Übertragung ist abgeschlossen, wenn die Domain in Ihrem Registrar-Konto registriert ist. Danach zahlt Sedo den Kaufpreis an die Verkäuferin aus. Ab dann verlängern Sie die Domain jährlich bei Ihrem eigenen Registrar.'],
+      ],
+      whoK: 'Wer ist wer', who: [
+        ['AI-DOMAIN.AI', 'Die Portfolio-Website der Inhaberin Diana Bauer. Sie stellt die Domains vor und verlinkt auf Sedo. Sie schließt keine Verträge und nimmt keine Zahlungen entgegen.'],
+        ['Sedo', 'Der externe Marktplatz und Transfer-Service. ' + SITE.sedo.role.de + ' ' + SITE.sedo.entities.de + ' Es gelten die Nutzungsbedingungen von Sedo.'],
+        ['Sie', 'Der Käufer: Sie schließen den Kauf im Sedo-Prozess ab, zahlen über Sedo und erhalten die Domain bei Ihrem Registrar.'],
+      ],
+      priceK: 'Preise', price: LEGAL.priceNotice.de + ' ' + LEGAL.usdNotice.de,
+      noTerms: 'AI-DOMAIN.AI veröffentlicht keine eigenen Allgemeinen Geschäftsbedingungen für den Verkauf: Der Vertrag kommt im Sedo-Prozess zu Sedos Bedingungen zustande und wird dort abgewickelt. Diese Seite ist eine Information, kein Vertrag.',
+      links: 'Sedo: Transfer-Service', faqK: 'Fragen',
+    };
+const jsonld = [breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.how'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld} ogType="article">
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.how'), path }]} />
+      <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+      <ol class="plain steps">{T.steps.map(([h, p]) => <li class="card step rv"><h2>{h}</h2><p>{p}</p></li>)}</ol>
+      <div class="grid grid-3 mt-3">{T.who.map(([h, p]) => <div class="card rv"><div class="kicker">{T.whoK}</div><h3>{h}</h3><p class="muted small">{p}</p></div>)}</div>
+      <div class="card glass mt-3 rv">
+        <div class="kicker">{T.priceK}</div>
+        <p class="small">{T.price}</p>
+        <p class="small muted">{T.noTerms}</p>
+        <p class="small"><a href={SITE.sedo.transferInfo[lang]} target="_blank" rel="noopener">{T.links} →</a> · <a href={SITE.sedo.terms} target="_blank" rel="noopener">Sedo Marketplace Terms →</a></p>
+      </div>
+      <div class="mt-3"><h2 class="h-sm">{T.faqK}</h2><FaqList lang={lang} /></div>
+    </div>
+  </section>
+</Base>
+<style>
+  .steps { display: grid; gap: 14px; max-width: 900px; }
+  .step h2 { font-size: 1.35rem; margin-bottom: 8px; }
+  .step p { margin: 0; color: var(--ink-2); }
+  .h-sm { font-size: 1.5rem; margin-bottom: 14px; }
+</style>

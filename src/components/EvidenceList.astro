@@ -1,0 +1,27 @@
+---
+import { SALES } from '../i18n/market';
+import type { Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
+interface Props { lang: Lang; limit?: number }
+const { lang, limit = SALES.length } = Astro.props;
+const rows = SALES.slice(0, limit);
+---
+<div class="evidence-list">
+  {rows.map((s) => (
+    <div class="evidence rv">
+      <div>
+        <span class="dn notranslate" translate="no">{s.domain}</span>
+        <div class="meta">{s.when[lang]} · {s.venue[lang]}</div>
+      </div>
+      <div class="amt">{s.amount}</div>
+      <div class="meta">
+        <span class="small">{ui(lang, 'label.source')}: {s.source.url ? <a href={s.source.url} rel="noopener" target="_blank">{s.source.label}</a> : s.source.label}</span>
+        {s.note && <div class="small">{s.note[lang]}</div>}
+      </div>
+    </div>
+  ))}
+</div>
+<style>
+  .evidence .dn { font-size: 1.15rem; color: var(--ink); }
+  .evidence a { color: var(--blue-2); text-decoration: underline; text-underline-offset: 3px; }
+</style>

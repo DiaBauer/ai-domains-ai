@@ -1,0 +1,4 @@
+{
+  "_note": "Central status workflow. Keys = domain. Values: available | inquiry | sold. Empty = derived from sedo-live.json (live → available/buy_now, otherwise inquiry). Set a domain to sold here to remove CTAs, mark cards, exclude from bundles and de-prioritise in the sitemap.",
+  "overrides": {}
+}

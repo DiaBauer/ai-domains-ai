@@ -1,0 +1,59 @@
+---
+import { localePath, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
+import { LEGAL } from '../config/legal';
+import { CONTACT } from '../config/contact';
+import { SITE } from '../config/site';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const explore = [
+  ['/domains/', 'nav.domains'], ['/bundles/', 'nav.bundles'], ['/market/', 'nav.market'], ['/how-it-works/', 'nav.how'], ['/guides/', 'nav.guides'], ['/faq/', 'nav.faq'], ['/about/', 'nav.about'], ['/contact/', 'nav.contact'],
+] as const;
+const legal = [['/imprint/', 'nav.imprint'], ['/privacy/', 'nav.privacy']] as const;
+---
+<footer class="ft">
+  <div class="shell">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <span class="brand-word" translate="no">AI-DOMAIN<span>.AI</span></span>
+        <p class="ft-claim">{lang === 'de' ? '„Die Adresse, die sagt, wer Sie sein werden.“' : '“The address that says who you will become.”'}</p>
+        <p class="small muted">{SITE.sedo.standard[lang]}</p>
+      </div>
+      <div>
+        <h4>{ui(lang, 'footer.explore')}</h4>
+        <ul class="plain ft-links">{explore.map(([p, k]) => <li><a href={localePath(lang, p)}>{ui(lang, k)}</a></li>)}</ul>
+      </div>
+      <div>
+        <h4>{ui(lang, 'footer.operator')}</h4>
+        <address class="ft-addr">
+          {SITE.brand}<br />{LEGAL.operator.name}<br />{LEGAL.operator.street}<br />{LEGAL.operator.postalCode} {LEGAL.operator.city}<br />{LEGAL.operator.country[lang]}<br />
+          <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a>
+        </address>
+      </div>
+      <div>
+        <h4>{ui(lang, 'footer.legal')}</h4>
+        <ul class="plain ft-links">{legal.map(([p, k]) => <li><a href={localePath(lang, p)}>{ui(lang, k)}</a></li>)}</ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <span>{ui(lang, 'footer.rights')}</span>
+      <span class="muted">{LEGAL.priceNoticeShort[lang]} · {lang === 'de' ? 'USD zur Orientierung (1,16, Sep 2026)' : 'USD for orientation (1.16, Sep 2026)'}</span>
+    </div>
+  </div>
+</footer>
+<style>
+  .ft { border-top: 1px solid var(--rule); padding: clamp(40px, 6vw, 72px) 0 32px; background: var(--bg-2); }
+  .ft-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 32px; }
+  .brand-word { font-family: var(--font-ui); font-weight: 700; letter-spacing: .12em; font-size: .92rem; }
+  .brand-word span { color: var(--blue); }
+  .ft-claim { font-family: var(--font-display); font-style: italic; color: var(--ink-2); margin: 14px 0 12px; font-size: 1.05rem; max-width: 30ch; }
+  .ft h4 { font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+  .ft-links li { margin: 6px 0; }
+  .ft-links a { color: var(--ink-2); font-size: .92rem; }
+  .ft-links a:hover { color: var(--ink); }
+  .ft-addr { font-style: normal; color: var(--ink-2); font-size: .92rem; line-height: 1.7; }
+  .ft-addr a { color: var(--blue-2); }
+  .ft-bot { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--rule); font-size: .82rem; color: var(--ink-2); }
+  @media (max-width: 900px) { .ft-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .ft-grid { grid-template-columns: 1fr; gap: 24px; } }
+</style>

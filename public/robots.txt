@@ -1,0 +1,6 @@
+# AI-DOMAIN.AI — production robots. Preview deployments (*.vercel.app) are noindex via HTTP header (vercel.json).
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://ai-domain.ai/sitemap-index.xml

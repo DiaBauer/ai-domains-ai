@@ -1,0 +1,100 @@
+---
+import Base from '../../layouts/Base.astro';
+import DomainCard from '../DomainCard.astro';
+import SectionHead from '../SectionHead.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { sortedDomains, STATS, inCategory } from '../../lib/domains';
+import { CATEGORIES } from '../../i18n/categories';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { LEGAL } from '../../config/legal';
+import { collectionPage, breadcrumbs } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/domains/');
+const T = lang === 'en'
+  ? { title: `All ${STATS.count} premium AI domains — portfolio directory`, desc: `The complete AI-DOMAIN.AI portfolio: ${STATS.count} premium AI domains across seven categories with EUR asking prices, buyer profiles and the Sedo purchase path.`,
+      k: 'Portfolio', h: `The <em>portfolio</em>.`, lead: `${STATS.count} domains, ${STATS.tlds} extensions, one owner. Filter by category, tier or availability — every name has its own page.`,
+      fk: 'Finder', fh: 'Narrow by what you <em>build</em>.', fl: 'A deterministic selector: pick a use case and the strongest names for it are listed first.', tiers: 'Tier S = category-defining names · A = strong exact-match names · B = descriptive and regional names',
+      modes: { buy_now: 'Buy Now at Sedo', inquiry: 'Enquiry', sold: 'Sold' } }
+  : { title: `Alle ${STATS.count} Premium-KI-Domains — Portfolio-Verzeichnis`, desc: `Das vollständige AI-DOMAIN.AI-Portfolio: ${STATS.count} Premium-KI-Domains in sieben Kategorien mit EUR-Angebotspreisen, Käuferprofilen und dem Sedo-Kaufweg.`,
+      k: 'Portfolio', h: `Das <em>Portfolio</em>.`, lead: `${STATS.count} Domains, ${STATS.tlds} Endungen, eine Inhaberin. Nach Kategorie, Stufe oder Verfügbarkeit filtern — jeder Name hat eine eigene Seite.`,
+      fk: 'Finder', fh: 'Eingrenzen nach dem, was Sie <em>bauen</em>.', fl: 'Ein deterministischer Selektor: Anwendungsfall wählen, die stärksten Namen dafür stehen zuerst.', tiers: 'Stufe S = kategoriebestimmende Namen · A = starke Exact-Match-Namen · B = beschreibende und regionale Namen',
+      modes: { buy_now: 'Sofortkauf bei Sedo', inquiry: 'Auf Anfrage', sold: 'Verkauft' } };
+const jsonld = [collectionPage(lang, T.title, path, T.desc), breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.domains'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.domains'), path }]} />
+      <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+
+      <div class="finder glass" id="finder">
+        <div class="finder-head"><div class="kicker">{T.fk}</div><h2 set:html={T.fh} /><p class="muted small">{T.fl}</p></div>
+        <div class="finder-opts" role="group" aria-label={T.fk}>
+          {CATEGORIES.map((c) => <a class="fopt" id={`finder-${c.slug}`} href={`#dir`} data-cat={c.slug}><span class="kicker">{c.short[lang]}</span><span>{c.useCase[lang]}</span><span class="n">{inCategory(c.slug).length}</span></a>)}
+        </div>
+      </div>
+
+      <form class="filters" id="filters" role="search" aria-label={ui(lang, 'label.search')} onsubmit="return false">
+        <div class="field grow"><label for="q">{ui(lang, 'label.search')}</label><input id="q" type="search" name="q" autocomplete="off" placeholder="agent, health, .bayern …" /></div>
+        <div class="field"><label for="f-cat">{ui(lang, 'label.filterCategory')}</label>
+          <select id="f-cat" name="cat"><option value="">{ui(lang, 'label.all')}</option>{CATEGORIES.map((c) => <option value={c.slug}>{c.name[lang]}</option>)}</select></div>
+        <div class="field"><label for="f-tier">{ui(lang, 'label.filterTier')}</label>
+          <select id="f-tier" name="tier"><option value="">{ui(lang, 'label.all')}</option><option value="S">S</option><option value="A">A</option><option value="B">B</option></select></div>
+        <div class="field"><label for="f-mode">{ui(lang, 'label.filterMode')}</label>
+          <select id="f-mode" name="mode"><option value="">{ui(lang, 'label.all')}</option><option value="buy_now">{T.modes.buy_now}</option><option value="inquiry">{T.modes.inquiry}</option>{STATS.sold > 0 && <option value="sold">{T.modes.sold}</option>}</select></div>
+        <button class="btn btn-tertiary" type="button" id="f-reset">{ui(lang, 'label.reset')}</button>
+      </form>
+      <p class="small muted"><span id="count">{STATS.count}</span> {ui(lang, 'label.results')} · {T.tiers}</p>
+
+      <div class="grid grid-3" id="dir" aria-live="polite">
+        {sortedDomains.map((d) => <div class="cell"><DomainCard domain={d} lang={lang} /></div>)}
+      </div>
+      <p class="empty muted" id="empty" hidden>{ui(lang, 'label.noResults')}</p>
+      <p class="small muted mt-2">{LEGAL.priceNotice[lang]} {LEGAL.usdNotice[lang]}</p>
+    </div>
+  </section>
+</Base>
+<script>
+  // Directory filtering: all 75 cards are static HTML; JS only shows/hides. Finder option = category preset.
+  const q = document.getElementById('q') as HTMLInputElement;
+  const cat = document.getElementById('f-cat') as HTMLSelectElement;
+  const tier = document.getElementById('f-tier') as HTMLSelectElement;
+  const mode = document.getElementById('f-mode') as HTMLSelectElement;
+  const cells = Array.from(document.querySelectorAll<HTMLElement>('#dir .cell'));
+  const count = document.getElementById('count')!;
+  const empty = document.getElementById('empty')!;
+  const apply = () => {
+    const term = q.value.trim().toLowerCase();
+    let n = 0;
+    for (const cell of cells) {
+      const c = cell.querySelector<HTMLElement>('.dcard')!;
+      const ok = (!term || (c.dataset.search || '').includes(term)) && (!cat.value || c.dataset.category === cat.value) && (!tier.value || c.dataset.tier === tier.value) && (!mode.value || c.dataset.mode === mode.value);
+      cell.hidden = !ok; if (ok) n++;
+    }
+    count.textContent = String(n); empty.hidden = n > 0;
+    document.querySelectorAll<HTMLElement>('.fopt').forEach((o) => o.classList.toggle('on', !!cat.value && o.dataset.cat === cat.value));
+  };
+  [q, cat, tier, mode].forEach((el) => el.addEventListener('input', apply));
+  document.getElementById('f-reset')?.addEventListener('click', () => { q.value = ''; cat.value = ''; tier.value = ''; mode.value = ''; apply(); });
+  document.querySelectorAll<HTMLElement>('.fopt').forEach((o) => o.addEventListener('click', () => { cat.value = o.dataset.cat || ''; apply(); }));
+  // Deep link: /domains/#finder-<category> or ?cat=
+  const hash = location.hash.replace('#finder-', '');
+  const params = new URLSearchParams(location.search);
+  const preset = params.get('cat') || (hash && hash !== location.hash ? hash : '');
+  if (preset && Array.from(cat.options).some((o) => o.value === preset)) { cat.value = preset; apply(); document.getElementById('dir')?.scrollIntoView({ block: 'start' }); }
+</script>
+<style>
+  .finder { padding: clamp(18px, 3vw, 30px); margin-bottom: 28px; }
+  .finder-head h2 { font-size: 1.6rem; margin: 6px 0 4px; }
+  .finder-opts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin-top: 16px; }
+  .fopt { display: flex; flex-direction: column; gap: 4px; padding: 12px 14px; border: 1px solid var(--rule); border-radius: 6px; color: var(--ink-2); font-size: .88rem; background: color-mix(in srgb, var(--surface) 60%, transparent); position: relative; }
+  .fopt:hover, .fopt.on { border-color: var(--blue); color: var(--ink); }
+  .fopt .n { position: absolute; right: 12px; top: 10px; font-size: .75rem; color: var(--muted); }
+  .filters { display: grid; grid-template-columns: 2fr 1.2fr 1fr 1.2fr auto; gap: 12px; align-items: end; margin-bottom: 10px; }
+  .cell[hidden] { display: none; }
+  .empty { padding: 32px 0; }
+  @media (max-width: 1080px) { .finder-opts { grid-template-columns: repeat(2, minmax(0, 1fr)); } .filters { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .finder-opts, .filters { grid-template-columns: 1fr; } }
+</style>

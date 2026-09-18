@@ -1,0 +1,110 @@
+---
+import { heroDomains, formatEur, STATS } from '../lib/domains';
+import { localePath, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
+import { SITE } from '../config/site';
+import LogoMark from './LogoMark.astro';
+import DomainName from './DomainName.astro';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const picks = heroDomains();
+const T = lang === 'en'
+  ? {
+      kicker: `Curated portfolio · ${STATS.count} premium AI domains`,
+      h1a: 'The domain name decides whether you are ',
+      h1em: 'the category',
+      h1b: ' — or interchangeable.',
+      lead: 'A curated portfolio of premium AI domains from a single, long-held owner’s inventory: .ai names and category terms for founders, companies and portfolios. No brokerage, no marketplace for other sellers.',
+      trust: ['Own portfolio only', 'Sedo transfer service', 'Prices in EUR', 'No checkout on this site'],
+      selected: 'Selected assets',
+      selectedSub: 'Six names from the top tier',
+      all: ui('en', 'cta.allDomains'),
+    }
+  : {
+      kicker: `Kuratiertes Portfolio · ${STATS.count} Premium-KI-Domains`,
+      h1a: 'Der Domain-Name entscheidet, ob Sie ',
+      h1em: 'die Kategorie',
+      h1b: ' sind — oder austauschbar.',
+      lead: 'Ein kuratiertes Portfolio von Premium-KI-Domains aus dem eigenen, langjährigen Bestand: .ai-Namen und Kategoriebegriffe für Gründer, Unternehmen und Portfolios. Keine Vermittlung, kein Marktplatz für fremde Verkäufer.',
+      trust: ['Nur eigener Bestand', 'Sedo Transfer-Service', 'Preise in EUR', 'Kein Checkout auf dieser Seite'],
+      selected: 'Ausgewählte Assets',
+      selectedSub: 'Sechs Namen aus der obersten Stufe',
+      all: ui('de', 'cta.allDomains'),
+    };
+---
+<section class="hero mesh" aria-labelledby="hero-title">
+  <div class="shell hero-in">
+    <div class="hero-l">
+      <LogoMark size={236} class="hero-logo rv" />
+      <div class="kicker rv">{T.kicker}</div>
+      <h1 id="hero-title" class="rv">{T.h1a}<em class="sweep-text">{T.h1em}</em>{T.h1b}</h1>
+      <p class="lead rv">{T.lead}</p>
+      <p class="sedo rv"><b>{SITE.sedo.standard[lang]}</b></p>
+      <div class="cta rv">
+        <a class="btn btn-primary" href={localePath(lang, '/domains/')}>{ui(lang, 'cta.portfolio')} <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn btn-secondary" href={localePath(lang, '/how-it-works/')}>{ui(lang, 'nav.how')}</a>
+      </div>
+      <ul class="plain trust rv">{T.trust.map((t) => <li>{t}</li>)}</ul>
+    </div>
+    <aside class="hero-r rv" aria-label={T.selected}>
+      <div class="glass sel">
+        <div class="sel-head">
+          <div><div class="kicker">{T.selected}</div><div class="small muted">{T.selectedSub}</div></div>
+          <a class="btn btn-tertiary btn-sm" href={localePath(lang, '/domains/')}>{T.all}</a>
+        </div>
+        <ul class="plain sel-list">
+          {picks.map((d) => (
+            <li>
+              <a class="sel-row" href={localePath(lang, `/domains/${d.slug}/`)}>
+                <DomainName domain={d} class="sel-name" />
+                <span class="sel-meta"><span class="chip chip-tier">{d.tier}</span><span class="sel-price">{formatEur(d.priceEur, lang)}</span></span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+<style>
+  .hero { padding: clamp(40px, 6vw, 88px) 0 clamp(40px, 6vw, 80px); overflow: hidden; }
+  .hero-in { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(28px, 5vw, 72px); align-items: center; }
+  .hero-l :global(.hero-logo) { margin-bottom: 26px; }
+  .hero h1 { font-size: clamp(2.1rem, 4.2vw, 3.6rem); max-width: 16ch; margin-bottom: 20px; }
+  .hero .lead { margin-bottom: 14px; }
+  .sedo { color: var(--ink-2); font-size: .98rem; margin-bottom: 26px; }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 26px; }
+  .trust { display: flex; gap: 8px 22px; flex-wrap: wrap; font-size: .8rem; color: var(--muted); letter-spacing: .02em; }
+  .trust li::before { content: '·'; color: var(--gold); margin-right: 8px; }
+  .sel { padding: 22px 22px 14px; box-shadow: var(--shadow); }
+  .sel-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+  .sel-list li + li { border-top: 1px solid var(--rule); }
+  .sel-row { display: flex; justify-content: space-between; align-items: center; gap: 14px; padding: 13px 4px; color: var(--ink); border-radius: 4px; }
+  .sel-row:hover { background: color-mix(in srgb, var(--blue) 8%, transparent); color: var(--ink); }
+  .sel-name { font-size: 1.05rem; }
+  .sel-meta { display: inline-flex; align-items: center; gap: 12px; flex: none; }
+  .sel-price { font-family: var(--font-display); font-size: 1.08rem; }
+  /* Light sweep on the emphasised headline phrase — same motion language as the logo sweep, delayed slightly */
+  .sweep-text { color: inherit; }
+  @media (min-width: 721px) and (prefers-reduced-motion: no-preference) {
+    .sweep-text {
+      background: linear-gradient(105deg, var(--ink) 0 38%, var(--sweep-text) 50%, var(--ink) 62% 100%);
+      background-size: 320% 100%; background-position: 100% 0;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      animation: text-sweep 22s cubic-bezier(.4,.05,.55,.95) 4.9s 3 both;
+    }
+  }
+  @keyframes text-sweep { 0% { background-position: 100% 0; } 16% { background-position: 0% 0; } 100% { background-position: 0% 0; } }
+  :global(:root) { --sweep-text: #f3e2b0; }
+  :global(:root[data-theme='light']) { --sweep-text: #2a5bd7; }
+  @media (max-width: 960px) {
+    .hero-in { grid-template-columns: 1fr; }
+    .hero h1 { max-width: none; }
+  }
+  @media (max-width: 720px) {
+    .hero { padding-top: 28px; }
+    .hero-l :global(.hero-logo) { width: 170px; margin-bottom: 18px; }
+    .sel { padding: 16px 14px 8px; }
+    .sel-name { font-size: .98rem; }
+  }
+</style>

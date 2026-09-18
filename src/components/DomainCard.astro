@@ -1,0 +1,42 @@
+---
+import type { DomainRecord } from '../lib/domains';
+import { formatEur, approxUsd } from '../lib/domains';
+import { localePath, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
+import { categoryBySlug } from '../i18n/categories';
+import DomainName from './DomainName.astro';
+import SaleCta from './SaleCta.astro';
+interface Props { domain: DomainRecord; lang: Lang; glass?: boolean; showUsd?: boolean; compact?: boolean }
+const { domain: d, lang, glass = false, showUsd = false, compact = false } = Astro.props;
+const href = localePath(lang, `/domains/${d.slug}/`);
+const cat = categoryBySlug(d.category)!;
+const priceLabel = d.saleMode === 'buy_now' ? ui(lang, 'label.buyNow') : d.saleMode === 'inquiry' ? ui(lang, 'label.inquiry') : ui(lang, 'label.sold');
+---
+<article
+  class={`card dcard ${glass ? 'glass' : ''} ${d.saleMode === 'sold' ? 'is-sold' : ''}`}
+  data-domain={d.domain}
+  data-category={d.category}
+  data-tier={d.tier}
+  data-mode={d.saleMode}
+  data-price={d.priceEur}
+  data-search={`${d.domain} ${d.pitch[lang]} ${d.buyers[lang]} ${cat.name[lang]}`.toLowerCase()}
+>
+  <div class="meta">
+    <span class="chip chip-tier">{ui(lang, 'label.tier')} {d.tier}</span>
+    <a class="chip" href={localePath(lang, `/categories/${d.category}/`)}>{cat.short[lang]}</a>
+  </div>
+  <h3 class="dcard-title"><a href={href}><DomainName domain={d} /></a></h3>
+  {!compact && <p class="pitch">{d.pitch[lang]}</p>}
+  <div class="foot">
+    <div>
+      <div class="price-label">{ui(lang, 'label.askingPrice')} · {priceLabel}</div>
+      <div class="price">{formatEur(d.priceEur, lang)}{showUsd && <span class="usd">{approxUsd(d.priceEur)}</span>}</div>
+    </div>
+    <SaleCta domain={d} lang={lang} size="sm" />
+  </div>
+</article>
+<style>
+  .dcard-title { font-family: var(--font-ui); font-size: 1.15rem; margin: 0; font-weight: 500; }
+  .dcard-title a { color: var(--ink); }
+  .dcard-title a:hover { color: var(--blue-2); }
+</style>

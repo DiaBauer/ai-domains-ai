@@ -1,0 +1,15 @@
+---
+import { localePath, type Lang } from '../lib/i18n';
+import { ui } from '../i18n/ui';
+interface Props { lang: Lang; items: { name: string; path: string }[] }
+const { lang, items } = Astro.props;
+---
+<nav class="crumbs" aria-label={lang === 'de' ? 'Brotkrumen' : 'Breadcrumb'}>
+  <a href={localePath(lang, '/')}>{ui(lang, 'label.breadcrumbHome')}</a>
+  {items.map((it, i) => (
+    <>
+      <span aria-hidden="true">/</span>
+      {i === items.length - 1 ? <span aria-current="page">{it.name}</span> : <a href={it.path}>{it.name}</a>}
+    </>
+  ))}
+</nav>

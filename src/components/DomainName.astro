@@ -1,0 +1,8 @@
+---
+// Renders a domain name as a literal asset: never translated (translate="no" + notranslate), TLD accented.
+import type { DomainRecord } from '../lib/domains';
+interface Props { domain: DomainRecord | { base: string; tld: string; domain: string }; class?: string; tag?: string }
+const { domain, class: cls = '', tag = 'span' } = Astro.props;
+const Tag = tag as any;
+---
+<Tag class={`dn notranslate${cls ? " " + cls : ""}`} translate="no" lang="zxx">{domain.base}<span class="t">{domain.tld}</span></Tag>

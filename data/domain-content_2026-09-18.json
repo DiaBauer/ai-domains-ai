@@ -1,0 +1,2562 @@
+{
+  "meta": {
+    "file": "domain-content_2026-09-18.json",
+    "created": "2026-09-18",
+    "purpose": "D5 content preparation — individual EN/DE texts for 75 domains, prepared for Diana's review (nothing published)",
+    "status": "DRAFT — WAITING FOR DIANA (review/approval)",
+    "rules": [
+      "no invented facts (no traffic, age, sales or demand figures)",
+      "no return/valuation promises (D17)",
+      "no legal/compliance claims about domains",
+      "no text clones — each description individual; domain families explain their variant",
+      "market_context only where verified (Safe List): .ai registrations, 10 domains",
+      "prices/tiers/categories/status copied unchanged from the site dataset D (index.html @ d36729c)",
+      "status derived from SEDO_LIVE set in index.html (58 live) — verify against Sedo account before use"
+    ],
+    "sources": [
+      "index.html const D (75 entries)",
+      "Sedo_Content_2026-09-18/sedo-angebotstexte_CLEAN_2026-09-18.csv",
+      "MARKET-CLAIMS-SAFE-LIST.md",
+      "SOURCE-VERIFICATION_V2_SEDO.md"
+    ],
+    "counts": {
+      "domains": 75,
+      "sedo_live": 58,
+      "with_market_context": 10,
+      "buyers_en_added": 25,
+      "ideas_en_rewritten": 74,
+      "pitch_en_changed": 37,
+      "pitch_de_changed": 46
+    }
+  },
+  "domains": [
+    {
+      "domain": "bitcoinworld.ai",
+      "tld": ".ai",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "S",
+      "price_eur": 14500,
+      "badge": "hot",
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Bitcoin and AI in a single name.",
+      "pitch_de": "Bitcoin und KI in einem Namen.",
+      "description_en": "bitcoinworld.ai combines the best-known cryptocurrency with the .ai extension. The name reads as a destination — a “world” of Bitcoin — rather than a single tool, which suits portals, communities and multi-product platforms. It works for an AI-assisted market analysis service, a news and education hub for crypto and machine learning, or a portfolio assistant for digital assets. Both keywords are globally understood and need no translation.",
+      "description_de": "bitcoinworld.ai verbindet die bekannteste Kryptowährung mit der Endung .ai. Der Name liest sich als Ort — eine „Welt“ rund um Bitcoin — und nicht als einzelnes Werkzeug; das passt zu Portalen, Communities und Plattformen mit mehreren Produkten. Denkbar sind ein KI-gestützter Marktanalysedienst, ein Nachrichten- und Lernangebot zu Krypto und maschinellem Lernen oder ein Portfolio-Assistent für digitale Vermögenswerte. Beide Begriffe werden weltweit verstanden und brauchen keine Übersetzung.",
+      "ideas_en": [
+        "Trading platform with AI-assisted market analysis",
+        "News and education hub for crypto and AI",
+        "Portfolio assistant for digital assets"
+      ],
+      "ideas_de": [
+        "Handelsplattform mit KI-gestützter Marktanalyse",
+        "Nachrichten- und Lernportal für Krypto und KI",
+        "Portfolio-Assistent für digitale Vermögenswerte"
+      ],
+      "buyers_en": "Crypto AI platforms, trading bots, Web3 projects",
+      "buyers_de": "Crypto-AI-Plattformen, Trading-Bots, Web3-Projekte",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Pitch DE softened (‘heißesten Keywords’ removed — opinion/hype). Ideas from D (individual). Buyers from D.",
+      "word_count": {
+        "description_en": 67,
+        "description_de": 66
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "asi.direct",
+      "tld": ".direct",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "S",
+      "price_eur": 10000,
+      "badge": "hot",
+      "status": "sedo_listing_pending",
+      "pitch_en": "ASI — artificial superintelligence. Three letters, direct.",
+      "pitch_de": "ASI — Artificial Superintelligence. Drei Zeichen, direkt.",
+      "description_en": "asi.direct is a three-letter acronym on a descriptive extension. “ASI” is the common shorthand for artificial superintelligence, the stage beyond AGI that research labs, safety institutes and commentators discuss. The .direct ending adds a sense of immediacy and can be read as a call to action. Suitable for a research institute or think tank, a publication on superintelligence safety, or as the brand of a frontier lab. Compared with asi.place in the same portfolio, .direct signals action while .place signals a venue.",
+      "description_de": "asi.direct ist ein Drei-Buchstaben-Kürzel auf einer beschreibenden Endung. „ASI“ steht für Artificial Superintelligence — die Stufe nach AGI, über die Forschungslabore, Sicherheitsinstitute und Fachmedien diskutieren. Die Endung .direct vermittelt Unmittelbarkeit und lässt sich als Aufforderung lesen. Geeignet für ein Forschungsinstitut oder einen Think-Tank, eine Publikation zur ASI-Sicherheitsforschung oder als Markenname eines Frontier-Labs. Im Vergleich zu asi.place aus demselben Portfolio steht .direct für Handlung, .place für den Ort.",
+      "ideas_en": [
+        "Research institute or think tank on superintelligence",
+        "Publication platform for ASI safety research",
+        "Brand name for a frontier lab"
+      ],
+      "ideas_de": [
+        "Forschungsinstitut oder Think-Tank zu Superintelligenz",
+        "Publikationsplattform für ASI-Sicherheitsforschung",
+        "Markenname für ein Frontier-Lab"
+      ],
+      "buyers_en": "AI safety institutes, research labs, science publishers",
+      "buyers_de": "KI-Sicherheitsinstitute, Forschungslabore, Wissenschaftsverlage",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from individual DE ideas (EN in D was a category clone). Buyers newly added (missing in D) — derived from ideas.",
+      "word_count": {
+        "description_en": 82,
+        "description_de": 67
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "shoppingworld.ai",
+      "tld": ".ai",
+      "registrar": "GoDaddy",
+      "category": "ecommerce",
+      "category_target": "business-ai",
+      "tier": "S",
+      "price_eur": 9500,
+      "badge": "hot",
+      "status": "sedo_listing_pending",
+      "pitch_en": "AI shopping, told in one name.",
+      "pitch_de": "KI-Shopping, in einem Namen erzählt.",
+      "description_en": "shoppingworld.ai names a whole category rather than a single feature: a world of shopping, run with artificial intelligence. That breadth suits a consumer-facing shopping assistant, a recommendation platform that serves several retailers, or a product search engine for marketplaces. The words are plain English, easy to say aloud and easy to remember, and the .ai extension states the technology without further explanation.",
+      "description_de": "shoppingworld.ai benennt eine ganze Kategorie statt einer einzelnen Funktion: eine Welt des Einkaufens, betrieben mit künstlicher Intelligenz. Diese Breite passt zu einem Einkaufsassistenten für Verbraucher, einer Empfehlungsplattform für mehrere Händler oder einer Produktsuche für Marktplätze. Die Wörter sind einfaches Englisch, leicht auszusprechen und zu merken; die Endung .ai benennt die Technologie ohne weitere Erklärung.",
+      "ideas_en": [
+        "Shopping assistant for consumers",
+        "Platform for personalised product recommendations",
+        "Product search for retailers and marketplaces"
+      ],
+      "ideas_de": [
+        "Einkaufsassistent für Verbraucher",
+        "Plattform für personalisierte Produktempfehlungen",
+        "Produktsuche für Händler und Marktplätze"
+      ],
+      "buyers_en": "E-commerce platforms, retail tech, shopping assistants",
+      "buyers_de": "E-Commerce-Plattformen, Retail-Tech, Shopping-Assistenten",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Pitch DE rewritten to match EN (old DE ‘nächste große Anwendungsmarkt’ = forecast). Ideas/buyers from D.",
+      "word_count": {
+        "description_en": 62,
+        "description_de": 54
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "agi-agent.ai",
+      "tld": ".ai",
+      "registrar": "GoDaddy",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "S",
+      "price_eur": 8500,
+      "badge": "hot",
+      "status": "sedo_listing_pending",
+      "pitch_en": "AGI and agent — two core terms of current AI, in one name.",
+      "pitch_de": "AGI und Agent — zwei Kernbegriffe der aktuellen KI in einem Namen.",
+      "description_en": "agi-agent.ai pairs “AGI” (artificial general intelligence) with “agent”, the word used for software that acts autonomously on a user's behalf. Together they describe a product category that many labs and start-ups are working towards. The hyphen keeps both terms readable. The name fits a developer platform for autonomous agents, a research project at the AGI frontier, or the brand of an agent start-up that wants its ambition in the name.",
+      "description_de": "agi-agent.ai kombiniert „AGI“ (Artificial General Intelligence) mit „Agent“, dem Begriff für Software, die eigenständig im Auftrag von Nutzern handelt. Zusammen beschreiben sie eine Produktkategorie, an der viele Labore und Start-ups arbeiten. Der Bindestrich hält beide Begriffe lesbar. Der Name passt zu einer Entwicklerplattform für autonome Agenten, einem Forschungsprojekt an der Schwelle zu AGI oder als Marke eines Agenten-Start-ups, das seinen Anspruch im Namen trägt.",
+      "ideas_en": [
+        "Developer platform for autonomous agents",
+        "Research project at the AGI frontier",
+        "Brand name for an agent start-up"
+      ],
+      "ideas_de": [
+        "Entwicklerplattform für autonome Agenten",
+        "Forschungsprojekt an der Schwelle zu AGI",
+        "Markenname für ein Agenten-Start-up"
+      ],
+      "buyers_en": "AGI platforms, agent start-ups, research spin-offs",
+      "buyers_de": "AGI-Plattformen, Agent-Start-ups, Forschungs-Spin-offs",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Pitch rewritten — old ‘two of the most expensive keywords of 2026’ is NOT VERIFIED (no price-per-keyword source). Ideas/buyers from D.",
+      "word_count": {
+        "description_en": 70,
+        "description_de": 64
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "newtrading.ai",
+      "tld": ".ai",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "S",
+      "price_eur": 8500,
+      "badge": "premium",
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The next generation of trading.",
+      "pitch_de": "Für die nächste Generation von Trading-Plattformen.",
+      "description_en": "newtrading.ai says what a product does and that it is different: new trading, with AI. The name is broad enough for a broker with AI-assisted order execution, a signal service for retail investors, or a learning platform for algorithmic trading. It contains no brand name, no geography and no specific asset class, so it can grow from a single tool into a full platform without renaming.",
+      "description_de": "newtrading.ai sagt, was ein Produkt tut und dass es anders ist: neues Trading, mit KI. Der Name ist breit genug für einen Broker mit KI-gestützter Orderausführung, einen Signaldienst für Privatanleger oder eine Lernplattform für algorithmisches Handeln. Er enthält keinen Markennamen, keine Region und keine bestimmte Anlageklasse und kann daher ohne Umbenennung von einem einzelnen Werkzeug zur vollständigen Plattform wachsen.",
+      "ideas_en": [
+        "Broker with AI-assisted order execution",
+        "Signal service for retail investors",
+        "Learning platform for algorithmic trading"
+      ],
+      "ideas_de": [
+        "Broker mit KI-gestützter Orderausführung",
+        "Signaldienst für Privatanleger",
+        "Lernplattform für algorithmisches Handeln"
+      ],
+      "buyers_en": "Algorithmic trading, retail brokers, fintech",
+      "buyers_de": "Algo-Trading, Retail-Broker, FinTech",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Ideas EN translated from individual DE ideas (EN clone in D). buyers_en in D was German — translated.",
+      "word_count": {
+        "description_en": 66,
+        "description_de": 59
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "asi.place",
+      "tld": ".place",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "S",
+      "price_eur": 8500,
+      "status": "sedo_listing_pending",
+      "pitch_en": "The place for superintelligence.",
+      "pitch_de": "Der Ort für Superintelligenz.",
+      "description_en": "asi.place puts the acronym for artificial superintelligence on an extension that literally means a location. That makes it a natural fit for anything that gathers people or projects: a community platform around superintelligence, an event series or conference brand, or a directory of ASI projects and labs. It is the companion to asi.direct in this portfolio — .place for the venue, .direct for the action.",
+      "description_de": "asi.place setzt das Kürzel für Artificial Superintelligence auf eine Endung, die wörtlich einen Ort bezeichnet. Das passt zu allem, was Menschen oder Projekte zusammenbringt: eine Community-Plattform rund um Superintelligenz, eine Veranstaltungsreihe oder Konferenzmarke oder ein Verzeichnis von ASI-Projekten und Laboren. Im Portfolio ist es das Gegenstück zu asi.direct — .place für den Ort, .direct für die Handlung.",
+      "ideas_en": [
+        "Community platform around superintelligence",
+        "Event series or conference brand",
+        "Directory of ASI projects and labs"
+      ],
+      "ideas_de": [
+        "Community-Plattform rund um Superintelligenz",
+        "Veranstaltungsreihe oder Konferenzmarke",
+        "Verzeichnis von ASI-Projekten und Laboren"
+      ],
+      "buyers_en": "Conference organisers, research communities, AI media",
+      "buyers_de": "Konferenzveranstalter, Forschungs-Communities, KI-Medien",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE. Buyers newly added (missing in D).",
+      "word_count": {
+        "description_en": 65,
+        "description_de": 57
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ki.technology",
+      "tld": ".technology",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "S",
+      "price_eur": 8000,
+      "badge": "premium",
+      "status": "sedo_buy_now_live",
+      "pitch_en": "KI. Technology. Short and clear.",
+      "pitch_de": "KI. Technologie. Kurz und klar.",
+      "description_en": "ki.technology is a two-letter domain: “KI” is the German abbreviation for Künstliche Intelligenz (artificial intelligence). The .technology extension completes the phrase in a way that German-speaking audiences read instantly. It suits the technology division of a German company, a consultancy that introduces AI in mid-sized businesses, or a German-language portal on AI technologies. Two letters before the dot make it one of the shortest names in the portfolio.",
+      "description_de": "ki.technology ist eine Zwei-Buchstaben-Domain: „KI“ steht für Künstliche Intelligenz. Die Endung .technology vervollständigt den Begriff so, dass ihn deutschsprachige Leser sofort verstehen. Geeignet für die Technologiesparte eines deutschen Unternehmens, ein Beratungshaus für KI-Einführung im Mittelstand oder ein deutschsprachiges Fachportal für KI-Technologien. Zwei Zeichen vor dem Punkt machen sie zu einem der kürzesten Namen im Portfolio.",
+      "ideas_en": [
+        "Technology division of a German company",
+        "Consultancy for AI adoption in mid-sized businesses",
+        "German-language portal on AI technologies"
+      ],
+      "ideas_de": [
+        "Technologiesparte eines deutschen Konzerns",
+        "Beratungshaus für KI-Einführung im Mittelstand",
+        "Fachportal für KI-Technologien auf Deutsch"
+      ],
+      "buyers_en": "German technology companies, DACH consultancies, AI media in German",
+      "buyers_de": "Deutsche Technologieunternehmen, DACH-Beratungen, deutschsprachige KI-Medien",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE. Buyers newly added (missing in D).",
+      "word_count": {
+        "description_en": 68,
+        "description_de": 55
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-chatbots.ai",
+      "tld": ".ai",
+      "registrar": "United Domains",
+      "category": "chat",
+      "category_target": "conversational-ai",
+      "tier": "S",
+      "price_eur": 6500,
+      "badge": "hot",
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The category name for conversational AI, on .ai.",
+      "pitch_de": "Der Kategoriename für Conversational AI, auf .ai.",
+      "description_en": "ai-chatbots.ai is the plain category term — AI chatbots — on the matching extension. It describes a whole product class rather than one brand, which suits a provider of conversational customer-service systems, a comparison portal for chatbot solutions, or a toolkit for building in-house assistants. The plural form makes it credible for a marketplace or directory as well as for a vendor.",
+      "description_de": "ai-chatbots.ai ist der schlichte Kategoriebegriff — AI Chatbots — auf der passenden Endung. Er beschreibt eine ganze Produktklasse statt einer einzelnen Marke und passt daher zu einem Anbieter dialogfähiger Kundenservice-Systeme, einem Vergleichsportal für Chatbot-Lösungen oder einem Baukasten für unternehmenseigene Assistenten. Der Plural macht den Namen auch für einen Marktplatz oder ein Verzeichnis glaubwürdig.",
+      "ideas_en": [
+        "Provider of conversational customer-service systems",
+        "Comparison portal for chatbot solutions",
+        "Toolkit for building in-house assistants"
+      ],
+      "ideas_de": [
+        "Anbieter dialogfähiger Kundenservice-Systeme",
+        "Vergleichsportal für Chatbot-Lösungen",
+        "Baukasten für unternehmenseigene Assistenten"
+      ],
+      "buyers_en": "Conversational AI start-ups, chatbot providers, CX platforms",
+      "buyers_de": "Conversational-AI-Start-ups, Chatbot-Anbieter, CX-Plattformen",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Pitch rewritten — old ‘Chat was the most searched term on Sedo in February 2026’ is NOT VERIFIED (no source located in V1). Ideas/buyers from D.",
+      "word_count": {
+        "description_en": 62,
+        "description_de": 53
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-factories.ai",
+      "tld": ".ai",
+      "registrar": "Spaceship",
+      "category": "industry",
+      "category_target": "business-ai",
+      "tier": "S",
+      "price_eur": 6500,
+      "badge": "hot",
+      "status": "sedo_buy_now_live",
+      "pitch_en": "“AI factory” is the term the industry uses for large-scale AI compute.",
+      "pitch_de": "„AI Factory“ ist der Branchenbegriff für KI-Rechenkapazität im großen Maßstab.",
+      "description_en": "ai-factories.ai uses a term that has become established for facilities built to train and run AI models at scale. The plural fits an operator with several sites, a consultancy for industrial AI infrastructure, or a consortium brand for a public or private compute project. The .ai extension matches the subject exactly, and the hyphen keeps “ai” and “factories” separately readable.",
+      "description_de": "ai-factories.ai verwendet einen Begriff, der sich für Einrichtungen etabliert hat, in denen KI-Modelle im großen Maßstab trainiert und betrieben werden. Der Plural passt zu einem Betreiber mit mehreren Standorten, einer Beratung für industrielle KI-Infrastruktur oder einer Konsortialmarke für ein öffentliches oder privates Rechenprojekt. Die Endung .ai trifft das Thema exakt; der Bindestrich hält „ai“ und „factories“ getrennt lesbar.",
+      "ideas_en": [
+        "Operator of data centres for AI training",
+        "Consultancy for industrial AI infrastructure",
+        "Consortium brand for a compute-facility bid"
+      ],
+      "ideas_de": [
+        "Betreiber von Rechenzentren für KI-Training",
+        "Beratung für industrielle KI-Infrastruktur",
+        "Konsortialmarke für eine Rechenzentrums-Bewerbung"
+      ],
+      "buyers_en": "Compute providers, industrial AI, data centres",
+      "buyers_de": "Compute-Anbieter, Industrie-KI, Rechenzentren",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Old pitch named NVIDIA and the EU as users of the term; both are plausible (NVIDIA marketing, EuroHPC ‘AI Factories’) but not in the Safe List → replaced by a neutral formulation; names can be reintroduced if Diana wants them verified. ‘Gigafactory’ removed from idea 3.",
+      "word_count": {
+        "description_en": 60,
+        "description_de": 58
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-office.ai",
+      "tld": ".ai",
+      "registrar": "United Domains",
+      "category": "industry",
+      "category_target": "business-ai",
+      "tier": "S",
+      "price_eur": 6000,
+      "badge": "premium",
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Workplace AI — assistants for documents, meetings and routine office work.",
+      "pitch_de": "Workplace-KI — Assistenz für Dokumente, Termine und Büroroutine.",
+      "description_en": "ai-office.ai describes the application area in two words: artificial intelligence for office work. It fits a productivity suite with built-in agents, an assistant that handles documents and scheduling, or a platform that automates recurring office processes. The name is neutral enough for a start-up and clear enough for a product line inside a larger software company.",
+      "description_de": "ai-office.ai beschreibt das Einsatzgebiet in zwei Wörtern: künstliche Intelligenz für Büroarbeit. Passend für eine Produktivitätssuite mit eingebauten Agenten, ein Assistenzsystem für Dokumente und Termine oder eine Plattform, die wiederkehrende Büroabläufe automatisiert. Der Name ist neutral genug für ein Start-up und klar genug für eine Produktlinie innerhalb eines größeren Softwarehauses.",
+      "ideas_en": [
+        "Productivity suite with built-in agents",
+        "Assistant for documents and scheduling",
+        "Platform for automated office workflows"
+      ],
+      "ideas_de": [
+        "Produktivitätssuite mit eingebauten Agenten",
+        "Assistenzsystem für Dokumente und Termine",
+        "Plattform für automatisierte Büroabläufe"
+      ],
+      "buyers_en": "Productivity software, workplace AI, SaaS",
+      "buyers_de": "Produktivitäts-Software, Workplace-KI, SaaS",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Pitch rewritten without Microsoft/Google reference (competitor name-dropping). Ideas EN translated from DE (EN clone). buyers_en translated.",
+      "word_count": {
+        "description_en": 56,
+        "description_de": 49
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-agentbuilder.ai",
+      "tld": ".ai",
+      "registrar": "Spaceship",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "S",
+      "price_eur": 5500,
+      "badge": "premium",
+      "status": "sedo_listing_pending",
+      "pitch_en": "A builder for AI agents — the product class, in the name.",
+      "pitch_de": "Ein Builder für KI-Agenten — die Produktklasse im Namen.",
+      "description_en": "ai-agentbuilder.ai names the product class directly: a builder for AI agents. That is how no-code tools, developer platforms and agent frameworks describe themselves, so the name matches how customers search. It suits a visual builder for agents without programming, a developer tool for multi-agent systems, or a training platform for agent development. The .ai extension keeps the whole name on-topic.",
+      "description_de": "ai-agentbuilder.ai benennt die Produktklasse direkt: ein Builder für KI-Agenten. So beschreiben sich No-Code-Werkzeuge, Entwicklerplattformen und Agent-Frameworks selbst — der Name entspricht also der Art, wie Kunden suchen. Geeignet für einen visuellen Baukasten für Agenten ohne Programmierung, ein Entwicklerwerkzeug für Multi-Agent-Systeme oder eine Schulungsplattform für Agentenentwicklung. Die Endung .ai hält den gesamten Namen beim Thema.",
+      "ideas_en": [
+        "Visual builder for agents without programming",
+        "Developer tool for multi-agent systems",
+        "Training platform for agent development"
+      ],
+      "ideas_de": [
+        "Baukasten für Agenten ohne Programmierung",
+        "Entwicklerwerkzeug für Multi-Agent-Systeme",
+        "Schulungsplattform für Agentenentwicklung"
+      ],
+      "buyers_en": "No-code tools, developer platforms, agent frameworks",
+      "buyers_de": "No-Code-Tools, Developer-Plattformen, Agent-Frameworks",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Ideas EN translated from DE (EN clone). Pitch/buyers from D. Pitch rewritten 2026-09-18 (final round): \"the term every no-code agent platform is looking for\" removed (unverified demand claim).",
+      "word_count": {
+        "description_en": 60,
+        "description_de": 54
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "stock-exchange.ai",
+      "tld": ".ai",
+      "registrar": "GoDaddy",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "S",
+      "price_eur": 5000,
+      "badge": "premium",
+      "status": "sedo_listing_pending",
+      "pitch_en": "Exchange plus AI — the name explains the business model.",
+      "pitch_de": "Börse plus KI — der Name erklärt das Geschäftsmodell.",
+      "description_en": "stock-exchange.ai combines the generic term for a securities market with the AI extension. It reads as a category name and is understood by investors everywhere. Possible uses include a trading platform with AI analysis, a data provider for exchange information, or a research tool for institutional investors. Any use touching regulated financial services will of course require the appropriate licences — the domain itself carries no such claim.",
+      "description_de": "stock-exchange.ai verbindet den Gattungsbegriff für einen Wertpapiermarkt mit der KI-Endung. Der Name liest sich als Kategoriebezeichnung und wird von Anlegern überall verstanden. Mögliche Nutzungen sind eine Handelsplattform mit KI-Analyse, ein Datenanbieter für Börseninformationen oder ein Research-Werkzeug für institutionelle Anleger. Regulierte Finanzdienstleistungen setzen selbstverständlich die entsprechenden Zulassungen voraus — die Domain selbst enthält keine solche Zusage.",
+      "ideas_en": [
+        "Trading platform with AI analysis",
+        "Data provider for exchange information",
+        "Research tool for institutional investors"
+      ],
+      "ideas_de": [
+        "Handelsplattform mit KI-Analyse",
+        "Datenanbieter für Börseninformationen",
+        "Research-Werkzeug für institutionelle Anleger"
+      ],
+      "buyers_en": "Trading platforms, fintech, broker software",
+      "buyers_de": "Trading-Plattformen, FinTech, Broker-Software",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Ideas EN translated from DE (EN clone). Regulatory sentence added as neutral note (no legal advice).",
+      "word_count": {
+        "description_en": 68,
+        "description_de": 55
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ki-gesundheit.com",
+      "tld": ".com",
+      "registrar": "United Domains",
+      "category": "health",
+      "category_target": "healthcare-ai",
+      "tier": "A",
+      "price_eur": 4600,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Health AI in German, with .com reach.",
+      "pitch_de": "Gesundheits-KI auf Deutsch, mit .com-Reichweite.",
+      "description_en": "ki-gesundheit.com is the German phrase for “AI health” on the world's most familiar extension. It targets the German-speaking healthcare market — Germany, Austria and Switzerland — while the .com ending keeps it credible for international parent companies. Suited to a health portal with AI symptom checking, the digital service of a health insurer, or a platform for practices and clinics. The hyphen follows common German usage for compound terms in domains.",
+      "description_de": "ki-gesundheit.com ist der deutsche Begriff für „AI Health“ auf der weltweit bekanntesten Endung. Der Name zielt auf den deutschsprachigen Gesundheitsmarkt — Deutschland, Österreich, Schweiz — und bleibt durch .com auch für internationale Muttergesellschaften glaubwürdig. Geeignet für ein Gesundheitsportal mit KI-Symptomcheck, das Digitalangebot einer Krankenkasse oder eine Plattform für Praxen und Kliniken. Der Bindestrich entspricht der üblichen Schreibweise deutscher Komposita in Domains.",
+      "ideas_en": [
+        "Health portal with AI symptom check",
+        "Digital service of a health insurer",
+        "Platform for practices and clinics"
+      ],
+      "ideas_de": [
+        "Gesundheitsportal mit KI-Symptomcheck",
+        "Digitalangebot einer Krankenkasse",
+        "Plattform für Praxen und Kliniken"
+      ],
+      "buyers_en": "DACH health platforms, health insurers, telemedicine",
+      "buyers_de": "DACH-Gesundheitsplattformen, Krankenkassen, Telemedizin",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). buyers_en translated from German.",
+      "word_count": {
+        "description_en": 71,
+        "description_de": 61
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ki-voice.de",
+      "tld": ".de",
+      "registrar": "United Domains",
+      "category": "voice",
+      "category_target": "conversational-ai",
+      "tier": "A",
+      "price_eur": 3800,
+      "badge": "hot",
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Voice AI in German — on the German country extension.",
+      "pitch_de": "Voice-AI auf Deutsch — auf der deutschen Länderendung.",
+      "description_en": "ki-voice.de pairs the German abbreviation for AI with “voice” on the .de extension, which German users associate with local providers. It fits a telephone assistant for medical practices and law firms, a speech dialogue system for customer service, or the sales site of a voicebot vendor serving the German market. The mixed German/English form mirrors how the industry actually talks about the product in Germany.",
+      "description_de": "ki-voice.de kombiniert das deutsche KI-Kürzel mit „Voice“ auf der Endung .de, die deutsche Nutzer mit lokalen Anbietern verbinden. Passend für einen Telefonassistenten für Praxen und Kanzleien, ein Sprachdialogsystem für den Kundenservice oder die Vertriebsseite eines Voicebot-Anbieters für den deutschen Markt. Die deutsch-englische Mischform entspricht der Art, wie die Branche in Deutschland tatsächlich über das Produkt spricht.",
+      "ideas_en": [
+        "Telephone assistant for practices and law firms",
+        "Speech dialogue system for customer service",
+        "Sales site of a voicebot provider"
+      ],
+      "ideas_de": [
+        "Telefonassistent für Praxen und Kanzleien",
+        "Sprachdialogsystem für den Kundenservice",
+        "Vertriebsseite eines Voicebot-Anbieters"
+      ],
+      "buyers_en": "DACH voicebot providers, speech assistance, call centres",
+      "buyers_de": "DACH-Voicebot-Anbieter, Sprachassistenz, Callcenter",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN in D was a different generic set). ‘Vertrauen von .de’ (trust claim) replaced by a factual association.",
+      "word_count": {
+        "description_en": 65,
+        "description_de": 56
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-health.ch",
+      "tld": ".ch",
+      "registrar": "United Domains",
+      "category": "health",
+      "category_target": "healthcare-ai",
+      "tier": "A",
+      "price_eur": 3600,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Health AI for the Swiss market.",
+      "pitch_de": "Gesundheits-KI für den Schweizer Markt.",
+      "description_en": "ai-health.ch is the English category term on Switzerland's country extension. English works across all Swiss language regions, and .ch tells patients, hospitals and insurers that the provider is based in Switzerland. Suited to a digital health start-up with a Swiss registered office, a platform for university hospitals, or the digital offering of a Swiss health insurer.",
+      "description_de": "ai-health.ch ist der englische Kategoriebegriff auf der Schweizer Länderendung. Englisch funktioniert in allen Schweizer Sprachregionen, und .ch signalisiert Patienten, Spitälern und Versicherern einen Anbieter mit Sitz in der Schweiz. Geeignet für ein Digital-Health-Start-up mit Schweizer Sitz, eine Plattform für Universitätsspitäler oder das Digitalangebot eines Schweizer Krankenversicherers.",
+      "ideas_en": [
+        "Digital health start-up with a Swiss registered office",
+        "Platform for university hospitals",
+        "Digital offering of a Swiss health insurer"
+      ],
+      "ideas_de": [
+        "Digital-Health-Start-up mit Schweizer Sitz",
+        "Plattform für Universitätsspitäler",
+        "Angebot eines Schweizer Krankenversicherers"
+      ],
+      "buyers_en": "Swiss medtech, digital health start-ups",
+      "buyers_de": "Schweizer MedTech, Digital-Health-Start-ups",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). DE pitch ‘Qualitätssignal inklusive’ replaced by neutral wording. buyers_en translated.",
+      "word_count": {
+        "description_en": 56,
+        "description_de": 46
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "künstliche-intelligenz.bayern",
+      "domain_ascii": "xn--knstliche-intelligenz-8hc.bayern",
+      "tld": ".bayern",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "A",
+      "price_eur": 3600,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Artificial intelligence from Bavaria, spelled out in German.",
+      "pitch_de": "Künstliche Intelligenz aus Bayern — ausgeschrieben.",
+      "description_en": "künstliche-intelligenz.bayern is the full German term for artificial intelligence on the regional extension for Bavaria. It is an internationalised domain name (IDN) with the umlaut “ü”, which browsers display natively; the technical form is xn--knstliche-intelligenz-8hc.bayern. Suited to a state or association initiative promoting AI, an information portal for Bavarian companies, or the umbrella brand of a regional AI alliance. The portfolio also holds artificialintelligence.bayern, the English spelling.",
+      "description_de": "künstliche-intelligenz.bayern ist der vollständige deutsche Begriff auf der regionalen Endung für Bayern. Es handelt sich um eine internationalisierte Domain (IDN) mit dem Umlaut „ü“, die Browser nativ anzeigen; die technische Form lautet xn--knstliche-intelligenz-8hc.bayern. Geeignet für eine Landes- oder Verbandsinitiative zur KI-Förderung, ein Informationsportal für bayerische Unternehmen oder die Dachmarke einer regionalen KI-Allianz. Im Portfolio ist zusätzlich artificialintelligence.bayern, die englische Schreibweise, enthalten.",
+      "ideas_en": [
+        "State or association initiative for AI promotion",
+        "Information portal for Bavarian companies",
+        "Umbrella brand of a regional AI alliance"
+      ],
+      "ideas_de": [
+        "Landes- oder Verbandsinitiative zur KI-Förderung",
+        "Informationsportal für bayerische Unternehmen",
+        "Dachmarke einer regionalen KI-Allianz"
+      ],
+      "buyers_en": "Bavarian public bodies, industry associations, regional AI networks",
+      "buyers_de": "Bayerische öffentliche Stellen, Verbände, regionale KI-Netzwerke",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). Buyers newly added. Punycode form computed (xn--knstliche-intelligenz-8hc) — verify in registrar panel before publishing.",
+      "word_count": {
+        "description_en": 67,
+        "description_de": 61
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-medicaltechnology.com",
+      "tld": ".com",
+      "registrar": "United Domains",
+      "category": "health",
+      "category_target": "healthcare-ai",
+      "tier": "A",
+      "price_eur": 3200,
+      "status": "sedo_buy_now_live",
+      "pitch_en": ".com for medtech — the extension healthcare buyers expect.",
+      "pitch_de": ".com für MedTech — die Endung, die Einkäufer im Gesundheitswesen erwarten.",
+      "description_en": "ai-medicaltechnology.com spells out the full field — AI medical technology — on the .com extension. Long, but unambiguous: it describes exactly what a manufacturer of AI-assisted diagnostics, a supplier for imaging systems, or a trade portal for medical technology with AI would offer. The full term rather than an abbreviation helps with clarity in a regulated, documentation-heavy sector.",
+      "description_de": "ai-medicaltechnology.com schreibt das gesamte Fachgebiet aus — AI Medical Technology — auf der Endung .com. Lang, aber eindeutig: Der Name beschreibt genau, was ein Hersteller KI-gestützter Diagnostik, ein Zulieferer für bildgebende Verfahren oder ein Fachportal für Medizintechnik mit KI anbietet. Der ausgeschriebene Begriff statt einer Abkürzung sorgt in einer regulierten, dokumentationsintensiven Branche für Klarheit.",
+      "ideas_en": [
+        "Manufacturer of AI-assisted diagnostics",
+        "Supplier for imaging systems",
+        "Trade portal for medical technology with AI"
+      ],
+      "ideas_de": [
+        "Hersteller KI-gestützter Diagnostik",
+        "Zulieferer für bildgebende Verfahren",
+        "Fachportal für Medizintechnik mit KI"
+      ],
+      "buyers_en": "Medtech manufacturers, clinical software, diagnostic AI",
+      "buyers_de": "MedTech-Hersteller, Klinik-Software, Diagnostik-KI",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). ‘Vertrauenssignal’ replaced by factual expectation statement. buyers_en translated.",
+      "word_count": {
+        "description_en": 58,
+        "description_de": 54
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "agi.bayern",
+      "tld": ".bayern",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "A",
+      "price_eur": 3200,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AGI on the Bavarian extension.",
+      "pitch_de": "AGI auf der bayerischen Endung.",
+      "description_en": "agi.bayern is a three-letter acronym on a regional extension. “AGI” stands for artificial general intelligence; .bayern ties it to Bavaria, home to Munich's universities and a dense AI research and start-up scene. Suited to a research initiative in the Munich area, a programme of a Bavarian university, or a location brand for attracting AI companies to the region.",
+      "description_de": "agi.bayern ist ein Drei-Buchstaben-Kürzel auf einer regionalen Endung. „AGI“ steht für Artificial General Intelligence; .bayern verortet den Namen in Bayern mit den Münchner Universitäten und einer dichten KI-Forschungs- und Start-up-Szene. Geeignet für eine Forschungsinitiative im Münchner Umfeld, das Programm einer bayerischen Hochschule oder eine Standortmarke für die Ansiedlung von KI-Unternehmen.",
+      "ideas_en": [
+        "Research initiative in the Munich area",
+        "Programme of a Bavarian university",
+        "Location brand for attracting AI companies"
+      ],
+      "ideas_de": [
+        "Forschungsinitiative im Münchner Umfeld",
+        "Programm einer bayerischen Hochschule",
+        "Standortmarke für KI-Ansiedlungen"
+      ],
+      "buyers_en": "TU Munich ecosystem, applied-AI initiatives, Bavarian institutions",
+      "buyers_de": "TU-München-Umfeld, Applied-AI-Initiativen, bayerische Institutionen",
+      "market_context": null,
+      "source_notes": "DE pitch ‘stärkster KI-Standort Deutschlands’ removed (unverified superlative). ‘appliedAI’ (an organisation name) generalised in buyers. Ideas EN translated from DE.",
+      "word_count": {
+        "description_en": 58,
+        "description_de": 50
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-tradingapp.com",
+      "tld": ".com",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "A",
+      "price_eur": 3100,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The trading app with AI, on .com.",
+      "pitch_de": "Die Trading-App mit KI, auf .com.",
+      "description_en": "ai-tradingapp.com states the product type — a trading app — and the technology — AI — on the extension most app users type by default. It fits a mobile trading application with AI features, a broker with an app-first strategy, or a comparison portal for trading apps. Because “app” is in the name, it works especially well as the landing page behind an app-store listing.",
+      "description_de": "ai-tradingapp.com nennt den Produkttyp — eine Trading-App — und die Technologie — KI — auf der Endung, die App-Nutzer standardmäßig eintippen. Geeignet für eine mobile Handels-App mit KI-Funktionen, einen Broker mit App-First-Strategie oder ein Vergleichsportal für Trading-Apps. Weil „App“ im Namen steht, eignet sich die Domain besonders als Landingpage hinter einem App-Store-Eintrag.",
+      "ideas_en": [
+        "Mobile trading app with AI features",
+        "Broker with an app-first strategy",
+        "Comparison portal for trading apps"
+      ],
+      "ideas_de": [
+        "Mobile Handels-App mit KI-Funktionen",
+        "Broker mit App-First-Strategie",
+        "Vergleichsportal für Trading-Apps"
+      ],
+      "buyers_en": "Trading app developers, mobile brokers",
+      "buyers_de": "Trading-App-Entwickler, Mobile-Broker",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). buyers_en translated.",
+      "word_count": {
+        "description_en": 65,
+        "description_de": 52
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "allartificialintelligence.ai",
+      "tld": ".ai",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "A",
+      "price_eur": 3000,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The full term, with .ai — and “all” in front.",
+      "pitch_de": "Der volle Begriff mit .ai — und „all“ davor.",
+      "description_en": "allartificialintelligence.ai is the complete phrase “all artificial intelligence” on the .ai extension. The word “all” makes it a natural name for something comprehensive: a directory of AI tools, a news portal covering the whole industry, or an education platform on AI fundamentals. It is long, but every word is a common English term, so it is easy to spell from hearing.",
+      "description_de": "allartificialintelligence.ai ist die vollständige Wendung „all artificial intelligence“ auf der Endung .ai. Das Wort „all“ macht den Namen zur naheliegenden Wahl für etwas Umfassendes: ein Verzeichnis für KI-Werkzeuge, ein Nachrichtenportal zur gesamten Branche oder eine Bildungsplattform für KI-Grundlagen. Der Name ist lang, besteht aber aus geläufigen englischen Wörtern und lässt sich nach dem Hören leicht schreiben.",
+      "ideas_en": [
+        "Directory of AI tools",
+        "News portal covering the AI industry",
+        "Education platform for AI fundamentals"
+      ],
+      "ideas_de": [
+        "Verzeichnis für KI-Werkzeuge",
+        "Nachrichtenportal zur KI-Branche",
+        "Bildungsplattform für KI-Grundlagen"
+      ],
+      "buyers_en": "AI portals, directories, aggregators",
+      "buyers_de": "KI-Portale, Verzeichnisse, Aggregatoren",
+      "market_context": {
+        "en": ".ai passed one million registered domains in January 2026 (Government of Anguilla).",
+        "de": ".ai hat im Januar 2026 die Marke von einer Million registrierter Domains überschritten (Regierung von Anguilla).",
+        "source": "MARKET-CLAIMS-SAFE-LIST.md / SOURCE-VERIFICATION_V1_MARKET.md (qualified)"
+      },
+      "source_notes": "Ideas EN translated from DE (EN clone). buyers_en translated. ‘.ai-Premium’ wording dropped from DE pitch.",
+      "word_count": {
+        "description_en": 61,
+        "description_de": 56
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ki-trading.ch",
+      "tld": ".ch",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "A",
+      "price_eur": 2900,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI trading for Switzerland.",
+      "pitch_de": "KI-Trading für die Schweiz.",
+      "description_en": "ki-trading.ch uses the German abbreviation for AI with the English word “trading” — the combination Swiss German speakers actually use — on the Swiss country extension. It suits an asset manager with an AI-based strategy, a fintech based in Zug or Zurich, or a trading platform aimed at Swiss investors. The .ch ending localises the offer without a separate country subdomain.",
+      "description_de": "ki-trading.ch verwendet das deutsche KI-Kürzel mit dem englischen Wort „Trading“ — die Kombination, die Deutschschweizer tatsächlich benutzen — auf der Schweizer Länderendung. Geeignet für einen Vermögensverwalter mit KI-Strategie, ein Fintech aus Zug oder Zürich oder eine Handelsplattform für Schweizer Anleger. Die Endung .ch lokalisiert das Angebot ohne separate Länder-Subdomain.",
+      "ideas_en": [
+        "Asset manager with an AI-based strategy",
+        "Fintech based in Zug or Zurich",
+        "Trading platform for Swiss investors"
+      ],
+      "ideas_de": [
+        "Vermögensverwalter mit KI-Strategie",
+        "Fintech aus Zug oder Zürich",
+        "Handelsplattform für Schweizer Anleger"
+      ],
+      "buyers_en": "Swiss fintechs, asset managers, trading platforms",
+      "buyers_de": "Schweizer Fintechs, Vermögensverwalter, Handelsplattformen",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). Buyers newly added (missing in D).",
+      "word_count": {
+        "description_en": 61,
+        "description_de": 49
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "health-assistant.de",
+      "tld": ".de",
+      "registrar": "United Domains",
+      "category": "health",
+      "category_target": "healthcare-ai",
+      "tier": "A",
+      "price_eur": 2900,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The health assistant, on the German country extension.",
+      "pitch_de": "Digitaler Gesundheitsassistent, auf .de.",
+      "description_en": "health-assistant.de describes a product category — a digital health assistant — on the extension German users expect from domestic providers. It fits a digital health application in the German DiGA framework, a companion app for people with chronic conditions, or the service portal of a pharmacy chain. The English term is widely understood in Germany, and the .de ending places the provider in the German market. The .eu variant is also in this portfolio.",
+      "description_de": "health-assistant.de beschreibt eine Produktkategorie — einen digitalen Gesundheitsassistenten — auf der Endung, die deutsche Nutzer von inländischen Anbietern erwarten. Geeignet für eine digitale Gesundheitsanwendung im DiGA-Rahmen, einen Begleitassistenten für chronisch Kranke oder das Serviceportal einer Apothekenkette. Der englische Begriff ist in Deutschland geläufig, die Endung .de verortet den Anbieter im deutschen Markt. Die .eu-Variante ist ebenfalls im Portfolio.",
+      "ideas_en": [
+        "Digital health application (DiGA framework)",
+        "Companion assistant for people with chronic conditions",
+        "Service portal of a pharmacy chain"
+      ],
+      "ideas_de": [
+        "Digitale Gesundheitsanwendung nach DiGA",
+        "Begleitassistent für chronisch Kranke",
+        "Serviceportal einer Apothekenkette"
+      ],
+      "buyers_en": "DiGA providers, telemedicine, patient portals",
+      "buyers_de": "DiGA-Anbieter, Telemedizin, Patientenportale",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). buyers_en translated. ‘.de-Vertrauen’ replaced by expectation statement.",
+      "word_count": {
+        "description_en": 74,
+        "description_de": 58
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ki-ausbildung.net",
+      "tld": ".net",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "A",
+      "price_eur": 2400,
+      "status": "sedo_listing_pending",
+      "pitch_en": "Vocational AI training in German.",
+      "pitch_de": "Berufliche KI-Qualifizierung auf Deutsch.",
+      "description_en": "ki-ausbildung.net is the German term for AI training or vocational education (“Ausbildung”) on the .net extension. The word carries the specific meaning of structured professional qualification, which suits a continuing-education provider for skilled workers, a programme of a chamber of crafts or commerce, or a certification platform for AI competence. The audience is German-speaking; the .net ending is neutral and widely accepted.",
+      "description_de": "ki-ausbildung.net ist der deutsche Begriff für KI-Ausbildung auf der Endung .net. „Ausbildung“ trägt die konkrete Bedeutung strukturierter beruflicher Qualifizierung — passend für einen Weiterbildungsanbieter für Fachkräfte, das Programm einer Handwerks- oder Handelskammer oder eine Zertifizierungsplattform für KI-Kompetenz. Die Zielgruppe ist deutschsprachig; die Endung .net ist neutral und etabliert.",
+      "ideas_en": [
+        "Continuing-education provider for skilled workers",
+        "Programme of a chamber of crafts or commerce",
+        "Certification platform for AI competence"
+      ],
+      "ideas_de": [
+        "Weiterbildungsanbieter für Fachkräfte",
+        "Programm einer Handwerkskammer",
+        "Zertifizierungsplattform für KI-Kompetenz"
+      ],
+      "buyers_en": "Education providers, chamber of commerce (IHK) partners, vocational schools",
+      "buyers_de": "Bildungsträger, IHK-Partner, Berufsschulen",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). buyers_en translated.",
+      "word_count": {
+        "description_en": 62,
+        "description_de": 48
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "artificialintelligence.bayern",
+      "tld": ".bayern",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "A",
+      "price_eur": 2300,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI from Bavaria, spelled out in English.",
+      "pitch_de": "KI aus Bayern, auf Englisch ausgeschrieben.",
+      "description_en": "artificialintelligence.bayern is the full English term on the Bavarian regional extension. Where künstliche-intelligenz.bayern addresses a German-speaking audience, this English spelling suits an international presentation of the region: an English-language portal for investors, the outward-facing site of a location initiative, or a conference brand with a regional link. No umlaut, so it can be typed on any keyboard.",
+      "description_de": "artificialintelligence.bayern ist der vollständige englische Begriff auf der bayerischen Regionalendung. Während künstliche-intelligenz.bayern eine deutschsprachige Zielgruppe anspricht, eignet sich die englische Schreibweise für die internationale Darstellung der Region: ein englischsprachiges Portal für Investoren, die Außendarstellung einer Standortinitiative oder eine Konferenzmarke mit Regionalbezug. Ohne Umlaut, daher auf jeder Tastatur tippbar.",
+      "ideas_en": [
+        "International presentation of a business location",
+        "English-language portal for investors",
+        "Conference brand with a regional link"
+      ],
+      "ideas_de": [
+        "Internationale Außendarstellung eines Standorts",
+        "Englischsprachiges Portal für Investoren",
+        "Konferenzmarke mit Regionalbezug"
+      ],
+      "buyers_en": "Location marketing agencies, investor networks, conference organisers",
+      "buyers_de": "Standortmarketing, Investorennetzwerke, Konferenzveranstalter",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). Buyers newly added.",
+      "word_count": {
+        "description_en": 57,
+        "description_de": 48
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-agents.tools",
+      "tld": ".tools",
+      "registrar": "Spaceship",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "A",
+      "price_eur": 2100,
+      "status": "sedo_listing_pending",
+      "pitch_en": "Developer language: tools for AI agents.",
+      "pitch_de": "Entwicklersprache: Werkzeuge für KI-Agenten.",
+      "description_en": "ai-agents.tools is written the way developers talk. The .tools extension states the product category, and “ai-agents” states the subject. It fits a toolbox for agent development, a directory of agent frameworks, or a developer platform with SDK. The name is technical on purpose — it addresses the people who build agents, not those who merely use them.",
+      "description_de": "ai-agents.tools ist so geschrieben, wie Entwickler sprechen. Die Endung .tools nennt die Produktkategorie, „ai-agents“ das Thema. Geeignet für einen Werkzeugkasten für Agentenentwicklung, ein Verzeichnis von Agent-Frameworks oder eine Entwicklerplattform mit SDK. Der Name ist bewusst technisch — er spricht die Menschen an, die Agenten bauen, nicht nur die, die sie nutzen.",
+      "ideas_en": [
+        "Toolbox for agent development",
+        "Directory of agent frameworks",
+        "Developer platform with SDK"
+      ],
+      "ideas_de": [
+        "Werkzeugkasten für Agentenentwicklung",
+        "Verzeichnis von Agent-Frameworks",
+        "Entwicklerplattform mit SDK"
+      ],
+      "buyers_en": "Toolkits, SDKs, developer platforms",
+      "buyers_de": "Toolkits, SDKs, Developer-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). Pitch EN made idiomatic.",
+      "word_count": {
+        "description_en": 57,
+        "description_de": 51
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aiagent.services",
+      "tld": ".services",
+      "registrar": "United Domains",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 1800,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Agent plus services — no hyphen, no detour.",
+      "pitch_de": "Agent plus Services — ohne Bindestrich, ohne Umweg.",
+      "description_en": "aiagent.services places “aiagent” on the .services extension, so the domain reads as a complete offer: AI agent services. That matches companies that implement agents for clients rather than sell software — a service provider for agent adoption, a managed service for enterprise agents, or an agency brand in the agent space. The unhyphenated spelling keeps the name short.",
+      "description_de": "aiagent.services setzt „aiagent“ auf die Endung .services, sodass die Domain wie ein vollständiges Angebot gelesen wird: AI Agent Services. Das passt zu Unternehmen, die Agenten für Kunden einführen statt Software zu verkaufen — ein Dienstleister für Agenten-Einführung, ein Managed Service für Unternehmensagenten oder eine Agenturmarke im Agentenbereich. Die Schreibweise ohne Bindestrich hält den Namen kurz.",
+      "ideas_en": [
+        "Service provider for agent adoption",
+        "Managed service for enterprise agents",
+        "Agency brand in the agent space"
+      ],
+      "ideas_de": [
+        "Dienstleister für Agenten-Einführung",
+        "Managed-Service für Unternehmensagenten",
+        "Agenturmarke im Agentenbereich"
+      ],
+      "buyers_en": "AI agencies, managed service providers, B2B platforms",
+      "buyers_de": "KI-Agenturen, Managed-Service-Anbieter, B2B-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone).",
+      "word_count": {
+        "description_en": 58,
+        "description_de": 55
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "call-agents.net",
+      "tld": ".net",
+      "registrar": "Spaceship",
+      "category": "voice",
+      "category_target": "conversational-ai",
+      "tier": "B",
+      "price_eur": 1500,
+      "status": "sedo_listing_pending",
+      "pitch_en": "Call agents — automated telephony, in the name.",
+      "pitch_de": "Call Agents — automatisierte Telefonie, im Namen.",
+      "description_en": "call-agents.net names the product: agents that make and take calls. It suits a provider of telephone automation, a contact-centre platform, or the sales site for voicebots. The .net extension is neutral and well established. Within this portfolio, .net is the general variant; call-agents.help points to support use cases and call-agents.eu to a European positioning.",
+      "description_de": "call-agents.net benennt das Produkt: Agenten, die Anrufe führen und annehmen. Geeignet für einen Anbieter von Telefonautomatisierung, eine Contact-Center-Plattform oder die Vertriebsseite für Voicebots. Die Endung .net ist neutral und etabliert. Innerhalb des Portfolios ist .net die allgemeine Variante; call-agents.help zielt auf Support-Anwendungen, call-agents.eu auf eine europäische Positionierung.",
+      "ideas_en": [
+        "Provider of telephone automation",
+        "Contact-centre platform",
+        "Sales site for voicebots"
+      ],
+      "ideas_de": [
+        "Anbieter für Telefonautomatisierung",
+        "Plattform für Contact-Center",
+        "Vertriebsseite für Voicebots"
+      ],
+      "buyers_en": "Contact-centre software, voicebot providers, telcos",
+      "buyers_de": "Contact-Center-Software, Voicebot-Anbieter, Telcos",
+      "market_context": null,
+      "source_notes": "Pitch rewritten — ‘market exploding in 2026’ is a forecast (D17). Ideas EN translated from DE (EN clone).",
+      "word_count": {
+        "description_en": 54,
+        "description_de": 47
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "healthai.uk",
+      "tld": ".uk",
+      "registrar": "United Domains",
+      "category": "health",
+      "category_target": "healthcare-ai",
+      "tier": "B",
+      "price_eur": 1500,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "HealthAI for the UK market.",
+      "pitch_de": "HealthAI für den britischen Markt.",
+      "description_en": "healthai.uk is a compact compound — health plus AI — on the direct .uk extension. It targets the United Kingdom, where the NHS, private providers and health-tech start-ups form a large English-speaking market. Suited to a digital health application for UK patients, a platform for GP practices and clinics, or a patient information service. Short, no hyphen, easy to say.",
+      "description_de": "healthai.uk ist ein kompaktes Kompositum — Health plus AI — auf der direkten Endung .uk. Es zielt auf das Vereinigte Königreich, wo NHS, private Anbieter und Health-Tech-Start-ups einen großen englischsprachigen Markt bilden. Geeignet für eine digitale Gesundheitsanwendung für britische Patienten, eine Plattform für Hausarztpraxen und Kliniken oder ein Patienteninformationsangebot. Kurz, ohne Bindestrich, leicht auszusprechen.",
+      "ideas_en": [
+        "Digital health application for UK patients",
+        "Platform for GP practices and clinics",
+        "Patient information service"
+      ],
+      "ideas_de": [
+        "Digitale Gesundheitsanwendung für britische Patienten",
+        "Plattform für Hausarztpraxen und Kliniken",
+        "Patienteninformationsangebot"
+      ],
+      "buyers_en": "UK health-tech start-ups, private healthcare providers, patient platforms",
+      "buyers_de": "Britische Health-Tech-Start-ups, private Gesundheitsanbieter, Patientenplattformen",
+      "market_context": null,
+      "source_notes": "Ideas individualised for the UK (D had the generic health set in both languages). Buyers newly added.",
+      "word_count": {
+        "description_en": 60,
+        "description_de": 54
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aitranslator.app",
+      "tld": ".app",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 1400,
+      "status": "sedo_buy_now_live",
+      "pitch_en": ".app signals direct utility: a translator, as an app.",
+      "pitch_de": ".app signalisiert direkten Nutzwert: ein Übersetzer, als App.",
+      "description_en": "aitranslator.app names a product people already search for — an AI translator — on the extension reserved for applications. The .app domain space is served over HTTPS by requirement, which suits software products. Possible uses: a translation tool delivered as an app, an interpreting service for businesses, or an extension for word processors. No hyphen, one clear function.",
+      "description_de": "aitranslator.app benennt ein Produkt, nach dem Menschen bereits suchen — einen KI-Übersetzer — auf der für Anwendungen reservierten Endung. Der .app-Namensraum wird verpflichtend über HTTPS ausgeliefert, was zu Softwareprodukten passt. Mögliche Nutzungen: ein Übersetzungswerkzeug als App, ein Dolmetscherdienst für Unternehmen oder eine Erweiterung für Textverarbeitung. Ohne Bindestrich, eine klare Funktion.",
+      "ideas_en": [
+        "Translation tool delivered as an app",
+        "Interpreting service for businesses",
+        "Extension for word processors"
+      ],
+      "ideas_de": [
+        "Übersetzungswerkzeug als App",
+        "Dolmetscherdienst für Unternehmen",
+        "Erweiterung für Textverarbeitung"
+      ],
+      "buyers_en": "Translation tools, language AI",
+      "buyers_de": "Übersetzungstools, Sprach-KI",
+      "market_context": null,
+      "source_notes": "Ideas EN translated from DE (EN clone). buyers_en translated. HTTPS requirement of .app (HSTS preload) is a public registry fact — verify wording if kept.",
+      "word_count": {
+        "description_en": 58,
+        "description_de": 50
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-companies.net",
+      "tld": ".net",
+      "registrar": "United Domains",
+      "category": "industry",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 1300,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The directory of AI companies.",
+      "pitch_de": "Das Verzeichnis der KI-Unternehmen.",
+      "description_en": "ai-companies.net is a plural, generic term that reads like a list — which is exactly what it is best used for. It suits a directory of AI companies, a database for investors and venture funds, or a start-up listing with profiles and funding data. The .net extension is neutral and familiar to a business audience.",
+      "description_de": "ai-companies.net ist ein pluraler Gattungsbegriff, der sich wie eine Liste liest — und genau dafür eignet er sich am besten. Passend für ein Verzeichnis von KI-Unternehmen, eine Datenbank für Investoren und Venture-Fonds oder ein Start-up-Listing mit Profilen und Finanzierungsdaten. Die Endung .net ist neutral und einem Geschäftspublikum vertraut.",
+      "ideas_en": [
+        "Directory of AI companies",
+        "Database for investors and venture funds",
+        "Start-up listing with profiles and funding data"
+      ],
+      "ideas_de": [
+        "Verzeichnis von KI-Unternehmen",
+        "Datenbank für Investoren und Venture-Fonds",
+        "Start-up-Listing mit Profilen und Finanzierungsdaten"
+      ],
+      "buyers_en": "VC databases, start-up directories",
+      "buyers_de": "VC-Datenbanken, Start-up-Verzeichnisse",
+      "market_context": null,
+      "source_notes": "Ideas newly written (D had the generic industry set in both languages, which did not fit a directory name). buyers_en translated.",
+      "word_count": {
+        "description_en": 55,
+        "description_de": 48
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-agent.training",
+      "tld": ".training",
+      "registrar": "United Domains",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 1300,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Train agents — or train people to work with agents.",
+      "pitch_de": "Agenten trainieren — oder Menschen für die Arbeit mit Agenten.",
+      "description_en": "ai-agent.training has two readings, and both are useful. It can mean training the agents themselves — data, evaluation, fine-tuning — or training people to build and manage agents. That fits an EdTech course platform on agent development, a corporate training programme for teams adopting agents, or an evaluation and fine-tuning service for agent developers.",
+      "description_de": "ai-agent.training hat zwei Lesarten, und beide sind brauchbar. Es kann das Training der Agenten selbst meinen — Daten, Evaluation, Feinabstimmung — oder die Schulung von Menschen, die Agenten bauen und steuern. Passend für eine EdTech-Kursplattform zur Agentenentwicklung, ein Corporate-Training-Programm für Teams, die Agenten einführen, oder einen Evaluations- und Fine-Tuning-Dienst für Agentenentwickler.",
+      "ideas_en": [
+        "Course platform on agent development",
+        "Corporate training programme for teams adopting agents",
+        "Evaluation and fine-tuning service for agent developers"
+      ],
+      "ideas_de": [
+        "Kursplattform zur Agentenentwicklung",
+        "Corporate-Training-Programm für Teams, die Agenten einführen",
+        "Evaluations- und Fine-Tuning-Dienst für Agentenentwickler"
+      ],
+      "buyers_en": "EdTech, corporate training, agent platforms",
+      "buyers_de": "EdTech, Corporate Training, Agent-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (D had the generic agents set in both languages). buyers_en translated.",
+      "word_count": {
+        "description_en": 54,
+        "description_de": 51
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-agent.vision",
+      "tld": ".vision",
+      "registrar": "United Domains",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 1300,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "For those who set the agenda on agents.",
+      "pitch_de": "Für alle, die beim Thema Agenten die Richtung vorgeben.",
+      "description_en": "ai-agent.vision pairs the subject with an extension that suggests outlook and strategy. It suits a consultancy that advises on agent strategy, a think tank publishing on the future of autonomous systems, or a strategy platform with reports and briefings. A second, literal reading — computer vision for agents — is also available for a technical product.",
+      "description_de": "ai-agent.vision verbindet das Thema mit einer Endung, die Ausblick und Strategie nahelegt. Geeignet für eine Beratung zu Agentenstrategie, einen Think-Tank mit Publikationen zur Zukunft autonomer Systeme oder eine Strategieplattform mit Reports und Briefings. Eine zweite, wörtliche Lesart — Computer Vision für Agenten — steht für ein technisches Produkt ebenfalls zur Verfügung.",
+      "ideas_en": [
+        "Consultancy for agent strategy",
+        "Think tank on the future of autonomous systems",
+        "Computer-vision product for agents"
+      ],
+      "ideas_de": [
+        "Beratung für Agentenstrategie",
+        "Think-Tank zur Zukunft autonomer Systeme",
+        "Computer-Vision-Produkt für Agenten"
+      ],
+      "buyers_en": "Consultancies, think tanks, strategy platforms",
+      "buyers_de": "Beratungen, Think-Tanks, Strategie-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 56,
+        "description_de": 51
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "super-agent.org",
+      "tld": ".org",
+      "registrar": "United Domains",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 1300,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The super agent.",
+      "pitch_de": "Der Super-Agent.",
+      "description_en": "super-agent.org is a memorable two-word name on the .org extension, which audiences associate with organisations, communities and open projects. It suits an open-source agent framework, a non-profit or standards initiative around autonomous agents, or a community hub with documentation and benchmarks. The portfolio also holds super-agent.online for a commercial or product-facing use.",
+      "description_de": "super-agent.org ist ein einprägsamer Zwei-Wort-Name auf der Endung .org, die mit Organisationen, Communities und offenen Projekten verbunden wird. Geeignet für ein Open-Source-Agent-Framework, eine gemeinnützige oder Standardisierungsinitiative rund um autonome Agenten oder einen Community-Hub mit Dokumentation und Benchmarks. Im Portfolio ist zusätzlich super-agent.online für eine kommerzielle oder produktbezogene Nutzung enthalten.",
+      "ideas_en": [
+        "Open-source agent framework",
+        "Non-profit or standards initiative for autonomous agents",
+        "Community hub with documentation and benchmarks"
+      ],
+      "ideas_de": [
+        "Open-Source-Agent-Framework",
+        "Gemeinnützige oder Standardisierungsinitiative für autonome Agenten",
+        "Community-Hub mit Dokumentation und Benchmarks"
+      ],
+      "buyers_en": "Open-source projects, developer communities, foundations",
+      "buyers_de": "Open-Source-Projekte, Entwickler-Communities, Stiftungen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 52,
+        "description_de": 49
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aiagentur.org",
+      "tld": ".org",
+      "registrar": "Spaceship",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 1200,
+      "status": "sedo_listing_pending",
+      "pitch_en": "“AI agency” in German — direct, no translation needed.",
+      "pitch_de": "KI-Agentur auf Deutsch — direkt, ohne Übersetzung.",
+      "description_en": "aiagentur.org is the German word “Agentur” (agency) prefixed with AI. It reads naturally to German speakers and describes a service business: an agency that plans and implements AI for clients. Suited to an agency in the DACH region, a digital consultancy, or a network brand for freelancers. The .org ending is neutral; aiagentur.net in the same portfolio offers a second spelling for a network or alliance.",
+      "description_de": "aiagentur.org ist das deutsche Wort „Agentur“ mit vorangestelltem AI. Für deutschsprachige Leser liest es sich natürlich und beschreibt ein Dienstleistungsgeschäft: eine Agentur, die KI für Kunden plant und umsetzt. Geeignet für eine Agentur im DACH-Raum, eine Digitalberatung oder eine Netzwerkmarke für Freelancer. Die Endung .org ist neutral; aiagentur.net aus demselben Portfolio bietet eine zweite Variante für ein Netzwerk oder einen Verbund.",
+      "ideas_en": [
+        "AI agency for the DACH region",
+        "Digital consultancy with AI focus",
+        "Network brand for freelancers"
+      ],
+      "ideas_de": [
+        "KI-Agentur für den DACH-Raum",
+        "Digitalberatung mit KI-Schwerpunkt",
+        "Netzwerkmarke für Freelancer"
+      ],
+      "buyers_en": "Agencies in the DACH region, digital consultancies",
+      "buyers_de": "DACH-Agenturen, Digitalberatungen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 66,
+        "description_de": 61
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aiagentur.net",
+      "tld": ".net",
+      "registrar": "Spaceship",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 1200,
+      "status": "sedo_listing_pending",
+      "pitch_en": "The network variant for agency alliances.",
+      "pitch_de": "Die Netzwerk-Variante für Agenturverbünde.",
+      "description_en": "aiagentur.net is the .net counterpart to aiagentur.org. “Net” lends itself to a network: an alliance of agencies that share AI capacity, a collective of freelancers offering AI services, or a partner programme run by a software vendor. Holding both .org and .net allows one brand to separate its organisation from its network, or to protect the name.",
+      "description_de": "aiagentur.net ist das .net-Gegenstück zu aiagentur.org. „Net“ legt ein Netzwerk nahe: ein Verbund von Agenturen, die KI-Kapazitäten teilen, ein Kollektiv von Freelancern mit KI-Dienstleistungen oder ein Partnerprogramm eines Softwareanbieters. Wer .org und .net zusammen hält, kann Organisation und Netzwerk einer Marke trennen — oder den Namen absichern.",
+      "ideas_en": [
+        "Alliance of agencies sharing AI capacity",
+        "Collective of freelancers offering AI services",
+        "Partner programme of a software vendor"
+      ],
+      "ideas_de": [
+        "Verbund von Agenturen mit geteilten KI-Kapazitäten",
+        "Kollektiv von Freelancern mit KI-Dienstleistungen",
+        "Partnerprogramm eines Softwareanbieters"
+      ],
+      "buyers_en": "Agency networks, freelancer collectives",
+      "buyers_de": "Agenturnetzwerke, Freelancer-Kollektive",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 57,
+        "description_de": 47
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-agents.technology",
+      "tld": ".technology",
+      "registrar": "GoDaddy",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 1100,
+      "status": "sedo_listing_pending",
+      "pitch_en": "A B2B signal for those who build agents, not just use them.",
+      "pitch_de": "Ein B2B-Signal für alle, die Agenten bauen statt nur nutzen.",
+      "description_en": "ai-agents.technology reads as a company description: the technology behind AI agents. It suits a vendor that develops agent infrastructure, the technology brand of a larger company, or an engineering blog and documentation site. The extension is long but descriptive, and it separates this name from consumer-facing agent products.",
+      "description_de": "ai-agents.technology liest sich wie eine Unternehmensbeschreibung: die Technologie hinter KI-Agenten. Geeignet für einen Anbieter, der Agenten-Infrastruktur entwickelt, die Technologiemarke eines größeren Unternehmens oder eine Engineering-Blog- und Dokumentationsseite. Die Endung ist lang, aber beschreibend, und grenzt den Namen von verbrauchernahen Agentenprodukten ab.",
+      "ideas_en": [
+        "Vendor of agent infrastructure",
+        "Technology brand of a larger company",
+        "Engineering blog and documentation site"
+      ],
+      "ideas_de": [
+        "Anbieter von Agenten-Infrastruktur",
+        "Technologiemarke eines größeren Unternehmens",
+        "Engineering-Blog und Dokumentationsseite"
+      ],
+      "buyers_en": "Agent developers, tech companies",
+      "buyers_de": "Agent-Hersteller, Tech-Unternehmen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 48,
+        "description_de": 41
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "superai.money",
+      "tld": ".money",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "B",
+      "price_eur": 1100,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "SuperAI, in money.",
+      "pitch_de": "SuperAI im Finanzbereich.",
+      "description_en": "superai.money combines a brandable prefix with an extension that names the subject. It fits a personal finance assistant, a budgeting or savings app with AI features, or a payments product. Compared with superai.finance in the same portfolio, .money is more consumer-facing and everyday; .finance reads more institutional.",
+      "description_de": "superai.money verbindet ein markenfähiges Präfix mit einer Endung, die das Thema benennt. Passend für einen persönlichen Finanzassistenten, eine Budget- oder Spar-App mit KI-Funktionen oder ein Zahlungsprodukt. Im Vergleich zu superai.finance aus demselben Portfolio ist .money verbrauchernäher und alltäglicher; .finance wirkt institutioneller.",
+      "ideas_en": [
+        "Personal finance assistant",
+        "Budgeting or savings app with AI features",
+        "Payments product"
+      ],
+      "ideas_de": [
+        "Persönlicher Finanzassistent",
+        "Budget- oder Spar-App mit KI-Funktionen",
+        "Zahlungsprodukt"
+      ],
+      "buyers_en": "Consumer fintech, personal finance apps, payment start-ups",
+      "buyers_de": "Consumer-Fintech, Personal-Finance-Apps, Payment-Start-ups",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic finance set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 47,
+        "description_de": 41
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "superai.finance",
+      "tld": ".finance",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "B",
+      "price_eur": 1100,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "SuperAI for finance.",
+      "pitch_de": "SuperAI für Finanzen.",
+      "description_en": "superai.finance is the institutional sibling of superai.money. The .finance extension suits an analysis tool for professional investors, a fintech platform with an AI core, or a research and information service for financial markets. The prefix is short and brandable, and the pair of domains lets one brand address consumers (.money) and professionals (.finance) separately.",
+      "description_de": "superai.finance ist das institutionelle Geschwister von superai.money. Die Endung .finance passt zu einem Analysewerkzeug für professionelle Anleger, einer Fintech-Plattform mit KI-Kern oder einem Research- und Informationsdienst für Finanzmärkte. Das Präfix ist kurz und markenfähig, und das Domain-Paar erlaubt einer Marke, Verbraucher (.money) und Profis (.finance) getrennt anzusprechen.",
+      "ideas_en": [
+        "Analysis tool for professional investors",
+        "Fintech platform with an AI core",
+        "Research and information service for financial markets"
+      ],
+      "ideas_de": [
+        "Analysewerkzeug für professionelle Anleger",
+        "Fintech-Plattform mit KI-Kern",
+        "Research- und Informationsdienst für Finanzmärkte"
+      ],
+      "buyers_en": "Fintech platforms, investment research, wealth-tech",
+      "buyers_de": "Fintech-Plattformen, Investment-Research, Wealth-Tech",
+      "market_context": null,
+      "source_notes": "Ideas adapted from D's finance set with a professional focus to differentiate from .money. Buyers newly added.",
+      "word_count": {
+        "description_en": 54,
+        "description_de": 47
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aifactorie.com",
+      "tld": ".com",
+      "registrar": "United Domains",
+      "category": "industry",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 1000,
+      "status": "sedo_listing_pending",
+      "pitch_en": ".com variant in the factory cluster.",
+      "pitch_de": ".com-Variante im Factory-Cluster.",
+      "description_en": "aifactorie.com is a short .com name in the “AI factory” family of this portfolio. Note the spelling: “factorie” without the final s — a coined form that is distinctive and unhyphenated. It suits a manufacturing software brand, an industrial AI start-up that wants a .com, or a product name within an industrial group. Buyers who want the standard plural spelling should look at ai-factories.ai.",
+      "description_de": "aifactorie.com ist ein kurzer .com-Name aus der „AI Factory“-Familie dieses Portfolios. Man beachte die Schreibweise: „factorie“ ohne das abschließende s — eine Kunstform, die unverwechselbar und bindestrichfrei ist. Geeignet für eine Marke für Fertigungssoftware, ein Industrie-KI-Start-up, das eine .com möchte, oder einen Produktnamen innerhalb eines Industriekonzerns. Wer die Standard-Pluralschreibweise sucht, findet sie bei ai-factories.ai.",
+      "ideas_en": [
+        "Brand for manufacturing software",
+        "Industrial AI start-up on .com",
+        "Product name within an industrial group"
+      ],
+      "ideas_de": [
+        "Marke für Fertigungssoftware",
+        "Industrie-KI-Start-up auf .com",
+        "Produktname innerhalb eines Industriekonzerns"
+      ],
+      "buyers_en": "Industrial AI, manufacturing software",
+      "buyers_de": "Industrie-KI, Fertigungssoftware",
+      "market_context": null,
+      "source_notes": "Spelling ‘factorie’ (not ‘factories’/‘factory’) explicitly flagged for review — the description treats it as a coined form. Ideas newly written (generic set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 64,
+        "description_de": 54
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aicoach.academy",
+      "tld": ".academy",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 1000,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI coaching as a business model, right in the name.",
+      "pitch_de": "KI-Coaching als Geschäftsmodell, direkt im Namen.",
+      "description_en": "aicoach.academy names both the product and the format: an AI coach, delivered as an academy. It suits a coaching platform with an AI assistant, a course programme that teaches professionals to work with AI, or a certification track for AI competence. The .academy extension tells visitors to expect structured learning.",
+      "description_de": "aicoach.academy benennt Produkt und Format zugleich: ein KI-Coach, angeboten als Akademie. Geeignet für eine Coaching-Plattform mit KI-Assistent, ein Kursprogramm, das Fachkräften die Arbeit mit KI vermittelt, oder einen Zertifizierungspfad für KI-Kompetenz. Die Endung .academy lässt Besucher strukturiertes Lernen erwarten.",
+      "ideas_en": [
+        "Coaching platform with an AI assistant",
+        "Course programme on working with AI",
+        "Certification track for AI competence"
+      ],
+      "ideas_de": [
+        "Coaching-Plattform mit KI-Assistent",
+        "Kursprogramm zur Arbeit mit KI",
+        "Zertifizierungspfad für KI-Kompetenz"
+      ],
+      "buyers_en": "Coaching platforms, professional development",
+      "buyers_de": "Coaching-Plattformen, Weiterbildung",
+      "market_context": null,
+      "source_notes": "Ideas adapted from D's education set with a coaching angle. buyers_en translated.",
+      "word_count": {
+        "description_en": 50,
+        "description_de": 39
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-store.app",
+      "tld": ".app",
+      "registrar": "United Domains",
+      "category": "ecommerce",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 1000,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "For AI app stores and tool marketplaces.",
+      "pitch_de": "Für KI-App-Stores und Tool-Marktplätze.",
+      "description_en": "ai-store.app reads as “AI store” on the extension for applications — a natural name for a marketplace of AI tools, an app store for agents and plug-ins, or a storefront for digital AI products. The .app space requires HTTPS, which suits a store handling accounts and payments. The portfolio also includes ai-store.world for a global positioning.",
+      "description_de": "ai-store.app liest sich als „AI Store“ auf der Endung für Anwendungen — ein naheliegender Name für einen Marktplatz für KI-Werkzeuge, einen App-Store für Agenten und Plug-ins oder einen Shop für digitale KI-Produkte. Der .app-Namensraum setzt HTTPS voraus, was zu einem Store mit Konten und Zahlungen passt. Im Portfolio ist zusätzlich ai-store.world für eine globale Positionierung enthalten.",
+      "ideas_en": [
+        "Marketplace for AI tools",
+        "App store for agents and plug-ins",
+        "Storefront for digital AI products"
+      ],
+      "ideas_de": [
+        "Marktplatz für KI-Werkzeuge",
+        "App-Store für Agenten und Plug-ins",
+        "Shop für digitale KI-Produkte"
+      ],
+      "buyers_en": "Tool marketplaces, app stores",
+      "buyers_de": "Tool-Marktplätze, App-Stores",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic ecommerce set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 56,
+        "description_de": 56
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "call-agents.help",
+      "tld": ".help",
+      "registrar": "Spaceship",
+      "category": "voice",
+      "category_target": "conversational-ai",
+      "tier": "B",
+      "price_eur": 930,
+      "status": "sedo_listing_pending",
+      "pitch_en": "Support automation, right in the name.",
+      "pitch_de": "Support-Automatisierung, direkt im Namen.",
+      "description_en": "call-agents.help puts the product — call agents — on an extension that names the use case: help. It suits helpdesk software with a voice channel, a customer-service AI that answers support calls, or the support portal of a voicebot provider. Within the call-agents family, .help is the support-specific variant.",
+      "description_de": "call-agents.help setzt das Produkt — Call Agents — auf eine Endung, die den Anwendungsfall benennt: Hilfe. Geeignet für Helpdesk-Software mit Sprachkanal, eine Kundenservice-KI, die Support-Anrufe beantwortet, oder das Support-Portal eines Voicebot-Anbieters. In der call-agents-Familie ist .help die supportspezifische Variante.",
+      "ideas_en": [
+        "Helpdesk software with a voice channel",
+        "Customer-service AI for support calls",
+        "Support portal of a voicebot provider"
+      ],
+      "ideas_de": [
+        "Helpdesk-Software mit Sprachkanal",
+        "Kundenservice-KI für Support-Anrufe",
+        "Support-Portal eines Voicebot-Anbieters"
+      ],
+      "buyers_en": "Helpdesk software, customer-service AI",
+      "buyers_de": "Helpdesk-Software, Customer-Service-KI",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic agents set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 49,
+        "description_de": 39
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "call-agents.eu",
+      "tld": ".eu",
+      "registrar": "Spaceship",
+      "category": "voice",
+      "category_target": "conversational-ai",
+      "tier": "B",
+      "price_eur": 930,
+      "status": "sedo_listing_pending",
+      "pitch_en": "The European variant of call agents.",
+      "pitch_de": "Die europäische Variante von Call Agents.",
+      "description_en": "call-agents.eu addresses providers that want to be seen as European. The .eu extension is available to organisations and residents in the EU and EEA, and it signals a European base to customers who care about where their voice data is processed. Suited to an EU-based voicebot provider, a contact-centre operator in the DACH region, or a European sales site of an international vendor.",
+      "description_de": "call-agents.eu richtet sich an Anbieter, die als europäisch wahrgenommen werden wollen. Die Endung .eu steht Organisationen und Personen in EU und EWR offen und signalisiert Kunden, denen der Verarbeitungsort ihrer Sprachdaten wichtig ist, einen europäischen Sitz. Geeignet für einen Voicebot-Anbieter mit EU-Sitz, einen Contact-Center-Betreiber im DACH-Raum oder die europäische Vertriebsseite eines internationalen Anbieters.",
+      "ideas_en": [
+        "EU-based voicebot provider",
+        "Contact-centre operator in the DACH region",
+        "European sales site of an international vendor"
+      ],
+      "ideas_de": [
+        "Voicebot-Anbieter mit EU-Sitz",
+        "Contact-Center-Betreiber im DACH-Raum",
+        "Europäische Vertriebsseite eines internationalen Anbieters"
+      ],
+      "buyers_en": "EU voicebot providers, DACH contact centres",
+      "buyers_de": "EU-Voicebot-Anbieter, DACH-Contact-Center",
+      "market_context": null,
+      "source_notes": "Old pitch ‘EU AI Act compliant positioning’ removed — a domain cannot be compliant (legal claim). .eu eligibility (EU/EEA) is a public EURid rule — verify wording if kept.",
+      "word_count": {
+        "description_en": 63,
+        "description_de": 53
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "super-agent.online",
+      "tld": ".online",
+      "registrar": "United Domains",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 900,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The super agent, online.",
+      "pitch_de": "Der Super-Agent, online.",
+      "description_en": "super-agent.online is the product-facing counterpart to super-agent.org. The .online extension suits a hosted service: a consumer assistant that runs in the browser, a SaaS agent for small businesses, or the demo and sign-up site of an agent product. Holding .org and .online together lets a project keep its open community and its commercial service apart.",
+      "description_de": "super-agent.online ist das produktbezogene Gegenstück zu super-agent.org. Die Endung .online passt zu einem gehosteten Dienst: einem Assistenten für Verbraucher im Browser, einem SaaS-Agenten für kleine Unternehmen oder der Demo- und Registrierungsseite eines Agentenprodukts. Wer .org und .online zusammen hält, kann offene Community und kommerziellen Dienst getrennt führen.",
+      "ideas_en": [
+        "Browser-based consumer assistant",
+        "SaaS agent for small businesses",
+        "Demo and sign-up site of an agent product"
+      ],
+      "ideas_de": [
+        "Browserbasierter Assistent für Verbraucher",
+        "SaaS-Agent für kleine Unternehmen",
+        "Demo- und Registrierungsseite eines Agentenprodukts"
+      ],
+      "buyers_en": "SaaS start-ups, consumer AI products, agent vendors",
+      "buyers_de": "SaaS-Start-ups, Consumer-AI-Produkte, Agentenanbieter",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 55,
+        "description_de": 47
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "superai.technology",
+      "tld": ".technology",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 870,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "SuperAI technology.",
+      "pitch_de": "SuperAI-Technologie.",
+      "description_en": "superai.technology is the most general name in the SuperAI family: a brandable prefix on a broad, descriptive extension. It suits the umbrella brand of an AI company with several products, a technology holding, or a corporate research site. Unlike the .money, .finance, .help and .academy variants, it commits to no single use case.",
+      "description_de": "superai.technology ist der allgemeinste Name der SuperAI-Familie: ein markenfähiges Präfix auf einer breiten, beschreibenden Endung. Geeignet als Dachmarke eines KI-Unternehmens mit mehreren Produkten, für eine Technologie-Holding oder eine Forschungsseite eines Unternehmens. Anders als die Varianten .money, .finance, .help und .academy legt er sich auf keinen Anwendungsfall fest.",
+      "ideas_en": [
+        "Umbrella brand of an AI company with several products",
+        "Technology holding",
+        "Corporate research site"
+      ],
+      "ideas_de": [
+        "Dachmarke eines KI-Unternehmens mit mehreren Produkten",
+        "Technologie-Holding",
+        "Forschungsseite eines Unternehmens"
+      ],
+      "buyers_en": "AI companies, technology holdings, corporate R&D",
+      "buyers_de": "KI-Unternehmen, Technologie-Holdings, Unternehmensforschung",
+      "market_context": null,
+      "source_notes": "Ideas adapted from D's core set to the family context. Buyers newly added.",
+      "word_count": {
+        "description_en": 53,
+        "description_de": 47
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-marketing.uk",
+      "tld": ".uk",
+      "registrar": "United Domains",
+      "category": "industry",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 820,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI marketing for the UK.",
+      "pitch_de": "KI-Marketing für Großbritannien.",
+      "description_en": "ai-marketing.uk is the category term on the direct .uk extension. It targets agencies and marketing-technology vendors that serve British clients: an agency offering AI-driven campaigns, a martech product for UK e-commerce, or an industry blog and newsletter on AI in marketing. Short, descriptive, country-specific.",
+      "description_de": "ai-marketing.uk ist der Kategoriebegriff auf der direkten Endung .uk. Er zielt auf Agenturen und Marketing-Technologie-Anbieter mit britischen Kunden: eine Agentur für KI-gestützte Kampagnen, ein MarTech-Produkt für den britischen E-Commerce oder ein Branchenblog mit Newsletter zu KI im Marketing. Kurz, beschreibend, länderspezifisch.",
+      "ideas_en": [
+        "Agency offering AI-driven campaigns",
+        "Martech product for UK e-commerce",
+        "Industry blog and newsletter on AI in marketing"
+      ],
+      "ideas_de": [
+        "Agentur für KI-gestützte Kampagnen",
+        "MarTech-Produkt für den britischen E-Commerce",
+        "Branchenblog mit Newsletter zu KI im Marketing"
+      ],
+      "buyers_en": "UK agencies, martech providers",
+      "buyers_de": "Britische Agenturen, MarTech-Anbieter",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic industry set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 44,
+        "description_de": 41
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-marketplace.eu",
+      "tld": ".eu",
+      "registrar": "United Domains",
+      "category": "ecommerce",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 750,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The AI marketplace for Europe.",
+      "pitch_de": "Der KI-Marktplatz für Europa.",
+      "description_en": "ai-marketplace.eu names a platform type and a region. It suits a B2B marketplace for AI services and models, a procurement platform for European companies, or a directory of EU-based AI vendors. The .eu extension signals a European operator to buyers who prefer suppliers within the EU.",
+      "description_de": "ai-marketplace.eu benennt einen Plattformtyp und eine Region. Geeignet für einen B2B-Marktplatz für KI-Dienste und -Modelle, eine Beschaffungsplattform für europäische Unternehmen oder ein Verzeichnis von KI-Anbietern mit EU-Sitz. Die Endung .eu signalisiert Einkäufern, die Lieferanten innerhalb der EU bevorzugen, einen europäischen Betreiber.",
+      "ideas_en": [
+        "B2B marketplace for AI services and models",
+        "Procurement platform for European companies",
+        "Directory of EU-based AI vendors"
+      ],
+      "ideas_de": [
+        "B2B-Marktplatz für KI-Dienste und -Modelle",
+        "Beschaffungsplattform für europäische Unternehmen",
+        "Verzeichnis von KI-Anbietern mit EU-Sitz"
+      ],
+      "buyers_en": "B2B marketplaces, EU platforms",
+      "buyers_de": "B2B-Marktplätze, EU-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic ecommerce set in D). ‘EU-konform positioniert’ dropped (legal wording). buyers_en translated.",
+      "word_count": {
+        "description_en": 46,
+        "description_de": 41
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aistore.news",
+      "tld": ".news",
+      "registrar": "United Domains",
+      "category": "ecommerce",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 750,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI store news.",
+      "pitch_de": "News rund um KI-Stores.",
+      "description_en": "aistore.news is a publishing name: news about AI stores, tools and marketplaces. The .news extension makes the format explicit. It suits a newsletter that tracks new AI tools and releases, a review site for AI apps, or the editorial arm of a marketplace. It is the media companion to aistore.international in this portfolio.",
+      "description_de": "aistore.news ist ein Publishing-Name: Nachrichten über KI-Stores, Werkzeuge und Marktplätze. Die Endung .news macht das Format explizit. Geeignet für einen Newsletter, der neue KI-Werkzeuge und Releases verfolgt, eine Bewertungsseite für KI-Apps oder den redaktionellen Teil eines Marktplatzes. Im Portfolio ist es das Medien-Gegenstück zu aistore.international.",
+      "ideas_en": [
+        "Newsletter tracking new AI tools and releases",
+        "Review site for AI apps",
+        "Editorial arm of a marketplace"
+      ],
+      "ideas_de": [
+        "Newsletter zu neuen KI-Werkzeugen und Releases",
+        "Bewertungsseite für KI-Apps",
+        "Redaktioneller Teil eines Marktplatzes"
+      ],
+      "buyers_en": "Tech publishers, newsletter operators, review sites",
+      "buyers_de": "Tech-Verlage, Newsletter-Betreiber, Bewertungsportale",
+      "market_context": null,
+      "source_notes": "Ideas newly written (D had the generic ecommerce set, which did not fit a .news name). Buyers newly added.",
+      "word_count": {
+        "description_en": 53,
+        "description_de": 45
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "superai.academy",
+      "tld": ".academy",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 720,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The SuperAI academy.",
+      "pitch_de": "Die SuperAI-Akademie.",
+      "description_en": "superai.academy is the learning variant of the SuperAI family. It suits a course platform for professionals, a bootcamp on applied AI, or the training arm of an AI company that uses the SuperAI brand. The .academy extension states the format, and the short prefix keeps the whole name easy to remember.",
+      "description_de": "superai.academy ist die Lernvariante der SuperAI-Familie. Geeignet für eine Kursplattform für Fachkräfte, ein Bootcamp zu angewandter KI oder den Schulungsbereich eines KI-Unternehmens, das die Marke SuperAI nutzt. Die Endung .academy benennt das Format; das kurze Präfix hält den gesamten Namen einprägsam.",
+      "ideas_en": [
+        "Course platform for professionals",
+        "Bootcamp on applied AI",
+        "Training arm of an AI company"
+      ],
+      "ideas_de": [
+        "Kursplattform für Fachkräfte",
+        "Bootcamp zu angewandter KI",
+        "Schulungsbereich eines KI-Unternehmens"
+      ],
+      "buyers_en": "EdTech, bootcamp operators, corporate academies",
+      "buyers_de": "EdTech, Bootcamp-Anbieter, Unternehmensakademien",
+      "market_context": null,
+      "source_notes": "Ideas adapted from D's education set to the family context. Buyers newly added.",
+      "word_count": {
+        "description_en": 51,
+        "description_de": 41
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "artificialintelligence.vision",
+      "tld": ".vision",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 710,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The full term, with vision.",
+      "pitch_de": "Der volle Begriff, mit Vision.",
+      "description_en": "artificialintelligence.vision pairs the complete term with an extension that means both outlook and — literally — computer vision. That gives two credible uses: a think tank or strategy consultancy publishing on where AI is heading, or a computer-vision company that wants the full keyword. It belongs to the artificialintelligence family in this portfolio (.bayern, .live, .international).",
+      "description_de": "artificialintelligence.vision verbindet den vollständigen Begriff mit einer Endung, die sowohl Ausblick als auch — wörtlich — Computer Vision bedeutet. Daraus ergeben sich zwei glaubwürdige Nutzungen: ein Think-Tank oder eine Strategieberatung, die über die Richtung der KI publiziert, oder ein Computer-Vision-Unternehmen, das den vollen Suchbegriff möchte. Im Portfolio gehört der Name zur artificialintelligence-Familie (.bayern, .live, .international).",
+      "ideas_en": [
+        "Think tank on the direction of AI",
+        "Strategy consultancy with AI focus",
+        "Computer-vision company"
+      ],
+      "ideas_de": [
+        "Think-Tank zur Richtung der KI",
+        "Strategieberatung mit KI-Schwerpunkt",
+        "Computer-Vision-Unternehmen"
+      ],
+      "buyers_en": "Think tanks, strategy consultancies, computer-vision companies",
+      "buyers_de": "Think-Tanks, Strategieberatungen, Computer-Vision-Unternehmen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic media set in D). buyers_en translated and extended by the computer-vision reading.",
+      "word_count": {
+        "description_en": 56,
+        "description_de": 55
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "artificialintelligence.live",
+      "tld": ".live",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 710,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI, live.",
+      "pitch_de": "KI, live.",
+      "description_en": "artificialintelligence.live suits anything that happens in real time: an event platform for AI conferences and streams, a site for live demos of AI products, or a broadcast and webinar series. The .live extension is self-explanatory, and the full keyword makes the subject unmistakable. Sibling names in the portfolio cover other angles (.vision, .international, .bayern).",
+      "description_de": "artificialintelligence.live passt zu allem, was in Echtzeit stattfindet: eine Event-Plattform für KI-Konferenzen und Streams, eine Seite für Live-Demos von KI-Produkten oder eine Sende- und Webinar-Reihe. Die Endung .live erklärt sich selbst, der volle Suchbegriff macht das Thema unmissverständlich. Geschwisternamen im Portfolio decken andere Blickwinkel ab (.vision, .international, .bayern).",
+      "ideas_en": [
+        "Event platform for AI conferences and streams",
+        "Live demo site for AI products",
+        "Broadcast and webinar series"
+      ],
+      "ideas_de": [
+        "Event-Plattform für KI-Konferenzen und Streams",
+        "Live-Demo-Seite für KI-Produkte",
+        "Sende- und Webinar-Reihe"
+      ],
+      "buyers_en": "Event platforms, live demo providers",
+      "buyers_de": "Event-Plattformen, Live-Demo-Anbieter",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic media set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 54,
+        "description_de": 48
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-agents.international",
+      "tld": ".international",
+      "registrar": "GoDaddy",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 690,
+      "status": "sedo_listing_pending",
+      "pitch_en": "For agent businesses operating globally.",
+      "pitch_de": "Für Agentenanbieter mit globalem Auftritt.",
+      "description_en": "ai-agents.international is for organisations that want the word “international” in their name: an AI agency with offices in several countries, a global consultancy on agent adoption, or an association or network of agent developers. The extension is long but unambiguous, and it avoids tying the brand to one country.",
+      "description_de": "ai-agents.international ist für Organisationen gedacht, die das Wort „international“ im Namen tragen wollen: eine KI-Agentur mit Standorten in mehreren Ländern, eine globale Beratung für Agenten-Einführung oder ein Verband bzw. Netzwerk von Agentenentwicklern. Die Endung ist lang, aber eindeutig, und bindet die Marke an kein einzelnes Land.",
+      "ideas_en": [
+        "AI agency with offices in several countries",
+        "Global consultancy on agent adoption",
+        "Association or network of agent developers"
+      ],
+      "ideas_de": [
+        "KI-Agentur mit Standorten in mehreren Ländern",
+        "Globale Beratung für Agenten-Einführung",
+        "Verband oder Netzwerk von Agentenentwicklern"
+      ],
+      "buyers_en": "International AI agencies",
+      "buyers_de": "Internationale KI-Agenturen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 49,
+        "description_de": 46
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "agiagents.world",
+      "tld": ".world",
+      "registrar": "GoDaddy",
+      "category": "agents",
+      "category_target": "agents",
+      "tier": "B",
+      "price_eur": 690,
+      "status": "sedo_listing_pending",
+      "pitch_en": "AGI agents, with global reach.",
+      "pitch_de": "AGI-Agenten, global positioniert.",
+      "description_en": "agiagents.world combines “AGI agents” — the idea of agents built on general intelligence — with the .world extension. It suits a research network on advanced agents, a global community or forum, or an ambitious product brand. The unhyphenated spelling keeps it compact; the .world ending suggests reach rather than a specific market.",
+      "description_de": "agiagents.world verbindet „AGI Agents“ — die Vorstellung von Agenten auf Basis allgemeiner Intelligenz — mit der Endung .world. Geeignet für ein Forschungsnetzwerk zu fortgeschrittenen Agenten, eine globale Community oder ein Forum oder eine ambitionierte Produktmarke. Die Schreibweise ohne Bindestrich hält den Namen kompakt; die Endung .world steht für Reichweite statt für einen bestimmten Markt.",
+      "ideas_en": [
+        "Research network on advanced agents",
+        "Global community or forum",
+        "Ambitious product brand"
+      ],
+      "ideas_de": [
+        "Forschungsnetzwerk zu fortgeschrittenen Agenten",
+        "Globale Community oder Forum",
+        "Ambitionierte Produktmarke"
+      ],
+      "buyers_en": "AGI projects, research networks",
+      "buyers_de": "AGI-Projekte, Forschungsnetzwerke",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 52,
+        "description_de": 54
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "superai.help",
+      "tld": ".help",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 680,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "SuperAI in support.",
+      "pitch_de": "SuperAI im Support.",
+      "description_en": "superai.help is the support-oriented member of the SuperAI family. It suits a customer-support assistant, a help-centre product with AI answers, or the support site of a SuperAI-branded product. The .help extension states the purpose in one word.",
+      "description_de": "superai.help ist das supportorientierte Mitglied der SuperAI-Familie. Geeignet für einen Kundensupport-Assistenten, ein Help-Center-Produkt mit KI-Antworten oder die Support-Seite eines Produkts unter der Marke SuperAI. Die Endung .help benennt den Zweck in einem Wort.",
+      "ideas_en": [
+        "Customer-support assistant",
+        "Help-centre product with AI answers",
+        "Support site of a SuperAI-branded product"
+      ],
+      "ideas_de": [
+        "Kundensupport-Assistent",
+        "Help-Center-Produkt mit KI-Antworten",
+        "Support-Seite eines SuperAI-Produkts"
+      ],
+      "buyers_en": "Customer-service software, helpdesk vendors, SaaS",
+      "buyers_de": "Kundenservice-Software, Helpdesk-Anbieter, SaaS",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic core set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 37,
+        "description_de": 33
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aibusiness.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "industry",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 600,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Broad enough for any AI business platform.",
+      "pitch_de": "Breit genug für jede KI-Wirtschaftsplattform.",
+      "description_en": "aibusiness.world is a generic, global name for the business side of AI. It suits a business media brand covering AI in companies, a consultancy portal, or a platform that connects enterprises with AI vendors. The .world ending signals international scope; the compact spelling without hyphen keeps it short.",
+      "description_de": "aibusiness.world ist ein generischer, globaler Name für die wirtschaftliche Seite der KI. Geeignet für eine Wirtschaftsmedienmarke zu KI in Unternehmen, ein Beratungsportal oder eine Plattform, die Unternehmen mit KI-Anbietern verbindet. Die Endung .world signalisiert internationale Ausrichtung; die kompakte Schreibweise ohne Bindestrich hält den Namen kurz.",
+      "ideas_en": [
+        "Business media brand on AI in companies",
+        "Consultancy portal",
+        "Platform connecting enterprises with AI vendors"
+      ],
+      "ideas_de": [
+        "Wirtschaftsmedienmarke zu KI in Unternehmen",
+        "Beratungsportal",
+        "Plattform, die Unternehmen mit KI-Anbietern verbindet"
+      ],
+      "buyers_en": "Enterprise AI, consultancies, business media",
+      "buyers_de": "Enterprise-KI, Beratungen, Wirtschaftsmedien",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic industry set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 48,
+        "description_de": 45
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aifinance.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "B",
+      "price_eur": 580,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Short, global, no special characters.",
+      "pitch_de": "Kurz, global, ohne Sonderzeichen.",
+      "description_en": "aifinance.world is the category term for AI in finance on a global extension. It suits a fintech platform with international customers, a financial AI product that is not tied to one market, or an information portal on AI in banking and investing. No hyphen, no country code.",
+      "description_de": "aifinance.world ist der Kategoriebegriff für KI im Finanzwesen auf einer globalen Endung. Geeignet für eine Fintech-Plattform mit internationalen Kunden, ein Finanz-KI-Produkt ohne Bindung an einen Markt oder ein Informationsportal zu KI im Banking und Investieren. Ohne Bindestrich, ohne Ländercode.",
+      "ideas_en": [
+        "Fintech platform with international customers",
+        "Financial AI product not tied to one market",
+        "Information portal on AI in banking and investing"
+      ],
+      "ideas_de": [
+        "Fintech-Plattform mit internationalen Kunden",
+        "Finanz-KI-Produkt ohne Marktbindung",
+        "Informationsportal zu KI im Banking und Investieren"
+      ],
+      "buyers_en": "Fintech platforms, financial AI",
+      "buyers_de": "FinTech-Plattformen, Finanz-KI",
+      "market_context": null,
+      "source_notes": "Ideas adapted from D's finance set with a global angle. buyers_en translated.",
+      "word_count": {
+        "description_en": 47,
+        "description_de": 39
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aichatbots.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "chat",
+      "category_target": "conversational-ai",
+      "tier": "B",
+      "price_eur": 580,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "No hyphen, with global reach.",
+      "pitch_de": "Ohne Bindestrich, mit globaler Reichweite.",
+      "description_en": "aichatbots.world is the compact form of the chatbot category name on a global extension. It suits a dialogue system for customer service, a comparison portal for chat solutions, or a toolkit for building in-house assistants — with an international audience in mind. It is the unhyphenated, global sibling of ai-chatbots.ai in this portfolio.",
+      "description_de": "aichatbots.world ist die kompakte Form des Chatbot-Kategoriebegriffs auf einer globalen Endung. Geeignet für ein Dialogsystem für den Kundenservice, ein Vergleichsportal für Chatlösungen oder einen Baukasten für eigene Assistenten — mit internationalem Publikum. Im Portfolio ist es das bindestrichfreie, globale Geschwister von ai-chatbots.ai.",
+      "ideas_en": [
+        "Dialogue system for customer service",
+        "Comparison portal for chat solutions",
+        "Toolkit for in-house assistants"
+      ],
+      "ideas_de": [
+        "Dialogsystem für den Kundenservice",
+        "Vergleichsportal für Chatlösungen",
+        "Baukasten für eigene Assistenten"
+      ],
+      "buyers_en": "International chatbot platforms",
+      "buyers_de": "Internationale Chatbot-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas from D (individual). buyers_en translated.",
+      "word_count": {
+        "description_en": 53,
+        "description_de": 42
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-uni.bayern",
+      "tld": ".bayern",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 530,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI university, Bavaria — hyphenated English form.",
+      "pitch_de": "KI-Uni Bayern — englische Schreibweise mit Bindestrich.",
+      "description_en": "ai-uni.bayern is one of four “AI university” names on the Bavarian extension in this portfolio. This is the English, hyphenated form. It suits a continuing-education programme of a Bavarian university, an online academy for professionals in the region, or a student initiative. The four variants — ai-uni, aiuni, ki-uni and kiuni — differ only in language (AI/KI) and hyphen; buying more than one protects the name in both spellings.",
+      "description_de": "ai-uni.bayern ist einer von vier „KI-Uni“-Namen auf der bayerischen Endung in diesem Portfolio. Dies ist die englische Form mit Bindestrich. Geeignet für ein Weiterbildungsprogramm einer bayerischen Hochschule, eine Online-Akademie für Fachkräfte in der Region oder eine Studierendeninitiative. Die vier Varianten — ai-uni, aiuni, ki-uni und kiuni — unterscheiden sich nur in Sprache (AI/KI) und Bindestrich; mehrere zusammen sichern den Namen in beiden Schreibweisen.",
+      "ideas_en": [
+        "Continuing-education programme of a Bavarian university",
+        "Online academy for professionals in Bavaria",
+        "Student initiative on AI"
+      ],
+      "ideas_de": [
+        "Weiterbildungsprogramm einer bayerischen Hochschule",
+        "Online-Akademie für Fachkräfte in Bayern",
+        "Studierendeninitiative zu KI"
+      ],
+      "buyers_en": "Bavarian universities, education providers, student initiatives",
+      "buyers_de": "Bayerische Hochschulen, Bildungsträger, Studierendeninitiativen",
+      "market_context": null,
+      "source_notes": "Family of 4 (ai-uni/aiuni/ki-uni/kiuni .bayern) — descriptions explain the variant instead of repeating text. Ideas regionalised. Buyers newly added.",
+      "word_count": {
+        "description_en": 69,
+        "description_de": 63
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aiuni.bayern",
+      "tld": ".bayern",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 530,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI university, Bavaria — compact English form.",
+      "pitch_de": "KI-Uni Bayern — kompakte englische Schreibweise.",
+      "description_en": "aiuni.bayern is the unhyphenated English variant in the “AI university” family on .bayern. Five letters before the dot make it the shortest way to say “AI uni” in English. Suited to a university programme, a regional online academy, or a brand for AI courses aimed at students and professionals in Bavaria. See ai-uni.bayern for the hyphenated form and ki-uni/kiuni.bayern for the German spellings.",
+      "description_de": "aiuni.bayern ist die bindestrichfreie englische Variante der „KI-Uni“-Familie auf .bayern. Fünf Buchstaben vor dem Punkt machen sie zur kürzesten englischen Form. Geeignet für ein Hochschulprogramm, eine regionale Online-Akademie oder eine Marke für KI-Kurse für Studierende und Fachkräfte in Bayern. Siehe ai-uni.bayern für die Form mit Bindestrich und ki-uni/kiuni.bayern für die deutschen Schreibweisen.",
+      "ideas_en": [
+        "University programme on AI",
+        "Regional online academy",
+        "Brand for AI courses in Bavaria"
+      ],
+      "ideas_de": [
+        "Hochschulprogramm zu KI",
+        "Regionale Online-Akademie",
+        "Marke für KI-Kurse in Bayern"
+      ],
+      "buyers_en": "Bavarian universities, education providers, EdTech",
+      "buyers_de": "Bayerische Hochschulen, Bildungsträger, EdTech",
+      "market_context": null,
+      "source_notes": "Family of 4 — variant explained. Buyers newly added.",
+      "word_count": {
+        "description_en": 63,
+        "description_de": 52
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ki-uni.bayern",
+      "tld": ".bayern",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 530,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI university in Bavaria — German spelling, hyphenated.",
+      "pitch_de": "KI-Universität in Bayern — mit Bindestrich.",
+      "description_en": "ki-uni.bayern uses the German abbreviation “KI”, which is how Bavarian students, universities and public bodies actually write it. The hyphenated form matches German compound conventions. Suited to a public university programme, a state-funded AI qualification initiative, or a German-language learning platform for the region. The English counterparts are ai-uni.bayern and aiuni.bayern.",
+      "description_de": "ki-uni.bayern verwendet das deutsche Kürzel „KI“ — so schreiben es bayerische Studierende, Hochschulen und öffentliche Stellen tatsächlich. Die Form mit Bindestrich entspricht der deutschen Kompositum-Konvention. Geeignet für ein Programm einer staatlichen Hochschule, eine landesgeförderte KI-Qualifizierungsinitiative oder eine deutschsprachige Lernplattform für die Region. Die englischen Gegenstücke sind ai-uni.bayern und aiuni.bayern.",
+      "ideas_en": [
+        "Public university programme on AI",
+        "State-funded AI qualification initiative",
+        "German-language learning platform for Bavaria"
+      ],
+      "ideas_de": [
+        "Programm einer staatlichen Hochschule zu KI",
+        "Landesgeförderte KI-Qualifizierungsinitiative",
+        "Deutschsprachige Lernplattform für Bayern"
+      ],
+      "buyers_en": "Bavarian universities, public education bodies, adult-education providers",
+      "buyers_de": "Bayerische Hochschulen, öffentliche Bildungsträger, Volkshochschulen",
+      "market_context": null,
+      "source_notes": "Family of 4 — variant explained. Buyers newly added.",
+      "word_count": {
+        "description_en": 51,
+        "description_de": 49
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "kiuni.bayern",
+      "tld": ".bayern",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 530,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI uni, Bavaria — the shortest German form.",
+      "pitch_de": "KI-Uni Bayern, kurz.",
+      "description_en": "kiuni.bayern is the compact German variant: five letters, no hyphen. It works well as a spoken name and on posters, which suits a student-facing brand, a campus AI initiative, or a short URL for course registration. The hyphenated German form is ki-uni.bayern; the English forms are ai-uni.bayern and aiuni.bayern.",
+      "description_de": "kiuni.bayern ist die kompakte deutsche Variante: fünf Buchstaben, kein Bindestrich. Sie funktioniert gut als gesprochener Name und auf Plakaten — passend für eine Marke mit Studierendenbezug, eine Campus-KI-Initiative oder eine kurze URL zur Kursanmeldung. Die deutsche Form mit Bindestrich ist ki-uni.bayern; die englischen Formen sind ai-uni.bayern und aiuni.bayern.",
+      "ideas_en": [
+        "Student-facing AI brand",
+        "Campus AI initiative",
+        "Short URL for course registration"
+      ],
+      "ideas_de": [
+        "KI-Marke mit Studierendenbezug",
+        "Campus-KI-Initiative",
+        "Kurze URL zur Kursanmeldung"
+      ],
+      "buyers_en": "Student organisations, universities, campus initiatives",
+      "buyers_de": "Studierendenorganisationen, Hochschulen, Campus-Initiativen",
+      "market_context": null,
+      "source_notes": "Family of 4 — variant explained. Buyers newly added.",
+      "word_count": {
+        "description_en": 49,
+        "description_de": 48
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ailearning.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 530,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "EdTech meets AI, positioned globally.",
+      "pitch_de": "EdTech trifft KI, global positioniert.",
+      "description_en": "ailearning.world has a double meaning: learning about AI, and learning powered by AI. That suits an EdTech platform with adaptive tutoring, an online academy with AI courses for an international audience, or a corporate learning product. The .world extension keeps it market-neutral, and the name has no hyphen.",
+      "description_de": "ailearning.world hat eine doppelte Bedeutung: Lernen über KI und Lernen mithilfe von KI. Das passt zu einer EdTech-Plattform mit adaptivem Tutoring, einer Online-Akademie mit KI-Kursen für ein internationales Publikum oder einem Corporate-Learning-Produkt. Die Endung .world hält den Namen marktneutral, ein Bindestrich fehlt.",
+      "ideas_en": [
+        "EdTech platform with adaptive tutoring",
+        "Online academy with AI courses for an international audience",
+        "Corporate learning product"
+      ],
+      "ideas_de": [
+        "EdTech-Plattform mit adaptivem Tutoring",
+        "Online-Akademie mit KI-Kursen für ein internationales Publikum",
+        "Corporate-Learning-Produkt"
+      ],
+      "buyers_en": "EdTech platforms, online academies",
+      "buyers_de": "EdTech-Plattformen, Online-Akademien",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic education set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 48,
+        "description_de": 42
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "artificialintelligence.international",
+      "tld": ".international",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 520,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI, international.",
+      "pitch_de": "KI, international.",
+      "description_en": "artificialintelligence.international is the full keyword on an extension that states global scope. It suits an international association or standards body, a cross-border research programme, or a global conference and publication brand. Long, but every part is a real word, and the name reads as an institution rather than a product.",
+      "description_de": "artificialintelligence.international ist der volle Suchbegriff auf einer Endung, die globale Ausrichtung benennt. Geeignet für einen internationalen Verband oder eine Standardisierungsorganisation, ein grenzüberschreitendes Forschungsprogramm oder eine globale Konferenz- und Publikationsmarke. Lang, aber jeder Bestandteil ist ein echtes Wort, und der Name liest sich wie eine Institution, nicht wie ein Produkt.",
+      "ideas_en": [
+        "International association or standards body",
+        "Cross-border research programme",
+        "Global conference and publication brand"
+      ],
+      "ideas_de": [
+        "Internationaler Verband oder Standardisierungsorganisation",
+        "Grenzüberschreitendes Forschungsprogramm",
+        "Globale Konferenz- und Publikationsmarke"
+      ],
+      "buyers_en": "Associations, research consortia, conference organisers",
+      "buyers_de": "Verbände, Forschungskonsortien, Konferenzveranstalter",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic media set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 50,
+        "description_de": 49
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aipress.online",
+      "tld": ".online",
+      "registrar": "United Domains",
+      "category": "media",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 510,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "For AI news portals and PR platforms.",
+      "pitch_de": "Für KI-Newsportale und PR-Plattformen.",
+      "description_en": "aipress.online reads two ways — “AI press” as in journalism, and as in press releases. Both fit: a news portal for the AI industry, a trade publication with newsletter, or a press-release platform for AI companies. The .online extension is generic and inexpensive to explain; the name itself carries the meaning.",
+      "description_de": "aipress.online lässt sich zweifach lesen — „AI Press“ im Sinne von Journalismus und im Sinne von Pressemitteilungen. Beides passt: ein Nachrichtenportal für die KI-Branche, eine Fachpublikation mit Newsletter oder eine Presseplattform für KI-Unternehmen. Die Endung .online ist generisch und erklärt sich von selbst; die Bedeutung trägt der Name.",
+      "ideas_en": [
+        "News portal for the AI industry",
+        "Trade publication with newsletter",
+        "Press-release platform for AI companies"
+      ],
+      "ideas_de": [
+        "Nachrichtenportal zur KI-Branche",
+        "Fachpublikation mit Newsletter",
+        "Presseplattform für KI-Unternehmen"
+      ],
+      "buyers_en": "Trade media, PR agencies",
+      "buyers_de": "Fachmedien, PR-Agenturen",
+      "market_context": null,
+      "source_notes": "Ideas from D (the media set fits this name exactly). buyers_en translated.",
+      "word_count": {
+        "description_en": 51,
+        "description_de": 48
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "airobots.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "industry",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 510,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Robotics keyword with global reach.",
+      "pitch_de": "Robotik-Suchbegriff mit globaler Reichweite.",
+      "description_en": "airobots.world combines AI and robots — the two words most people use for embodied AI — on a global extension. It suits a platform for service robotics, a news portal on robotics, or the sales site of an automation vendor. Broad, international, no hyphen.",
+      "description_de": "airobots.world verbindet AI und Robots — die beiden Wörter, die die meisten Menschen für verkörperte KI verwenden — auf einer globalen Endung. Geeignet für eine Plattform für Servicerobotik, ein Nachrichtenportal zur Robotik oder die Vertriebsseite eines Automatisierungsanbieters. Breit, international, ohne Bindestrich.",
+      "ideas_en": [
+        "Platform for service robotics",
+        "News portal on robotics",
+        "Sales site of an automation vendor"
+      ],
+      "ideas_de": [
+        "Plattform für Servicerobotik",
+        "Nachrichtenportal zur Robotik",
+        "Vertrieb für Automatisierungslösungen"
+      ],
+      "buyers_en": "Robotics start-ups, automation, Industry 4.0",
+      "buyers_de": "Robotik-Start-ups, Automatisierung, Industrie 4.0",
+      "market_context": null,
+      "source_notes": "DE pitch ‘280 echte Besucher in 22 Monaten. Nachfrage ist belegt.’ REMOVED — internal Sedo statistic, not publicly verifiable and a demand claim; kept here as a note for Diana only. Ideas EN translated from DE (EN clone). buyers_en translated.",
+      "word_count": {
+        "description_en": 44,
+        "description_de": 41
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ki-art.uk",
+      "tld": ".uk",
+      "registrar": "United Domains",
+      "category": "media",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 480,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "“KI-Art” — AI art, with a German twist, on .uk.",
+      "pitch_de": "KI-Art — KI-Kunst, auf .uk.",
+      "description_en": "ki-art.uk is an unusual combination: the German abbreviation for AI with the English word “art” on the UK extension. Read in German, “KI-Art” also means “kind of AI”. It suits a gallery or marketplace for AI-generated art, an artist collective working with generative tools, or a studio brand. Buyers should be aware that “KI” is primarily understood in German-speaking markets.",
+      "description_de": "ki-art.uk ist eine ungewöhnliche Kombination: das deutsche KI-Kürzel mit dem englischen Wort „art“ auf der britischen Endung. Auf Deutsch gelesen bedeutet „KI-Art“ zugleich „Art von KI“. Geeignet für eine Galerie oder einen Marktplatz für KI-generierte Kunst, ein Künstlerkollektiv, das mit generativen Werkzeugen arbeitet, oder eine Studiomarke. Käufer sollten wissen, dass „KI“ vor allem im deutschsprachigen Raum verstanden wird.",
+      "ideas_en": [
+        "Gallery or marketplace for AI-generated art",
+        "Artist collective working with generative tools",
+        "Studio brand"
+      ],
+      "ideas_de": [
+        "Galerie oder Marktplatz für KI-generierte Kunst",
+        "Künstlerkollektiv mit generativen Werkzeugen",
+        "Studiomarke"
+      ],
+      "buyers_en": "Digital art platforms, creative studios, artist collectives",
+      "buyers_de": "Digital-Art-Plattformen, Kreativstudios, Künstlerkollektive",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic media set in D did not fit). Buyers newly added. Language mismatch (KI on .uk) stated openly.",
+      "word_count": {
+        "description_en": 60,
+        "description_de": 58
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aicoin.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "finance",
+      "category_target": "finance-ai",
+      "tier": "B",
+      "price_eur": 480,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "Crypto meets AI, in one name.",
+      "pitch_de": "Krypto trifft KI, in einem Namen.",
+      "description_en": "aicoin.world names the intersection of tokens and artificial intelligence. It suits a token project with an AI use case, an information portal on AI-related crypto assets, or an analysis tool for token markets. As with all names in this segment, any use involving financial products is subject to the applicable regulation — the domain itself makes no claim.",
+      "description_de": "aicoin.world benennt die Schnittmenge von Token und künstlicher Intelligenz. Geeignet für ein Token-Projekt mit KI-Bezug, ein Informationsportal zu KI-bezogenen Kryptowerten oder ein Analysewerkzeug für Token-Märkte. Wie bei allen Namen dieses Segments unterliegt jede Nutzung mit Finanzprodukten der jeweils geltenden Regulierung — die Domain selbst enthält keine Zusage.",
+      "ideas_en": [
+        "Token project with an AI use case",
+        "Information portal on AI-related crypto assets",
+        "Analysis tool for token markets"
+      ],
+      "ideas_de": [
+        "Token-Projekt mit KI-Bezug",
+        "Informationsportal für KI-Kryptowerte",
+        "Analysewerkzeug für Token-Märkte"
+      ],
+      "buyers_en": "Token projects, crypto AI start-ups",
+      "buyers_de": "Token-Projekte, Crypto-AI-Start-ups",
+      "market_context": null,
+      "source_notes": "Pitch softened (‘the 2026 trend’ = hype). Ideas EN translated from DE (EN clone). buyers_en translated.",
+      "word_count": {
+        "description_en": 58,
+        "description_de": 47
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-store.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "ecommerce",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 460,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The global variant for AI marketplaces.",
+      "pitch_de": "Die globale Variante für KI-Marktplätze.",
+      "description_en": "ai-store.world is the international counterpart to ai-store.app. Where .app points to a software product, .world points to reach: a marketplace for AI tools that serves many countries, a global storefront for digital AI products, or the international brand of a tool platform. Hyphenated, so both words stay readable.",
+      "description_de": "ai-store.world ist das internationale Gegenstück zu ai-store.app. Während .app auf ein Softwareprodukt verweist, steht .world für Reichweite: ein Marktplatz für KI-Werkzeuge in vielen Ländern, ein globaler Shop für digitale KI-Produkte oder die internationale Marke einer Tool-Plattform. Mit Bindestrich, damit beide Wörter lesbar bleiben.",
+      "ideas_en": [
+        "Marketplace for AI tools serving many countries",
+        "Global storefront for digital AI products",
+        "International brand of a tool platform"
+      ],
+      "ideas_de": [
+        "Marktplatz für KI-Werkzeuge in vielen Ländern",
+        "Globaler Shop für digitale KI-Produkte",
+        "Internationale Marke einer Tool-Plattform"
+      ],
+      "buyers_en": "International tool platforms",
+      "buyers_de": "Internationale Tool-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic ecommerce set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 48,
+        "description_de": 43
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aiuni.info",
+      "tld": ".info",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 440,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The AI university, as an information site.",
+      "pitch_de": "Die KI-Universität, als Informationsseite.",
+      "description_en": "aiuni.info places the compact “AI uni” on the .info extension, which suits reference and information content. Possible uses: an information portal on AI degree programmes, a guide comparing AI courses, or the public information site of an academy. Unlike the .bayern variants, it carries no regional link.",
+      "description_de": "aiuni.info setzt das kompakte „AI uni“ auf die Endung .info, die zu Referenz- und Informationsinhalten passt. Mögliche Nutzungen: ein Informationsportal zu KI-Studiengängen, ein Ratgeber zum Vergleich von KI-Kursen oder die öffentliche Informationsseite einer Akademie. Anders als die .bayern-Varianten hat der Name keinen regionalen Bezug.",
+      "ideas_en": [
+        "Information portal on AI degree programmes",
+        "Guide comparing AI courses",
+        "Public information site of an academy"
+      ],
+      "ideas_de": [
+        "Informationsportal zu KI-Studiengängen",
+        "Ratgeber zum Vergleich von KI-Kursen",
+        "Öffentliche Informationsseite einer Akademie"
+      ],
+      "buyers_en": "Education portals, course comparison sites, academies",
+      "buyers_de": "Bildungsportale, Kursvergleichsseiten, Akademien",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic education set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 47,
+        "description_de": 44
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aistore.international",
+      "tld": ".international",
+      "registrar": "United Domains",
+      "category": "ecommerce",
+      "category_target": "business-ai",
+      "tier": "B",
+      "price_eur": 440,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI store, international.",
+      "pitch_de": "KI-Store, international.",
+      "description_en": "aistore.international is the unhyphenated “AI store” on an extension that states scope. It suits a cross-border marketplace for AI products, the international site of a tool store, or a reseller brand operating in several countries. Its media companion in the portfolio is aistore.news.",
+      "description_de": "aistore.international ist der bindestrichfreie „AI Store“ auf einer Endung, die die Ausrichtung benennt. Geeignet für einen grenzüberschreitenden Marktplatz für KI-Produkte, die internationale Seite eines Tool-Stores oder eine Reseller-Marke mit Präsenz in mehreren Ländern. Das Medien-Gegenstück im Portfolio ist aistore.news.",
+      "ideas_en": [
+        "Cross-border marketplace for AI products",
+        "International site of a tool store",
+        "Reseller brand operating in several countries"
+      ],
+      "ideas_de": [
+        "Grenzüberschreitender Marktplatz für KI-Produkte",
+        "Internationale Seite eines Tool-Stores",
+        "Reseller-Marke mit Präsenz in mehreren Ländern"
+      ],
+      "buyers_en": "Marketplace operators, software resellers, tool platforms",
+      "buyers_de": "Marktplatzbetreiber, Software-Reseller, Tool-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic ecommerce set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 43,
+        "description_de": 39
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aiml.international",
+      "tld": ".international",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 430,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI and machine learning, thought globally.",
+      "pitch_de": "AI und Machine Learning, global gedacht.",
+      "description_en": "aiml.international uses the four-letter shorthand “AIML” — AI and machine learning — that appears in job titles, course names and research groups. The .international extension suits a research network, a global ML platform, or a professional association. The acronym is compact and technical, which fits an expert audience.",
+      "description_de": "aiml.international verwendet das Vier-Buchstaben-Kürzel „AIML“ — AI und Machine Learning —, das in Stellentiteln, Kursnamen und Forschungsgruppen vorkommt. Die Endung .international passt zu einem Forschungsnetzwerk, einer globalen ML-Plattform oder einem Berufsverband. Das Kürzel ist kompakt und technisch, was zu einem Fachpublikum passt.",
+      "ideas_en": [
+        "Research network for AI and ML",
+        "Global machine-learning platform",
+        "Professional association"
+      ],
+      "ideas_de": [
+        "Forschungsnetzwerk für AI und ML",
+        "Globale Machine-Learning-Plattform",
+        "Berufsverband"
+      ],
+      "buyers_en": "Research networks, ML platforms",
+      "buyers_de": "Forschungsnetzwerke, ML-Plattformen",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic core set in D). buyers_en translated.",
+      "word_count": {
+        "description_en": 48,
+        "description_de": 42
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "health-assistant.eu",
+      "tld": ".eu",
+      "registrar": "United Domains",
+      "category": "health",
+      "category_target": "healthcare-ai",
+      "tier": "B",
+      "price_eur": 430,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The health assistant for Europe.",
+      "pitch_de": "Der Gesundheitsassistent für Europa.",
+      "description_en": "health-assistant.eu is the European variant of health-assistant.de. It suits a health start-up that operates in several EU countries, a provider that positions its product under EU medical-device rules, or a multilingual patient assistant. The .eu extension is open to organisations and residents of the EU and EEA and signals a European operator.",
+      "description_de": "health-assistant.eu ist die europäische Variante von health-assistant.de. Geeignet für ein Health-Start-up mit Aktivität in mehreren EU-Ländern, einen Anbieter, der sein Produkt unter den EU-Medizinprodukteregeln positioniert, oder einen mehrsprachigen Patientenassistenten. Die Endung .eu steht Organisationen und Personen in EU und EWR offen und signalisiert einen europäischen Betreiber.",
+      "ideas_en": [
+        "Health start-up operating in several EU countries",
+        "Provider positioned under EU medical-device rules",
+        "Multilingual patient assistant"
+      ],
+      "ideas_de": [
+        "Health-Start-up mit Aktivität in mehreren EU-Ländern",
+        "Anbieter unter den EU-Medizinprodukteregeln",
+        "Mehrsprachiger Patientenassistent"
+      ],
+      "buyers_en": "EU health start-ups, MDR-oriented providers",
+      "buyers_de": "EU-Health-Start-ups, MDR-orientierte Anbieter",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic health set in D). ‘MDR-konform’ softened to ‘MDR-oriented’ (compliance is not a domain property). buyers_en translated.",
+      "word_count": {
+        "description_en": 52,
+        "description_de": 46
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-dna.eu",
+      "tld": ".eu",
+      "registrar": "United Domains",
+      "category": "core",
+      "category_target": "artificial-intelligence",
+      "tier": "B",
+      "price_eur": 400,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "The DNA of AI.",
+      "pitch_de": "Die DNA der KI.",
+      "description_en": "ai-dna.eu works on two levels. Literally, it fits bioinformatics with AI-based analysis or a data platform for genomics. Figuratively, “DNA” stands for the core of something — which suits a deep-tech brand that wants to say AI is in its nature. The .eu extension places the operator in Europe.",
+      "description_de": "ai-dna.eu funktioniert auf zwei Ebenen. Wörtlich passt der Name zu Bioinformatik mit KI-Auswertung oder einer Datenplattform für Genomik. Im übertragenen Sinn steht „DNA“ für den Kern einer Sache — passend für eine DeepTech-Marke, die sagen will, dass KI in ihrer Natur liegt. Die Endung .eu verortet den Betreiber in Europa.",
+      "ideas_en": [
+        "Bioinformatics with AI-based analysis",
+        "Data platform for genomics",
+        "Brand name for a deep-tech project"
+      ],
+      "ideas_de": [
+        "Bioinformatik mit KI-Auswertung",
+        "Datenplattform für Genomik",
+        "Markenname für ein DeepTech-Projekt"
+      ],
+      "buyers_en": "Core AI platforms, biotech AI, data platforms",
+      "buyers_de": "KI-Kernplattformen, Biotech-KI, Datenplattformen",
+      "market_context": null,
+      "source_notes": "DE pitch ‘94% Click-Through-Rate auf Sedo’ REMOVED — internal Sedo statistic, not publicly verifiable; note for Diana only. Ideas EN translated from DE (EN clone). buyers_en translated.",
+      "word_count": {
+        "description_en": 49,
+        "description_de": 50
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "aiuni.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 380,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI university, worldwide.",
+      "pitch_de": "KI-Universität, weltweit.",
+      "description_en": "aiuni.world is the compact “AI uni” on a global extension. It suits an online university or academy with international students, a MOOC-style platform for AI courses, or a global brand for AI education. The hyphenated form ai-uni.world is also in this portfolio; the .bayern variants address the regional market.",
+      "description_de": "aiuni.world ist das kompakte „AI uni“ auf einer globalen Endung. Geeignet für eine Online-Universität oder Akademie mit internationalen Studierenden, eine MOOC-artige Plattform für KI-Kurse oder eine globale Marke für KI-Bildung. Die Form mit Bindestrich, ai-uni.world, ist ebenfalls im Portfolio; die .bayern-Varianten sprechen den regionalen Markt an.",
+      "ideas_en": [
+        "Online university or academy with international students",
+        "MOOC-style platform for AI courses",
+        "Global brand for AI education"
+      ],
+      "ideas_de": [
+        "Online-Universität oder Akademie mit internationalen Studierenden",
+        "MOOC-artige Plattform für KI-Kurse",
+        "Globale Marke für KI-Bildung"
+      ],
+      "buyers_en": "Online universities, MOOC platforms, EdTech",
+      "buyers_de": "Online-Universitäten, MOOC-Plattformen, EdTech",
+      "market_context": null,
+      "source_notes": "Ideas newly written (generic education set in D). Buyers newly added.",
+      "word_count": {
+        "description_en": 49,
+        "description_de": 46
+      },
+      "quality_status": "draft_for_review"
+    },
+    {
+      "domain": "ai-uni.world",
+      "tld": ".world",
+      "registrar": "United Domains",
+      "category": "education",
+      "category_target": "education-ai",
+      "tier": "B",
+      "price_eur": 370,
+      "status": "sedo_buy_now_live",
+      "pitch_en": "AI university — hyphenated, global.",
+      "pitch_de": "KI-Universität — mit Bindestrich, global.",
+      "description_en": "ai-uni.world is the hyphenated sibling of aiuni.world. The hyphen makes “AI” and “uni” visually distinct, which some brands prefer for readability in print. Suited to the same uses — an international online academy, a course platform, an AI education brand — and to holding both spellings together so that typed variants reach the same site.",
+      "description_de": "ai-uni.world ist das Geschwister mit Bindestrich von aiuni.world. Der Bindestrich trennt „AI“ und „uni“ sichtbar, was manche Marken für die Lesbarkeit im Druck bevorzugen. Geeignet für dieselben Nutzungen — internationale Online-Akademie, Kursplattform, KI-Bildungsmarke — und dafür, beide Schreibweisen zusammen zu halten, damit getippte Varianten dieselbe Seite erreichen.",
+      "ideas_en": [
+        "International online academy",
+        "Course platform for AI",
+        "Second spelling held together with aiuni.world"
+      ],
+      "ideas_de": [
+        "Internationale Online-Akademie",
+        "Kursplattform für KI",
+        "Zweitschreibweise zusammen mit aiuni.world"
+      ],
+      "buyers_en": "Online universities, EdTech, education brands",
+      "buyers_de": "Online-Universitäten, EdTech, Bildungsmarken",
+      "market_context": null,
+      "source_notes": "Pair explained (ai-uni/aiuni .world). Buyers newly added.",
+      "word_count": {
+        "description_en": 55,
+        "description_de": 47
+      },
+      "quality_status": "draft_for_review"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "_note": "Real bundle offers carried over from the previous site (prices set by Diana, 2026-09-13). No new bundle prices may be invented; the Custom Bundle card is a CTA without price.",
+  "bundles": [
+    {
+      "id": "bayern",
+      "name_en": ".bayern AI naming rights",
+      "name_de": ".bayern-Namensrechte KI",
+      "domains": [
+        "künstliche-intelligenz.bayern",
+        "artificialintelligence.bayern",
+        "agi.bayern",
+        "ai-uni.bayern",
+        "aiuni.bayern",
+        "ki-uni.bayern",
+        "kiuni.bayern"
+      ],
+      "text_en": "Seven domains cover the entire AI naming space under the Bavarian TLD — the umbrella term in German and English, plus the university field in every common spelling.",
+      "text_de": "Sieben Domains decken den Begriffsraum Künstliche Intelligenz unter der bayerischen Endung vollständig ab — Oberbegriff auf Deutsch und Englisch, dazu der Hochschulbereich in allen gängigen Schreibweisen.",
+      "for_en": "State initiatives, universities, research institutions",
+      "for_de": "Landesinitiativen, Hochschulen, Forschungseinrichtungen",
+      "price_individual_eur": 11220,
+      "price_bundle_eur": 8400,
+      "saving_eur": 2820
+    },
+    {
+      "id": "callagents",
+      "name_en": "Call Agents family",
+      "name_de": "Call-Agents-Familie",
+      "domains": [
+        "call-agents.net",
+        "call-agents.eu",
+        "call-agents.help"
+      ],
+      "text_en": "Three TLDs for one product term: international, European and support-focused. Covers main brand and defensive addresses in one move.",
+      "text_de": "Drei Endungen für denselben Produktbegriff: international, europäisch und supportbezogen. Wer Telefonautomatisierung anbietet, deckt damit Hauptmarke und Schutzadressen in einem Zug ab.",
+      "for_en": "Voicebot providers, contact centre software",
+      "for_de": "Voicebot-Anbieter, Contact-Center-Software",
+      "price_individual_eur": 3360,
+      "price_bundle_eur": 2500,
+      "saving_eur": 860
+    },
+    {
+      "id": "superai",
+      "name_en": "SuperAI family",
+      "name_de": "SuperAI-Familie",
+      "domains": [
+        "superai.money",
+        "superai.finance",
+        "superai.technology",
+        "superai.academy",
+        "superai.help"
+      ],
+      "text_en": "One brand name across five fields: finance, technology, education and support. Suited to a company running several divisions under one roof.",
+      "text_de": "Ein Markenname über fünf Anwendungsfelder: Finanzen, Technologie, Ausbildung und Support. Geeignet für ein Unternehmen, das mehrere Sparten unter einem Dach führt.",
+      "for_en": "Companies with several business lines",
+      "for_de": "Unternehmen mit mehreren Geschäftsfeldern",
+      "price_individual_eur": 4470,
+      "price_bundle_eur": 3350,
+      "saving_eur": 1120
+    },
+    {
+      "id": "aiuni",
+      "name_en": "AI University family",
+      "name_de": "AI-Uni-Familie",
+      "domains": [
+        "aiuni.world",
+        "ai-uni.world",
+        "aiuni.info"
+      ],
+      "text_en": "Three spellings for the education field, complementing the Bavarian variants. For providers operating internationally and regionally at once.",
+      "text_de": "Drei Schreibweisen für den Bildungsbereich, ergänzend zu den bayerischen Varianten. Sinnvoll für Anbieter, die international und regional zugleich auftreten wollen.",
+      "for_en": "Education providers, online academies",
+      "for_de": "Bildungsanbieter, Online-Akademien",
+      "price_individual_eur": 1190,
+      "price_bundle_eur": 900,
+      "saving_eur": 290
+    },
+    {
+      "id": "health",
+      "name_en": "Health Assistant pair",
+      "name_de": "Health-Assistant-Paar",
+      "domains": [
+        "health-assistant.de",
+        "health-assistant.eu"
+      ],
+      "text_en": "German and European address for the same product name. For digital health providers starting in DACH and expanding across Europe.",
+      "text_de": "Deutsche und europäische Adresse für denselben Produktnamen. Für Anbieter digitaler Gesundheitsanwendungen, die im DACH-Raum starten und nach Europa wachsen wollen.",
+      "for_en": "Digital health providers, telemedicine",
+      "for_de": "DiGA-Anbieter, Telemedizin",
+      "price_individual_eur": 3330,
+      "price_bundle_eur": 2500,
+      "saving_eur": 830
+    }
+  ]
+}

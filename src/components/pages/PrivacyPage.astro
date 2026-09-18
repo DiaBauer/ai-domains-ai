@@ -1,0 +1,133 @@
+---
+// Datenschutzerklärung / Privacy Policy — built from L1-DRAFT-PRIVACY-DE/EN.md and matched to the actual implementation:
+// Vercel hosting, contact form → Vercel Function → Resend → mailbox, no analytics, self-hosted fonts, no cookies,
+// theme preference in sessionStorage ONLY after an explicit toggle (documented in section 7 — deviation from the L1 draft).
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { LEGAL } from '../../config/legal';
+import { CONTACT } from '../../config/contact';
+import { breadcrumbs } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/privacy/');
+const o = LEGAL.operator;
+const de = lang === 'de';
+const title = de ? 'Datenschutzerklärung' : 'Privacy Policy';
+const desc = de ? 'Datenschutzerklärung von AI-DOMAIN.AI: Hosting bei Vercel, Kontaktformular über Resend, keine Cookies, keine Analyse-Dienste, selbst gehostete Schriftarten.' : 'Privacy policy of AI-DOMAIN.AI: hosting at Vercel, contact form via Resend, no cookies, no analytics, self-hosted fonts.';
+const mp = LEGAL.mailboxProvider;
+const sa = LEGAL.supervisoryAuthority;
+const jsonld = [breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: title, path }])];
+---
+<Base lang={lang} title={title} description={desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: title, path }]} />
+      <div class="prose legal">
+        <h1>{title}</h1>
+        {de ? (
+          <>
+            <p class="small muted">Stand: {LEGAL.lastReviewed}</p>
+            <h2>1. Verantwortliche</h2>
+            <p>Verantwortliche im Sinne der Datenschutz-Grundverordnung (DSGVO) für die Verarbeitung personenbezogener Daten auf dieser Website (ai-domain.ai) ist</p>
+            <p><strong>{o.name}</strong><br />{o.street}<br />{o.postalCode} {o.city}<br />{o.country.de}<br />E-Mail: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+            <p>Ein Datenschutzbeauftragter ist nicht benannt, da die gesetzlichen Voraussetzungen für eine Benennungspflicht nicht vorliegen.</p>
+            <h2>2. Das Wichtigste in Kürze</h2>
+            <ul>
+              <li>Diese Website verwendet keine Cookies und keine Analyse-, Tracking- oder Werbedienste. Es gibt deshalb keinen Cookie-Banner.</li>
+              <li>Schriftarten und alle Inhalte werden von unserem Hosting-Anbieter ausgeliefert; es werden keine Dienste Dritter (z. B. Google Fonts, Videos, Karten) eingebunden.</li>
+              <li>Personenbezogene Daten verarbeiten wir nur beim Abruf der Seiten (technisch notwendige Zugriffsdaten, siehe 3) und wenn Sie uns über das Kontaktformular oder per E-Mail schreiben (siehe 4 und 5).</li>
+              <li>Käufe, die über AI-DOMAIN.AI initiiert werden, werden über den externen Marktplatz Sedo abgewickelt. Sobald Sie einen Sedo-Link anklicken, verlassen Sie unsere Website (siehe 6).</li>
+            </ul>
+            <h2>3. Aufruf der Website (Hosting)</h2>
+            <p>Diese Website wird von Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA („Vercel“) gehostet und über das weltweite Content-Delivery-Netzwerk von Vercel ausgeliefert. Beim Aufruf einer Seite verarbeitet Vercel in unserem Auftrag die Daten, die Ihr Browser technisch übermittelt: Ihre IP-Adresse, Datum und Uhrzeit des Zugriffs, die aufgerufene Seite, die zuvor besuchte Seite (Referrer, nur die Ursprungsadresse), Browsertyp und -version, Betriebssystem sowie die aus der IP-Adresse abgeleitete ungefähre Herkunft (Stadt/Land).</p>
+            <p><strong>Zweck:</strong> Auslieferung der Website, Gewährleistung von Stabilität und Sicherheit (z. B. Abwehr von Angriffen), Fehleranalyse.<br /><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren und funktionsfähigen Betrieb der Website).<br /><strong>Empfänger:</strong> Vercel als Auftragsverarbeiter (Art. 28 DSGVO) auf Grundlage eines Auftragsverarbeitungsvertrags. Vercel setzt für den Betrieb seiner Infrastruktur Unterauftragsverarbeiter ein.<br /><strong>Drittlandübermittlung:</strong> Vercel verarbeitet Daten in den USA und an weiteren Standorten seines Netzwerks; Anfragen werden am jeweils nächstgelegenen Knoten beantwortet (für Besucher aus Deutschland in der Regel in Frankfurt). Vercel Inc. ist nach dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss der Europäischen Kommission vom 10. Juli 2023); ergänzend sind mit Vercel die Standardvertragsklauseln der Europäischen Kommission vereinbart.<br /><strong>Speicherdauer:</strong> Vercel benennt für diese Zugriffsdaten keine feste Speicherfrist. Wir selbst speichern keine Zugriffsprotokolle. Protokolle unserer Server-Funktion (siehe 4) hält Vercel maximal einen Tag vor.</p>
+            <h2>4. Kontaktformular</h2>
+            <p>Wenn Sie das Kontaktformular nutzen, verarbeiten wir die von Ihnen eingegebenen Angaben: Name, E-Mail-Adresse, Nachricht sowie — falls angegeben — Ihr Anliegen und die Domain, auf die sich Ihre Anfrage bezieht. Zusätzlich wird die von Ihnen genutzte Sprachversion übermittelt, damit wir Ihnen in dieser Sprache antworten können.</p>
+            <p><strong>Zweck:</strong> Bearbeitung und Beantwortung Ihrer Anfrage, insbesondere zu Kauf, Paketen, Zahlungsoptionen oder der Übertragung einer Domain.<br /><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. b DSGVO (Durchführung vorvertraglicher Maßnahmen auf Ihre Anfrage), bei sonstigen Anfragen Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Beantwortung der an uns gerichteten Kommunikation). Eine Einwilligung ist hierfür nicht erforderlich und wird nicht abgefragt.</p>
+            <p><strong>Technischer Ablauf:</strong> Das Formular wird von einer Server-Funktion bei Vercel (siehe 3) entgegengenommen, auf Vollständigkeit geprüft und als E-Mail an unser Postfach weitergeleitet. Zum Schutz vor automatisierten Spam-Einsendungen enthält das Formular ein für Menschen unsichtbares Prüffeld; außerdem begrenzt die Server-Funktion die Zahl der Einsendungen je IP-Adresse innerhalb eines kurzen Zeitfensters. Ihre IP-Adresse wird dafür nur kurzzeitig im Arbeitsspeicher verarbeitet und weder in der E-Mail noch in einer Datenbank gespeichert. Es gibt keine Formular-Datenbank; Ihre Angaben existieren nur in der E-Mail, die uns erreicht.</p>
+            <p><strong>E-Mail-Versand über Resend:</strong> Für die Zustellung der Formular-E-Mail nutzen wir den Dienst Resend der Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA („Resend“), als Auftragsverarbeiter auf Grundlage eines Auftragsverarbeitungsvertrags. Die E-Mail wird von einer Adresse unserer Domain versendet; Ihre E-Mail-Adresse wird als Antwortadresse eingetragen. Das Öffnungs- und Klick-Tracking von Resend ist deaktiviert. Der Versand erfolgt aus der Resend-Region Irland; Resend speichert Kontodaten, E-Mail-Metadaten, Protokolle und Inhalte jedoch nach eigener Angabe in den USA. Resend ist nach dem EU-U.S. Data Privacy Framework zertifiziert; ergänzend sind die Standardvertragsklauseln der Europäischen Kommission vereinbart. Resend bewahrt E-Mail-Protokolle und -Inhalte nach eigener Angabe 30 Tage auf.</p>
+            <p><strong>Bereitstellungspflicht:</strong> Die Angabe von Name, E-Mail-Adresse und Nachricht ist für die Nutzung des Formulars erforderlich; ohne diese Angaben können wir Ihre Anfrage nicht beantworten. Alle weiteren Angaben sind freiwillig.</p>
+            <h2>5. E-Mail-Kommunikation und Postfach</h2>
+            <p>Anfragen, die uns per Formular oder direkt per E-Mail an {CONTACT.email} erreichen, sowie unsere Antworten werden in unserem E-Mail-Postfach verarbeitet. {mp ? `Das Postfach wird von ${mp.name}, ${mp.address}, als Auftragsverarbeiter betrieben.${mp.euOnly ? ' Die Daten werden in der Europäischen Union verarbeitet.' : ''}` : 'Das Postfach wird von einem E-Mail-Anbieter als Auftragsverarbeiter betrieben.'}</p>
+            <p><strong>Rechtsgrundlage:</strong> wie unter 4.<br /><strong>Speicherdauer:</strong> Anfragen, aus denen kein Vertrag zustande kommt, löschen wir spätestens zwölf Monate nach Abschluss der Korrespondenz. Korrespondenz zu einem zustande gekommenen Domainverkauf bewahren wir so lange auf, wie dies zur Vertragsdurchführung und zur Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist.</p>
+            <h2>6. Links zum Marktplatz Sedo</h2>
+            <p>Die Kaufschaltflächen auf dieser Website verweisen auf die Angebotsseite der jeweiligen Domain beim Domain-Marktplatz Sedo (Sedo GmbH, Im Mediapark 6B, 50670 Köln, bzw. für Kunden in den USA und Kanada Sedo.com, LLC). Solange Sie einen solchen Link nur sehen, werden keine Daten an Sedo übermittelt; die Links sind einfache Verweise ohne eingebettete Inhalte oder Skripte von Sedo. Erst wenn Sie einen Link anklicken, ruft Ihr Browser die Website von Sedo auf und übermittelt dabei — wie bei jedem Aufruf einer Website — Ihre IP-Adresse und technische Browserdaten direkt an Sedo. Ab diesem Zeitpunkt ist Sedo eigenständig für die Verarbeitung Ihrer Daten verantwortlich; es gelten die Datenschutzhinweise von Sedo. Wir erhalten von Sedo keine personenbezogenen Daten über Sie, bevor ein Kauf zustande kommt.</p>
+            <h2>7. Keine Cookies, keine Drittdienste, Design-Einstellung</h2>
+            <p>Diese Website setzt keine Cookies. Die Sprachwahl erfolgt ausschließlich über getrennte Adressen (ai-domain.ai für Englisch, ai-domain.ai/de/ für Deutsch); eine automatische Weiterleitung anhand Ihres Standorts findet nicht statt. Schriftarten werden von unserem Hosting-Anbieter ausgeliefert; es werden keine Inhalte von Google Fonts, Videoplattformen, Kartendiensten oder sozialen Netzwerken eingebunden. Wir setzen keine Analyse-, Tracking- oder Werbedienste ein.</p>
+            <p>Das Farbschema (dunkel/hell) folgt der Einstellung Ihres Systems. Nur wenn Sie den Schalter für das Farbschema selbst betätigen, speichert Ihr Browser diese Wahl bis zum Schließen des Browserfensters im Sitzungsspeicher Ihres Geräts (Session Storage), damit sie beim Wechsel zwischen den Seiten erhalten bleibt (§ 25 Abs. 2 Nr. 2 TDDDG — unbedingt erforderlich für die von Ihnen ausdrücklich gewünschte Funktion). Es werden dabei keine personenbezogenen Daten gespeichert oder an uns übermittelt.</p>
+            <h2>8. Empfänger und Auftragsverarbeiter</h2>
+            <ul>
+              <li>Vercel Inc., Covina, USA — Hosting, Auslieferung der Website, Betrieb der Formular-Funktion (Auftragsverarbeiter).</li>
+              <li>Plus Five Five, Inc. (Resend), San Francisco, USA — Versand der Formular-E-Mails (Auftragsverarbeiter).</li>
+              <li>{mp ? mp.name : 'E-Mail-Anbieter'} — Betrieb des E-Mail-Postfachs (Auftragsverarbeiter).</li>
+              <li>Sedo GmbH / Sedo.com, LLC — eigenständig Verantwortliche ab dem Aufruf der Sedo-Website (siehe 6); keine Übermittlung durch uns.</li>
+            </ul>
+            <p>Eine Weitergabe an sonstige Dritte erfolgt nicht, es sei denn, wir sind gesetzlich dazu verpflichtet oder es ist zur Durchsetzung unserer Rechte erforderlich.</p>
+            <h2>9. Übermittlung in Drittländer</h2>
+            <p>Vercel und Resend verarbeiten Daten in den USA. Beide Anbieter sind nach dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss der Europäischen Kommission vom 10. Juli 2023, Art. 45 DSGVO). Zusätzlich haben wir mit beiden Anbietern die Standardvertragsklauseln der Europäischen Kommission (Art. 46 Abs. 2 lit. c DSGVO) vereinbart. Kopien der maßgeblichen Vereinbarungen können Sie über die Anbieter einsehen: <a href="https://vercel.com/legal/dpa" rel="noopener" target="_blank">vercel.com/legal/dpa</a> und <a href="https://resend.com/legal/dpa" rel="noopener" target="_blank">resend.com/legal/dpa</a>.</p>
+            <h2>10. Ihre Rechte</h2>
+            <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten: Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch gegen Verarbeitungen, die auf Art. 6 Abs. 1 lit. f DSGVO beruhen, aus Gründen, die sich aus Ihrer besonderen Situation ergeben (Art. 21 DSGVO). Zur Ausübung Ihrer Rechte genügt eine E-Mail an {CONTACT.email} oder ein Schreiben an die unter 1 genannte Anschrift.</p>
+            <p>Sie haben außerdem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77 DSGVO), insbesondere bei der für uns zuständigen Behörde: {sa.name}, {sa.address}, <a href={sa.url} rel="noopener" target="_blank">{sa.url.replace('https://', '')}</a>.</p>
+            <h2>11. Keine automatisierte Entscheidungsfindung</h2>
+            <p>Wir treffen keine automatisierten Entscheidungen im Einzelfall und führen kein Profiling durch (Art. 22 DSGVO).</p>
+            <h2>12. Änderungen</h2>
+            <p>Wir passen diese Datenschutzerklärung an, wenn sich die Verarbeitung oder die Rechtslage ändert. Es gilt die jeweils auf dieser Seite veröffentlichte Fassung.</p>
+          </>
+        ) : (
+          <>
+            <p class="small muted">Last updated: {LEGAL.lastReviewed}</p>
+            <h2>1. Controller</h2>
+            <p>The controller within the meaning of the General Data Protection Regulation (GDPR) for the processing of personal data on this website (ai-domain.ai) is</p>
+            <p><strong>{o.name}</strong><br />{o.street}<br />{o.postalCode} {o.city}<br />{o.country.en}<br />E-mail: <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+            <p>No data protection officer has been appointed, as the statutory conditions for a mandatory appointment are not met.</p>
+            <h2>2. Summary</h2>
+            <ul>
+              <li>This website does not use cookies and does not use analytics, tracking or advertising services. There is therefore no cookie banner.</li>
+              <li>Fonts and all content are delivered by our hosting provider; no third-party services (such as Google Fonts, videos or maps) are embedded.</li>
+              <li>We process personal data only when pages are requested (technically necessary access data, see 3) and when you write to us via the contact form or by e-mail (see 4 and 5).</li>
+              <li>Purchases initiated through AI-DOMAIN.AI are handled via the external marketplace Sedo. As soon as you click a Sedo link, you leave our website (see 6).</li>
+            </ul>
+            <h2>3. Accessing the website (hosting)</h2>
+            <p>This website is hosted by Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, USA ("Vercel") and delivered through Vercel’s global content delivery network. When you request a page, Vercel processes on our behalf the data your browser transmits for technical reasons: your IP address, date and time of the request, the page requested, the previously visited page (referrer, origin only), browser type and version, operating system, and the approximate location (city/country) derived from the IP address.</p>
+            <p><strong>Purpose:</strong> delivering the website, ensuring stability and security (e.g. defence against attacks), error analysis.<br /><strong>Legal basis:</strong> Art. 6(1)(f) GDPR (legitimate interest in the secure and functional operation of the website).<br /><strong>Recipient:</strong> Vercel as processor (Art. 28 GDPR) under a data processing agreement. Vercel uses sub-processors to operate its infrastructure.<br /><strong>Transfers outside the EU:</strong> Vercel processes data in the United States and at other locations of its network; requests are served from the nearest node (for visitors from Germany usually Frankfurt). Vercel Inc. is certified under the EU-U.S. Data Privacy Framework (European Commission adequacy decision of 10 July 2023); in addition, the European Commission’s Standard Contractual Clauses have been concluded with Vercel.<br /><strong>Retention:</strong> Vercel does not specify a fixed retention period for these access data. We do not store access logs ourselves. Logs of our server function (see 4) are retained by Vercel for a maximum of one day.</p>
+            <h2>4. Contact form</h2>
+            <p>When you use the contact form, we process the details you enter: name, e-mail address, message and — if provided — the subject of your enquiry and the domain your enquiry refers to. The language version you are using is also transmitted so that we can reply in that language.</p>
+            <p><strong>Purpose:</strong> handling and answering your enquiry, in particular regarding the purchase, bundles, payment options or the transfer of a domain.<br /><strong>Legal basis:</strong> Art. 6(1)(b) GDPR (steps prior to entering into a contract, taken at your request); for other enquiries Art. 6(1)(f) GDPR (legitimate interest in responding to communication addressed to us). Consent is not required for this and is not requested.</p>
+            <p><strong>Technical process:</strong> the form is received by a server function at Vercel (see 3), checked for completeness and forwarded as an e-mail to our mailbox. To protect against automated spam submissions, the form contains a check field invisible to humans; in addition, the server function limits the number of submissions per IP address within a short time window. Your IP address is processed for this purpose only briefly in memory and is stored neither in the e-mail nor in a database. There is no form database; your details exist only in the e-mail that reaches us.</p>
+            <p><strong>E-mail delivery via Resend:</strong> to deliver the form e-mail we use the service Resend of Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA ("Resend"), as processor under a data processing agreement. The e-mail is sent from an address of our own domain; your e-mail address is set as the reply address. Resend’s open and click tracking is disabled. E-mails are dispatched from Resend’s Ireland region; however, according to Resend, account data, e-mail metadata, logs and content are stored in the United States. Resend is certified under the EU-U.S. Data Privacy Framework; in addition, the European Commission’s Standard Contractual Clauses have been concluded. According to Resend, e-mail logs and content are retained for 30 days.</p>
+            <p><strong>Obligation to provide data:</strong> name, e-mail address and message are required to use the form; without them we cannot answer your enquiry. All other details are optional.</p>
+            <h2>5. E-mail communication and mailbox</h2>
+            <p>Enquiries that reach us via the form or directly by e-mail to {CONTACT.email}, as well as our replies, are processed in our e-mail mailbox. {mp ? `The mailbox is operated by ${mp.name}, ${mp.address}, as processor.${mp.euOnly ? ' The data are processed within the European Union.' : ''}` : 'The mailbox is operated by an e-mail provider as processor.'}</p>
+            <p><strong>Legal basis:</strong> as under 4.<br /><strong>Retention:</strong> enquiries that do not lead to a contract are deleted no later than twelve months after the correspondence has ended. Correspondence relating to a concluded domain sale is retained for as long as necessary to perform the contract and to comply with statutory retention obligations.</p>
+            <h2>6. Links to the Sedo marketplace</h2>
+            <p>The purchase buttons on this website link to the offer page of the respective domain on the domain marketplace Sedo (Sedo GmbH, Im Mediapark 6B, 50670 Cologne, Germany, or, for customers in the United States and Canada, Sedo.com, LLC). As long as you merely see such a link, no data are transmitted to Sedo; the links are plain references without embedded content or scripts from Sedo. Only when you click a link does your browser request Sedo’s website and — as with any website request — transmit your IP address and technical browser data directly to Sedo. From that point on, Sedo is independently responsible for the processing of your data and Sedo’s privacy notices apply. We do not receive any personal data about you from Sedo before a purchase is concluded.</p>
+            <h2>7. No cookies, no third-party services, theme setting</h2>
+            <p>This website does not set cookies. Language selection works solely through separate addresses (ai-domain.ai for English, ai-domain.ai/de/ for German); there is no automatic redirection based on your location. Fonts are delivered by our hosting provider; no content from Google Fonts, video platforms, map services or social networks is embedded. We do not use analytics, tracking or advertising services.</p>
+            <p>The colour scheme (dark/light) follows your system setting. Only if you operate the colour-scheme switch yourself does your browser store that choice in your device’s session storage until the browser window is closed, so that it is kept when you move between pages (Section 25 (2) no. 2 TDDDG — strictly necessary for the function you expressly requested). No personal data are stored or transmitted to us in the process.</p>
+            <h2>8. Recipients and processors</h2>
+            <ul>
+              <li>Vercel Inc., Covina, USA — hosting, delivery of the website, operation of the form function (processor).</li>
+              <li>Plus Five Five, Inc. (Resend), San Francisco, USA — delivery of form e-mails (processor).</li>
+              <li>{mp ? mp.name : 'E-mail provider'} — operation of the e-mail mailbox (processor).</li>
+              <li>Sedo GmbH / Sedo.com, LLC — independent controllers from the moment you access Sedo’s website (see 6); no transmission by us.</li>
+            </ul>
+            <p>Data are not passed on to other third parties unless we are legally obliged to do so or it is necessary to enforce our rights.</p>
+            <h2>9. Transfers to third countries</h2>
+            <p>Vercel and Resend process data in the United States. Both providers are certified under the EU-U.S. Data Privacy Framework (European Commission adequacy decision of 10 July 2023, Art. 45 GDPR). In addition, we have concluded the European Commission’s Standard Contractual Clauses (Art. 46(2)(c) GDPR) with both providers. Copies of the relevant agreements are available from the providers: <a href="https://vercel.com/legal/dpa" rel="noopener" target="_blank">vercel.com/legal/dpa</a> and <a href="https://resend.com/legal/dpa" rel="noopener" target="_blank">resend.com/legal/dpa</a>.</p>
+            <h2>10. Your rights</h2>
+            <p>With regard to personal data concerning you, you have the following rights against us: access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and objection to processing based on Art. 6(1)(f) GDPR on grounds relating to your particular situation (Art. 21 GDPR). To exercise your rights, an e-mail to {CONTACT.email} or a letter to the address stated under 1 is sufficient.</p>
+            <p>You also have the right to lodge a complaint with a data protection supervisory authority (Art. 77 GDPR), in particular with the authority responsible for us: {sa.name}, {sa.address}, Germany, <a href={sa.url} rel="noopener" target="_blank">{sa.url.replace('https://', '')}</a>.</p>
+            <h2>11. No automated decision-making</h2>
+            <p>We do not make automated individual decisions and do not carry out profiling (Art. 22 GDPR).</p>
+            <h2>12. Changes</h2>
+            <p>We will update this privacy policy if the processing or the legal situation changes. The version published on this page applies.</p>
+            <p class="small muted">{ui('en', 'label.germanPrevails')} <a href={localePath('de', '/privacy/')}>Datenschutzerklärung (Deutsch)</a></p>
+          </>
+        )}
+      </div>
+    </div>
+  </section>
+</Base>
+<style>.legal h1 { margin-bottom: 8px; }</style>

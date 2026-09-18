@@ -1,0 +1,97 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import SectionHead from '../SectionHead.astro';
+import EvidenceList from '../EvidenceList.astro';
+import { ZONE_STATS, GDR2025_TOP10_2024, GDR2025_FACTS } from '../../i18n/market';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { breadcrumbs } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/market/');
+const T = lang === 'en'
+  ? {
+      title: 'Market evidence — documented .ai domain sales and registrations',
+      desc: 'Publicly reported .ai domain sales (Wisdom.ai, Cloud.ai, law.ai, agents.ai) with dates, venues and sources, plus verified .ai registration figures — evidence, not forecasts.',
+      k: 'Market', h: 'A documented <em>secondary market</em>.',
+      lead: 'Premium domains are digital brand assets. What makes that statement checkable is a public record of sales: reported prices, dates, venues and sources. This page shows only what can be verified — and says what the numbers do not mean.',
+      s1k: 'Publicly reported .ai sales', s1h: 'What .ai domains have <em>actually</em> sold for.', s1l: 'Each entry: domain, amount, date, venue, source. Individual sales are not averages, and a past sale is not a forecast for any other name.',
+      s2k: 'The .ai zone', s2h: 'Registrations, not <em>promises</em>.', s2l: 'Registration counts describe how many organisations use the extension. They say nothing about the price of a single domain.',
+      s3k: 'Historical context', s3h: 'The ten highest public .ai sales of <em>2024</em>.', s3l: 'As published in the Sedo/InterNetX Global Domain Report 2025 (p. 35). Reported public sales only; confidential sales are not included.',
+      s4k: 'Reading the numbers', s4h: 'How to read <em>market data</em>.',
+      read: [
+        ['Asking price ≠ market value', 'Every price on this site is the owner’s asking price — derived from category, length and comparable sales. It is not a valuation, and no future value is predicted.'],
+        ['Individual sale ≠ average', 'Headline sales such as Wisdom.ai or law.ai are outliers by definition. The Sedo/InterNetX Global Domain Report 2025 puts the average .ai sale price on Sedo in 2024 at $6,525 (2023: $9,681) — an average across many small sales, not a benchmark for premium names.'],
+        ['Scope matters', 'A "largest sale" claim is only true within its scope: law.ai was the largest .ai sale on Sedo in 2025; Wisdom.ai and Cloud.ai were larger sales reported elsewhere in the same year.'],
+        ['Sources', 'DNJournal (public sales charts), the Sedo/InterNetX Global Domain Report 2025 (local copy, pages cited) and the Government of Anguilla announcement of January 2026. Claims without a source are not used on this site.'],
+      ],
+      avgNote: 'Average .ai sale price on Sedo, 2024',
+      cta: 'Browse the portfolio',
+    }
+  : {
+      title: 'Marktbelege — dokumentierte .ai-Domainverkäufe und Registrierungen',
+      desc: 'Öffentlich gemeldete .ai-Domainverkäufe (Wisdom.ai, Cloud.ai, law.ai, agents.ai) mit Datum, Ort und Quelle sowie verifizierte .ai-Registrierungszahlen — Belege, keine Prognosen.',
+      k: 'Markt', h: 'Ein dokumentierter <em>Sekundärmarkt</em>.',
+      lead: 'Premium-Domains sind digitale Markenwerte. Überprüfbar wird diese Aussage durch öffentliche Verkaufsbelege: gemeldete Preise, Daten, Orte und Quellen. Diese Seite zeigt nur, was sich verifizieren lässt — und sagt, was die Zahlen nicht bedeuten.',
+      s1k: 'Öffentlich gemeldete .ai-Verkäufe', s1h: 'Was .ai-Domains <em>tatsächlich</em> erzielt haben.', s1l: 'Jeder Eintrag: Domain, Betrag, Datum, Ort, Quelle. Einzelne Verkäufe sind keine Durchschnittswerte, und ein vergangener Verkauf ist keine Prognose für einen anderen Namen.',
+      s2k: 'Die .ai-Zone', s2h: 'Registrierungen, keine <em>Versprechen</em>.', s2l: 'Registrierungszahlen beschreiben, wie viele Organisationen die Endung nutzen. Über den Preis einer einzelnen Domain sagen sie nichts.',
+      s3k: 'Historischer Kontext', s3h: 'Die zehn höchsten öffentlichen .ai-Verkäufe <em>2024</em>.', s3l: 'Wie im Sedo/InterNetX Global Domain Report 2025 (S. 35) veröffentlicht. Nur gemeldete öffentliche Verkäufe; vertrauliche Verkäufe sind nicht enthalten.',
+      s4k: 'Zahlen lesen', s4h: 'Wie man <em>Marktdaten</em> liest.',
+      read: [
+        ['Angebotspreis ≠ Marktwert', 'Jeder Preis auf dieser Seite ist der Angebotspreis der Inhaberin — abgeleitet aus Kategorie, Länge und vergleichbaren Verkäufen. Er ist keine Bewertung, und ein künftiger Wert wird nicht vorhergesagt.'],
+        ['Einzelverkauf ≠ Durchschnitt', 'Schlagzeilen-Verkäufe wie Wisdom.ai oder law.ai sind per Definition Ausreißer. Der Sedo/InterNetX Global Domain Report 2025 beziffert den durchschnittlichen .ai-Verkaufspreis bei Sedo 2024 mit 6.525 US-Dollar (2023: 9.681 US-Dollar) — ein Durchschnitt über viele kleine Verkäufe, kein Maßstab für Premium-Namen.'],
+        ['Der Rahmen zählt', 'Eine Aussage „größter Verkauf“ stimmt nur in ihrem Rahmen: law.ai war der größte .ai-Verkauf bei Sedo 2025; Wisdom.ai und Cloud.ai waren größere Verkäufe, die im selben Jahr anderswo gemeldet wurden.'],
+        ['Quellen', 'DNJournal (öffentliche Verkaufscharts), der Sedo/InterNetX Global Domain Report 2025 (lokale Kopie, Seiten zitiert) und die Mitteilung der Regierung von Anguilla vom Januar 2026. Aussagen ohne Quelle werden auf dieser Website nicht verwendet.'],
+      ],
+      avgNote: 'Durchschnittlicher .ai-Verkaufspreis bei Sedo, 2024',
+      cta: 'Zum Portfolio',
+    };
+const jsonld = [breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.market'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld} ogType="article">
+  <section class="section-tight mesh">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.market'), path }]} />
+      <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+    </div>
+  </section>
+  <section class="section-tight">
+    <div class="shell">
+      <SectionHead kicker={T.s1k} title={T.s1h} lead={T.s1l} />
+      <EvidenceList lang={lang} />
+    </div>
+  </section>
+  <section class="section rule-top">
+    <div class="shell">
+      <SectionHead kicker={T.s2k} title={T.s2h} lead={T.s2l} />
+      <div class="stats">{ZONE_STATS.map((s) => <div class="stat glass p rv"><b>{s.value}</b><span>{s.label[lang]}</span><i>{s.source[lang]}</i></div>)}</div>
+      <div class="grid grid-2 mt-2">
+        <div class="stat card rv"><b>{GDR2025_FACTS.aiAverage2024.value}</b><span>{GDR2025_FACTS.aiAverage2024.label[lang]}</span><i>{GDR2025_FACTS.aiAverage2024.source}</i></div>
+        <div class="stat card rv"><b>{GDR2025_FACTS.yoy2024.value}</b><span>{GDR2025_FACTS.yoy2024.label[lang]}</span><i>{GDR2025_FACTS.yoy2024.source}</i></div>
+      </div>
+      <p class="small muted mt-1">{GDR2025_FACTS.firstSale[lang]} <span>({ui(lang, 'label.source')}: {GDR2025_FACTS.firstSale.source})</span></p>
+    </div>
+  </section>
+  <section class="section rule-top">
+    <div class="shell top10">
+      <SectionHead kicker={T.s3k} title={T.s3h} lead={T.s3l} />
+      <ol class="plain t10">{GDR2025_TOP10_2024.map((s, i) => <li class="rv"><span class="i">{i + 1}</span><span class="dn notranslate" translate="no">{s.domain}</span><span class="amt">{s.amount}</span></li>)}</ol>
+    </div>
+  </section>
+  <section class="section rule-top">
+    <div class="shell">
+      <SectionHead kicker={T.s4k} title={T.s4h} />
+      <div class="grid grid-2">{T.read.map(([h, p]) => <div class="card rv"><h3 class="rh">{h}</h3><p class="muted">{p}</p></div>)}</div>
+      <p class="mt-2"><a class="btn btn-primary" href={localePath(lang, '/domains/')}>{T.cta} <span class="arrow" aria-hidden="true">→</span></a></p>
+    </div>
+  </section>
+</Base>
+<style>
+  .stat.p { padding: 22px; }
+  .t10 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 32px; max-width: 760px; }
+  .t10 li { display: grid; grid-template-columns: 2rem 1fr auto; gap: 12px; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+  .t10 .i { color: var(--muted); font-size: .85rem; } .t10 .amt { font-family: var(--font-display); color: var(--gold-2); }
+  .rh { font-size: 1.15rem; }
+  @media (max-width: 680px) { .t10 { grid-template-columns: 1fr; } }
+</style>

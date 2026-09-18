@@ -1,0 +1,141 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import DomainName from '../DomainName.astro';
+import DomainCard from '../DomainCard.astro';
+import SaleCta from '../SaleCta.astro';
+import { formatEur, approxUsd, related, BUNDLES, type DomainRecord } from '../../lib/domains';
+import { categoryBySlug } from '../../i18n/categories';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { SITE } from '../../config/site';
+import { LEGAL } from '../../config/legal';
+import { breadcrumbs, domainProduct } from '../../lib/seo';
+interface Props { lang: Lang; domain: DomainRecord }
+const { lang, domain: d } = Astro.props;
+const cat = categoryBySlug(d.category)!;
+const path = localePath(lang, `/domains/${d.slug}/`);
+const rel = related(d, 4);
+const bundles = BUNDLES.filter((b) => d.bundles.includes(b.id));
+const modeLabel = d.saleMode === 'buy_now' ? ui(lang, 'label.buyNow') : d.saleMode === 'inquiry' ? ui(lang, 'label.inquiry') : ui(lang, 'label.sold');
+const T = lang === 'en'
+  ? { title: `${d.domain} — premium AI domain for sale`, desc: `${d.domain}: ${d.pitch.en} Asking price ${formatEur(d.priceEur, 'en')} — ${d.saleMode === 'buy_now' ? 'Buy Now at Sedo' : d.saleMode === 'inquiry' ? 'available on enquiry' : 'sold'}. ${cat.name.en}.`,
+      registrar: 'Registrar', ext: 'Extension', idn: 'Technical form (Punycode)', process: 'How buying works', steps: ['Open the Sedo offer page for this domain.', 'Buy at the listed EUR price — or send an enquiry for names not yet listed.', 'You pay into a neutral account provided by Sedo; Sedo releases the payment to the seller only after the domain has been transferred to you.', 'Sedo’s transfer service guides both parties; for common extensions Sedo states an average of one to ten business days.'],
+      soldNote: 'This domain has been sold and is no longer available.', enquiryNote: 'This domain is not yet listed for Buy Now at Sedo. Send an enquiry with the domain name; the sale is then handled via Sedo as well.', priceH: 'Price', why: 'Why this name', family: 'Part of a bundle', more: 'More in this category', contact: 'Questions about this domain?' }
+  : { title: `${d.domain} — Premium-KI-Domain zu verkaufen`, desc: `${d.domain}: ${d.pitch.de} Angebotspreis ${formatEur(d.priceEur, 'de')} — ${d.saleMode === 'buy_now' ? 'Sofortkauf bei Sedo' : d.saleMode === 'inquiry' ? 'auf Anfrage' : 'verkauft'}. ${cat.name.de}.`,
+      registrar: 'Registrar', ext: 'Endung', idn: 'Technische Form (Punycode)', process: 'So funktioniert der Kauf', steps: ['Öffnen Sie die Sedo-Angebotsseite dieser Domain.', 'Kaufen Sie zum gelisteten EUR-Preis — oder senden Sie eine Anfrage für noch nicht gelistete Namen.', 'Sie zahlen auf ein von Sedo bereitgestelltes Konto; Sedo zahlt den Kaufpreis erst an die Verkäuferin aus, wenn die Domain auf Sie übertragen ist.', 'Sedos Transfer-Service begleitet beide Seiten; für gängige Endungen nennt Sedo durchschnittlich ein bis zehn Werktage.'],
+      soldNote: 'Diese Domain wurde verkauft und ist nicht mehr verfügbar.', enquiryNote: 'Diese Domain ist noch nicht für den Sofortkauf bei Sedo gelistet. Senden Sie eine Anfrage mit dem Domainnamen; der Verkauf wird dann ebenfalls über Sedo abgewickelt.', priceH: 'Preis', why: 'Warum dieser Name', family: 'Teil eines Pakets', more: 'Mehr in dieser Kategorie', contact: 'Fragen zu dieser Domain?' };
+const jsonld = [
+  domainProduct(d, lang),
+  breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.domains'), path: localePath(lang, '/domains/') }, { name: d.domain, path }]),
+];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld} ogType="article">
+  <article class="section-tight detail mesh">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.domains'), path: localePath(lang, '/domains/') }, { name: cat.name[lang], path: localePath(lang, `/categories/${d.category}/`) }, { name: d.domain, path }]} />
+      <div class="head">
+        <div>
+          <div class="flex meta"><span class="chip chip-tier">{ui(lang, 'label.tier')} {d.tier}</span><a class="chip" href={localePath(lang, `/categories/${d.category}/`)}>{cat.name[lang]}</a>{d.saleMode === 'sold' && <span class="chip chip-sold">{ui(lang, 'label.sold')}</span>}</div>
+          <h1 class="dtitle"><DomainName domain={d} tag="span" /></h1>
+          <p class="lead">{d.pitch[lang]}</p>
+        </div>
+        <aside class={`glass buy ${d.saleMode === 'sold' ? 'is-sold' : ''}`} aria-label={T.priceH}>
+          <div class="price-label">{ui(lang, 'label.askingPrice')} · {modeLabel}</div>
+          <div class="price big">{formatEur(d.priceEur, lang)}<span class="usd">{approxUsd(d.priceEur)} · {lang === 'de' ? 'Orientierung, Kurs 1,16 (Sep 2026)' : 'orientation, rate 1.16 (Sep 2026)'}</span></div>
+          <div class="cta"><SaleCta domain={d} lang={lang} /></div>
+          {d.saleMode === 'buy_now' && <a class="btn btn-tertiary btn-sm" href={`${localePath(lang, '/contact/')}?domain=${encodeURIComponent(d.domain)}`}>{ui(lang, 'cta.ask')}</a>}
+          {d.saleMode === 'inquiry' && <p class="small muted note">{T.enquiryNote}</p>}
+          {d.saleMode === 'sold' && <p class="small note">{T.soldNote}</p>}
+          <p class="small muted sedo">{SITE.sedo.standard[lang]}</p>
+        </aside>
+      </div>
+
+      <div class="body">
+        <div class="main">
+          <section class="blk">
+            <h2>{T.why}</h2>
+            <p class="measure">{d.description[lang]}</p>
+          </section>
+          <section class="blk">
+            <h2>{ui(lang, 'label.ideas')}</h2>
+            <ol class="ideas">{d.ideas[lang].map((i) => <li>{i}</li>)}</ol>
+          </section>
+          <section class="blk">
+            <h2>{ui(lang, 'label.for')}</h2>
+            <p class="measure">{d.buyers[lang]}</p>
+          </section>
+          {d.marketContext && (
+            <section class="blk">
+              <h2>{lang === 'de' ? 'Kontext' : 'Context'}</h2>
+              <p class="measure">{d.marketContext[lang]} <span class="small muted">({ui(lang, 'label.source')}: {lang === 'de' ? 'Regierung von Anguilla, Januar 2026' : 'Government of Anguilla, January 2026'})</span></p>
+            </section>
+          )}
+          <section class="blk">
+            <h2>{T.process}</h2>
+            <ol class="steps">{T.steps.map((s) => <li>{s}</li>)}</ol>
+            <p><a class="btn btn-tertiary" href={localePath(lang, '/how-it-works/')}>{ui(lang, 'nav.how')} →</a></p>
+          </section>
+          <section class="blk">
+            <h2>{ui(lang, 'label.priceNote')}</h2>
+            <p class="small muted measure">{LEGAL.priceNotice[lang]} {LEGAL.usdNotice[lang]}</p>
+          </section>
+        </div>
+        <aside class="side">
+          <div class="card facts">
+            <dl>
+              <dt>{T.ext}</dt><dd class="notranslate" translate="no">{d.tld}</dd>
+              <dt>{ui(lang, 'label.category')}</dt><dd><a href={localePath(lang, `/categories/${d.category}/`)}>{cat.name[lang]}</a></dd>
+              <dt>{ui(lang, 'label.tier')}</dt><dd>{d.tier}</dd>
+              <dt>{T.registrar}</dt><dd>{d.registrar}</dd>
+              {d.domainAscii !== d.domain && <><dt>{T.idn}</dt><dd class="notranslate" translate="no"><code>{d.domainAscii}</code></dd></>}
+            </dl>
+          </div>
+          {bundles.length > 0 && (
+            <div class="card fam">
+              <div class="kicker">{T.family}</div>
+              {bundles.map((b) => (
+                <p><a href={`${localePath(lang, '/bundles/')}#bundle-${b.id}`}><strong>{b.name[lang]}</strong></a><br /><span class="small muted">{b.domains.length} {lang === 'de' ? 'Domains' : 'domains'} · {formatEur(b.priceBundleEur, lang)}</span></p>
+              ))}
+            </div>
+          )}
+          <div class="card">
+            <div class="kicker">{T.contact}</div>
+            <p class="small">{lang === 'de' ? 'Für Preisanfragen, Zahlungsoptionen oder Fragen zur Übertragung.' : 'For pricing, payment options or questions about the transfer.'}</p>
+            <a class="btn btn-secondary btn-sm" href={`${localePath(lang, '/contact/')}?domain=${encodeURIComponent(d.domain)}`}>{ui(lang, 'cta.enquire')}</a>
+          </div>
+        </aside>
+      </div>
+
+      {rel.length > 0 && (
+        <section class="rel">
+          <h2>{ui(lang, 'label.related')}</h2>
+          <div class="grid grid-4">{rel.map((r) => <DomainCard domain={r} lang={lang} compact />)}</div>
+          <p class="mt-1"><a class="btn btn-tertiary" href={localePath(lang, `/categories/${d.category}/`)}>{T.more} →</a></p>
+        </section>
+      )}
+    </div>
+  </article>
+</Base>
+<style>
+  .head { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(300px, .8fr); gap: clamp(24px, 4vw, 56px); align-items: start; margin-bottom: clamp(32px, 5vw, 64px); }
+  .meta { margin-bottom: 14px; }
+  .dtitle { font-family: var(--font-ui); font-weight: 500; font-size: clamp(1.9rem, 4vw, 3.2rem); letter-spacing: -.02em; line-height: 1.1; }
+  .buy { padding: 22px; box-shadow: var(--shadow); position: sticky; top: calc(var(--header-h) + 16px); }
+  .buy .big { font-size: 2.1rem; margin-bottom: 18px; }
+  .buy .cta { margin-bottom: 8px; }
+  .buy .note { margin: 10px 0 0; }
+  .buy .sedo { margin: 12px 0 0; border-top: 1px solid var(--rule); padding-top: 10px; }
+  .body { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(280px, .7fr); gap: clamp(24px, 4vw, 56px); }
+  .blk { margin-bottom: 36px; }
+  .blk h2 { font-size: 1.45rem; }
+  .ideas { padding-left: 1.2em; } .ideas li { margin: .4em 0; color: var(--ink-2); }
+  .steps { padding-left: 1.2em; color: var(--ink-2); } .steps li { margin: .5em 0; }
+  .facts dl { display: grid; grid-template-columns: auto 1fr; gap: 8px 16px; margin: 0; font-size: .92rem; }
+  .facts dt { color: var(--muted); } .facts dd { margin: 0; color: var(--ink); }
+  .side .card + .card { margin-top: 14px; }
+  .fam p { margin: 8px 0 0; }
+  .rel { margin-top: clamp(32px, 5vw, 64px); padding-top: 32px; border-top: 1px solid var(--rule); }
+  .rel h2 { font-size: 1.5rem; margin-bottom: 18px; }
+  @media (max-width: 900px) { .head, .body { grid-template-columns: 1fr; } .buy { position: static; } }
+</style>

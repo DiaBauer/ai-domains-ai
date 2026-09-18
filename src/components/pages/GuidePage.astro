@@ -1,0 +1,47 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import { GUIDES, type Guide } from '../../i18n/guides';
+import { CATEGORIES } from '../../i18n/categories';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { breadcrumbs } from '../../lib/seo';
+interface Props { lang: Lang; guide: Guide }
+const { lang, guide: g } = Astro.props;
+const path = localePath(lang, `/guides/${g.slug}/`);
+const others = GUIDES.filter((x) => x.slug !== g.slug);
+const jsonld = [breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.guides'), path: localePath(lang, '/guides/') }, { name: g.title[lang], path }])];
+const T = lang === 'en' ? { related: 'Related', cats: 'Browse by category', next: 'Next guide', portfolio: 'Browse the portfolio', how: 'How buying works' } : { related: 'Passend dazu', cats: 'Nach Kategorie stöbern', next: 'Nächster Guide', portfolio: 'Zum Portfolio', how: 'So funktioniert der Kauf' };
+---
+<Base lang={lang} title={g.title[lang]} description={g.description[lang]} jsonld={jsonld} ogType="article">
+  <article class="section-tight">
+    <div class="shell guide">
+      <div class="prose">
+        <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.guides'), path: localePath(lang, '/guides/') }, { name: g.title[lang], path }]} />
+        <div class="kicker">{g.kicker[lang]} · {ui(lang, 'label.updated')} {g.updated}</div>
+        <h1>{g.title[lang]}</h1>
+        <p class="lead">{g.intro[lang]}</p>
+        {g.sections[lang].map((s) => (
+          <section>
+            <h2>{s.h}</h2>
+            {s.p.map((p) => <p>{p}</p>)}
+            {s.list && <ul>{s.list.map((li) => <li>{li}</li>)}</ul>}
+          </section>
+        ))}
+        <p class="mt-2 flex"><a class="btn btn-primary" href={localePath(lang, '/domains/')}>{T.portfolio} <span class="arrow" aria-hidden="true">→</span></a> <a class="btn btn-secondary" href={localePath(lang, '/how-it-works/')}>{T.how}</a></p>
+      </div>
+      <aside class="side">
+        <div class="card"><div class="kicker">{T.cats}</div><ul class="plain links">{CATEGORIES.map((c) => <li><a href={localePath(lang, `/categories/${c.slug}/`)}>{c.name[lang]}</a></li>)}</ul></div>
+        {others.map((o) => <a class="card is-link mt-1" href={localePath(lang, `/guides/${o.slug}/`)}><div class="kicker">{T.next}</div><strong>{o.title[lang]}</strong></a>)}
+        <div class="card mt-1"><div class="kicker">{T.related}</div><ul class="plain links"><li><a href={localePath(lang, '/market/')}>{ui(lang, 'nav.market')}</a></li><li><a href={localePath(lang, '/faq/')}>{ui(lang, 'nav.faq')}</a></li><li><a href={localePath(lang, '/bundles/')}>{ui(lang, 'nav.bundles')}</a></li></ul></div>
+      </aside>
+    </div>
+  </article>
+</Base>
+<style>
+  .guide { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .guide .prose { max-width: 72ch; }
+  .links li { margin: 6px 0; } .links a { color: var(--ink-2); } .links a:hover { color: var(--ink); }
+  .side { position: sticky; top: calc(var(--header-h) + 16px); }
+  @media (max-width: 900px) { .guide { grid-template-columns: 1fr; } .side { position: static; } }
+</style>

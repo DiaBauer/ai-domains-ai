@@ -1,0 +1,46 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import DomainCard from '../DomainCard.astro';
+import { inCategory, BUNDLES } from '../../lib/domains';
+import { CATEGORIES, type CategoryCopy } from '../../i18n/categories';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { LEGAL } from '../../config/legal';
+import { breadcrumbs, collectionPage } from '../../lib/seo';
+interface Props { lang: Lang; category: CategoryCopy }
+const { lang, category: c } = Astro.props;
+const list = inCategory(c.slug);
+const path = localePath(lang, `/categories/${c.slug}/`);
+const bundles = BUNDLES.filter((b) => b.domains.some((d) => d.category === c.slug));
+const others = CATEGORIES.filter((x) => x.slug !== c.slug);
+const T = lang === 'en'
+  ? { title: `${c.name.en} domains — ${list.length} premium names`, desc: `${list.length} premium AI domains in the ${c.name.en} naming space, with EUR asking prices and the Sedo purchase path. ${c.short.en}.`, other: 'Other categories', inBundles: 'Bundles in this category' }
+  : { title: `${c.name.de}-Domains — ${list.length} Premium-Namen`, desc: `${list.length} Premium-KI-Domains im Namensraum ${c.name.de}, mit EUR-Angebotspreisen und dem Sedo-Kaufweg. ${c.short.de}.`, other: 'Weitere Kategorien', inBundles: 'Pakete in dieser Kategorie' };
+const jsonld = [collectionPage(lang, T.title, path, T.desc), breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.domains'), path: localePath(lang, '/domains/') }, { name: c.name[lang], path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld}>
+  <section class="section-tight">
+    <div class="shell">
+      <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.domains'), path: localePath(lang, '/domains/') }, { name: c.name[lang], path }]} />
+      <div class="section-head rv">
+        <div class="kicker">{ui(lang, 'label.category')} · {list.length} {ui(lang, 'label.domainsIn')}</div>
+        <h1>{c.name[lang]}</h1>
+        <p class="lead">{c.intro[lang]}</p>
+      </div>
+      <div class="grid grid-3">{list.map((d) => <div class="rv"><DomainCard domain={d} lang={lang} /></div>)}</div>
+      {bundles.length > 0 && (
+        <div class="mt-3">
+          <h2 class="h-sm">{T.inBundles}</h2>
+          <ul class="plain flex">{bundles.map((b) => <li><a class="btn btn-secondary btn-sm" href={`${localePath(lang, '/bundles/')}#bundle-${b.id}`}>{b.name[lang]} · {b.domains.length} {lang === 'de' ? 'Domains' : 'domains'}</a></li>)}</ul>
+        </div>
+      )}
+      <p class="small muted mt-2">{LEGAL.priceNotice[lang]}</p>
+      <div class="mt-3">
+        <h2 class="h-sm">{T.other}</h2>
+        <ul class="plain flex">{others.map((o) => <li><a class="btn btn-tertiary btn-sm" href={localePath(lang, `/categories/${o.slug}/`)}>{o.name[lang]} →</a></li>)}</ul>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>.h-sm { font-size: 1.3rem; margin-bottom: 12px; }</style>

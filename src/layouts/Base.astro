@@ -1,0 +1,105 @@
+---
+import '../styles/global.css';
+import { SITE } from '../config/site';
+import { alternatePath, OG_LOCALE, type Lang } from '../lib/i18n';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+  /** JSON-LD objects (already complete). */
+  jsonld?: object[];
+  ogType?: 'website' | 'article';
+  /** Optional class for <main>. */
+  mainClass?: string;
+  /** Error/utility pages: no canonical, no hreflang, robots noindex. */
+  noindex?: boolean;
+}
+const { lang, title, description, jsonld = [], ogType = 'website', mainClass = '', noindex = false } = Astro.props;
+const path = Astro.url.pathname.endsWith('/') ? Astro.url.pathname : `${Astro.url.pathname}/`;
+const canonical = `${SITE.url}${path}`;
+const alt = alternatePath(lang, path);
+const enPath = lang === 'en' ? path : alt;
+const dePath = lang === 'de' ? path : alt;
+const fullTitle = title.includes(SITE.brand) ? title : `${title} | ${SITE.brand}`;
+const website = {
+  '@type': 'WebSite',
+  '@id': `${SITE.url}/#website`,
+  url: `${SITE.url}/`,
+  name: SITE.brand,
+  inLanguage: ['en', 'de'],
+};
+---
+<!doctype html>
+<html lang={lang} data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {noindex ? (
+      <meta name="robots" content="noindex, follow" />
+    ) : (
+      <>
+        <link rel="canonical" href={canonical} />
+        <link rel="alternate" hreflang="en" href={`${SITE.url}${enPath}`} />
+        <link rel="alternate" hreflang="de" href={`${SITE.url}${dePath}`} />
+        <link rel="alternate" hreflang="x-default" href={`${SITE.url}${enPath}`} />
+      </>
+    )}
+    <meta property="og:site_name" content={SITE.brand} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={OG_LOCALE[lang]} />
+    <meta property="og:locale:alternate" content={OG_LOCALE[lang === 'en' ? 'de' : 'en']} />
+    <meta property="og:image" content={`${SITE.url}/og-default.jpg`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${SITE.url}/og-default.jpg`} />
+    <meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f4ef" media="(prefers-color-scheme: light)" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/space-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {/* Theme: system preference by default; a stored choice exists only after an explicit toggle (sessionStorage, documented in the privacy policy). */}
+    <script is:inline>
+      (function () {
+        var t = null;
+        try { t = sessionStorage.getItem('aid-theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', t);
+        document.documentElement.classList.add('js');
+      })();
+    </script>
+    <script type="application/ld+json" set:html={JSON.stringify({ '@context': 'https://schema.org', '@graph': [website, ...jsonld] })} />
+  </head>
+  <body>
+    <a class="skip" href="#main">{lang === 'de' ? 'Zum Inhalt springen' : 'Skip to content'}</a>
+    <Header lang={lang} altPath={noindex ? (lang === 'en' ? '/de/' : '/') : alt} />
+    <main id="main" class={mainClass}>
+      <slot />
+    </main>
+    <Footer lang={lang} />
+    <script>
+      // Reveal-on-scroll (progressive enhancement; content is visible without JS via reduced-motion fallback in CSS when JS is absent).
+      const els = document.querySelectorAll('.rv');
+      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        els.forEach((e) => e.classList.add('in'));
+      } else {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        els.forEach((e) => io.observe(e));
+      }
+    </script>
+  </body>
+</html>

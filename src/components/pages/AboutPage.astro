@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../Breadcrumbs.astro';
+import SectionHead from '../SectionHead.astro';
+import { STATS } from '../../lib/domains';
+import { localePath, type Lang } from '../../lib/i18n';
+import { ui } from '../../i18n/ui';
+import { SITE } from '../../config/site';
+import { LEGAL } from '../../config/legal';
+import { breadcrumbs, organization } from '../../lib/seo';
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const path = localePath(lang, '/about/');
+const T = lang === 'en'
+  ? {
+      title: 'About — a curated own portfolio', desc: 'AI-DOMAIN.AI is the portfolio site of Diana Bauer, Erfurt: 75 premium AI domains from her own long-held inventory. No brokerage, no marketplace — purchases via Sedo.',
+      k: 'About', h: 'One owner, one <em>portfolio</em>.',
+      lead: `AI-DOMAIN.AI is offered by ${LEGAL.operator.name}, ${LEGAL.operator.city}, Germany. Every one of the ${STATS.count} domains on this site comes from her own inventory, built up over years around one theme: names that describe what artificial intelligence does and where it is applied.`,
+      p1: 'This is not a marketplace and not a brokerage. There are no third-party listings, no advisers, no sales team — just a curated set of names, each with its own page, a clear EUR asking price and a transparent path to purchase.',
+      p2: `Purchases initiated through AI-DOMAIN.AI are handled securely via Sedo, the external domain marketplace, using Sedo’s transfer service. AI-DOMAIN.AI itself has no checkout and takes no payments.`,
+      p3: 'The market section shows only publicly reported sales with date, venue and source. Prices on this site are asking prices — derived from category, length and comparable sales — not valuations and not forecasts.',
+      facts: [[`${STATS.count}`, 'domains'], [`${STATS.tlds}`, 'extensions'], ['7', 'categories'], ['EUR', 'price basis']],
+      contact: 'Contact', how: 'How buying works', portfolio: 'Browse the portfolio',
+    }
+  : {
+      title: 'Über — ein kuratiertes eigenes Portfolio', desc: 'AI-DOMAIN.AI ist die Portfolio-Website von Diana Bauer, Erfurt: 75 Premium-KI-Domains aus dem eigenen, langjährigen Bestand. Keine Vermittlung, kein Marktplatz — Käufe über Sedo.',
+      k: 'Über', h: 'Eine Inhaberin, ein <em>Portfolio</em>.',
+      lead: `AI-DOMAIN.AI ist ein Angebot von ${LEGAL.operator.name}, ${LEGAL.operator.city}. Jede der ${STATS.count} Domains auf dieser Website stammt aus ihrem eigenen Bestand, über Jahre aufgebaut um ein Thema: Namen, die beschreiben, was künstliche Intelligenz tut und wo sie eingesetzt wird.`,
+      p1: 'Das ist kein Marktplatz und keine Vermittlung. Es gibt keine Fremdlistings, keine Berater, kein Vertriebsteam — nur eine kuratierte Auswahl von Namen, jeder mit eigener Seite, klarem EUR-Angebotspreis und einem transparenten Kaufweg.',
+      p2: 'Käufe, die über AI-DOMAIN.AI initiiert werden, werden sicher über Sedo abgewickelt, den externen Domain-Marktplatz, mit Sedos Transfer-Service. AI-DOMAIN.AI selbst hat keinen Checkout und nimmt keine Zahlungen entgegen.',
+      p3: 'Der Marktbereich zeigt ausschließlich öffentlich gemeldete Verkäufe mit Datum, Ort und Quelle. Preise auf dieser Website sind Angebotspreise — abgeleitet aus Kategorie, Länge und vergleichbaren Verkäufen — keine Bewertungen und keine Prognosen.',
+      facts: [[`${STATS.count}`, 'Domains'], [`${STATS.tlds}`, 'Endungen'], ['7', 'Kategorien'], ['EUR', 'Preisbasis']],
+      contact: 'Kontakt', how: 'So funktioniert der Kauf', portfolio: 'Zum Portfolio',
+    };
+const jsonld = [organization(), breadcrumbs([{ name: ui(lang, 'label.breadcrumbHome'), path: localePath(lang, '/') }, { name: ui(lang, 'nav.about'), path }])];
+---
+<Base lang={lang} title={T.title} description={T.desc} jsonld={jsonld}>
+  <section class="section-tight mesh">
+    <div class="shell about">
+      <div>
+        <Breadcrumbs lang={lang} items={[{ name: ui(lang, 'nav.about'), path }]} />
+        <SectionHead as="h1" kicker={T.k} title={T.h} lead={T.lead} />
+        <div class="prose rv"><p>{T.p1}</p><p>{T.p2}</p><p>{T.p3}</p></div>
+        <div class="flex mt-2 rv">
+          <a class="btn btn-primary" href={localePath(lang, '/domains/')}>{T.portfolio} <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn-secondary" href={localePath(lang, '/how-it-works/')}>{T.how}</a>
+          <a class="btn btn-tertiary" href={localePath(lang, '/contact/')}>{T.contact} →</a>
+        </div>
+      </div>
+      <aside class="glass facts rv">
+        {T.facts.map(([v, l]) => <div class="stat"><b>{v}</b><span>{l}</span></div>)}
+        <address class="addr small muted">{SITE.brand}<br />{LEGAL.operator.name}<br />{LEGAL.operator.street}<br />{LEGAL.operator.postalCode} {LEGAL.operator.city}<br />{LEGAL.operator.country[lang]}</address>
+      </aside>
+    </div>
+  </section>
+</Base>
+<style>
+  .about { display: grid; grid-template-columns: 1.3fr .7fr; gap: clamp(28px, 5vw, 72px); align-items: start; }
+  .facts { padding: 26px; display: grid; gap: 18px; }
+  .addr { font-style: normal; line-height: 1.7; border-top: 1px solid var(--rule); padding-top: 14px; }
+  @media (max-width: 900px) { .about { grid-template-columns: 1fr; } }
+</style>
